@@ -5,6 +5,7 @@
   "angular-cli": {},
   "scripts": {
     "start": "ng serve",
+    "prestart": "npm install",
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test",
     "pree2e": "webdriver-manager update",

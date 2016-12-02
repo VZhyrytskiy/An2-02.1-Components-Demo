@@ -19,6 +19,8 @@
 16. Styling Components
 17. Component Lifecycle Hooks
 
+To run this project type: `npm start` in your command line tool.
+Open the link `http://localhost:4200/`.
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.20-4.
 
