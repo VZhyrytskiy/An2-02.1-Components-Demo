@@ -1,4 +1,24 @@
-# TaskAnswer2
+# Angular2 Components Demo Project
+
+## Agenda
+1. What is Angular 2 App?
+2. What is a Model?
+3. AppComponent
+4. AppModule
+5. Bootstrap Application and Show Single Data
+6. Template Epressions
+7. Show a Collection
+8. Inputs
+9. Events
+10. DOM Events
+11. Custom Events / Outputs
+12. Types Of Bindings
+13. Content Security
+14. Host Element
+15. Projection
+16. Styling Components
+17. Component Lifecycle Hooks
+
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.20-4.
 
