@@ -1,0 +1,10 @@
+section {
+  width: 25%;
+  margin: 25px auto;
+}
+.highlight {
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}

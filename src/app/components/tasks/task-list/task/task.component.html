@@ -1,0 +1,13 @@
+<div class="panel panel-default">
+    <div class="panel-heading">Task</div>
+    <div class="panel-body">
+        <ul>
+            <li>Action: {{task.action}}</li>
+            <li>Priority: {{task.priority}}</li>
+            <li>Estimate Hours: {{task.estHours}}</li>
+            <li>Actual Hours: {{task.actHours}}</li>
+            <li>Done: {{task.done}}</li>
+        </ul>
+        <button class="btn btn-primary" (click)="completeTask($event)" >Done</button>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="task">
+    <div>Responsible: {{item.responsible}}</div>
+    <div>Action: {{item.action}}</div>
+    <div>Done: {{item.done}}</div>
+    <div>Priority: {{item.priority ? "High" : "Normal"}}</div>
+    <div>
+        <button (click)="setPriority()">Set Priority</button>
+        <button (click)="complete()">Complete</button>
+        <button (click)="clear()">Clear</button>
+        <button (click)="remove()">Remove</button>
+    </div>
+</div>

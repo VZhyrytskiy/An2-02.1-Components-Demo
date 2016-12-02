@@ -1,0 +1,7 @@
+<div>
+  <app-do-check-item
+      *ngFor="let task of tasks"
+      [item]="task"
+      (onRemove)="removeTask($event)">
+  </app-do-check-item>
+</div>

@@ -1,0 +1,10 @@
+section {
+  width: 25%;
+  margin: 25px auto;
+}
+.highlight {
+  border: 2px dashed red;
+  text-align: center;
+  margin-bottom: 20px;
+  background-color: green;
+}

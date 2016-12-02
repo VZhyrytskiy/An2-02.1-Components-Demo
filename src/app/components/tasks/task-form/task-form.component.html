@@ -1,0 +1,40 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="pannel-title">
+            <span class="glyphicon glyphicon-plus-sign"></span> Add New Task
+        </h4>
+    </div>
+    <div class="panel-body">
+        <form>
+          <div class="form-group">
+            <label for="action">Action</label>
+            <input type="text"
+                class="form-control" id="action"
+                placeholder="Action"
+                #action
+                (keyup)="onKey($event)">
+                <!-- (keyup.enter)="method()" -->
+            <div>{{value}}</div>
+          </div>
+          <div class="form-group">
+            <label for="priority">Priority</label>
+            <input type="number"
+                min="1" max="3"
+                class="form-control" id="priority"
+                placeholder="Priority"
+                #priority>
+          </div>
+          <div class="form-group">
+            <label for="estHours">Est. Hours</label>
+            <input type="number"
+                min="0"
+                step="2"
+                class="form-control" id="estHours"
+                placeholder="Est. Hours"
+                #estHours>
+          </div>
+          <button type="submit" class="btn btn-primary"
+                  (click)='onAddTask({"action": action.value, "priority": priority.value, "estHours": estHours.value})'>Add</button>
+        </form>
+    </div>
+</div>
