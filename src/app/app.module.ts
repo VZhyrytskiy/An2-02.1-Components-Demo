@@ -7,10 +7,12 @@ import { TasksModule } from './components/tasks/tasks.module';
 import { ProjectionModule } from './components/projection/projection.module';
 import { StylingModule } from './components/styling/styling.module';
 import { LifecycleHooksModule } from './components/lifecycle-hooks/lifecycle-hooks.module';
+import { HostDemoComponent } from './components/host/host-demo/host-demo.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HostDemoComponent
   ],
   imports: [
     BrowserModule,
