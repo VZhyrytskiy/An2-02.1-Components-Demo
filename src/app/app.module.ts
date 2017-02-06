@@ -7,6 +7,8 @@ import { TasksModule } from './components/tasks/tasks.module';
 import { ProjectionModule } from './components/projection/projection.module';
 import { StylingModule } from './components/styling/styling.module';
 import { LifecycleHooksModule } from './components/lifecycle-hooks/lifecycle-hooks.module';
+import { ViewchildModule } from './components/viewchild/viewchild.module';
+
 import { HostDemoComponent } from './components/host/host-demo/host-demo.component';
 
 @NgModule({
@@ -19,7 +21,8 @@ import { HostDemoComponent } from './components/host/host-demo/host-demo.compone
     TasksModule,
     ProjectionModule,
     StylingModule,
-    LifecycleHooksModule
+    LifecycleHooksModule,
+    ViewchildModule
   ],
   exports: [],
   providers: [],
