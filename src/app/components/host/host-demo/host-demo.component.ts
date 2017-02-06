@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-host-demo',
   templateUrl: './host-demo.component.html',
   styleUrls: ['./host-demo.component.css'],
-  // tslint: Use@HostBindings and@HostListeners instead of the host property
+  // tslint: Use@HostBindings and @HostListeners instead of the host property
   host: {
     // HostBindings
     ['class']: 'headingClass',
