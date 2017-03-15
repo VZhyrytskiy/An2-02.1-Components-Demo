@@ -8,6 +8,7 @@ import { ProjectionModule } from './components/projection/projection.module';
 import { StylingModule } from './components/styling/styling.module';
 import { LifecycleHooksModule } from './components/lifecycle-hooks/lifecycle-hooks.module';
 import { ViewchildModule } from './components/viewchild/viewchild.module';
+import { CommunicationModule } from './components/communication/communication.module';
 
 import { HostDemoComponent } from './components/host/host-demo/host-demo.component';
 
@@ -22,7 +23,8 @@ import { HostDemoComponent } from './components/host/host-demo/host-demo.compone
     ProjectionModule,
     StylingModule,
     LifecycleHooksModule,
-    ViewchildModule
+    ViewchildModule,
+    CommunicationModule
   ],
   exports: [],
   providers: [],
