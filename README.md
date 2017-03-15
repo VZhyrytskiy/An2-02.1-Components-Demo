@@ -20,8 +20,7 @@
 17. Component Lifecycle Hooks
 18. Sibling Communication
 
-To run this project type: `npm start` in your command line tool.
-Open the link `http://localhost:4200/`.
+To run this project type: `npm install`, `ng serve -o` in your command line tool.
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.20-4 and updated to version 1.0.0-rc.1.
 
