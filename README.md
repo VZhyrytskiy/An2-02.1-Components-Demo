@@ -18,6 +18,7 @@
 15. Projection
 16. Styling Components
 17. Component Lifecycle Hooks
+18. Sibling Communication
 
 To run this project type: `npm start` in your command line tool.
 Open the link `http://localhost:4200/`.
