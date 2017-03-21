@@ -19,6 +19,7 @@
 16. Styling Components
 17. Component Lifecycle Hooks
 18. Sibling Communication
+19. Change Detection Strategy
 
 To run this project type: `npm install`, `ng serve -o` in your command line tool.
 
