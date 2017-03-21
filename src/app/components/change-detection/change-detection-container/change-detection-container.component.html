@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <app-default [person]="person1"></app-default>
+    </div>
+    <div class="col-md-6">
+      <app-on-push [person]="person2"></app-on-push>
+    </div>
+  </div>
+
+  <div>
+    <h5>Instruction:</h5>
+    <ul>
+    <li>Change any value in the left component. You can notice date changes only in the left component.</li>
+    <li>Change any value in the right component. You can notice date changes in the left and right components.</li>
+    </ul>
+    It means that when we use OnPush change detection strategy component checks itself only when its inputs are changed.
+  </div>
+</div>
+

@@ -9,13 +9,15 @@ import { StylingModule } from './components/styling/styling.module';
 import { LifecycleHooksModule } from './components/lifecycle-hooks/lifecycle-hooks.module';
 import { ViewchildModule } from './components/viewchild/viewchild.module';
 import { CommunicationModule } from './components/communication/communication.module';
+import { ChangeDetectionModule } from './components/change-detection/change-detection.module';
+
 
 import { HostDemoComponent } from './components/host/host-demo/host-demo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HostDemoComponent
+    HostDemoComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,7 +26,8 @@ import { HostDemoComponent } from './components/host/host-demo/host-demo.compone
     StylingModule,
     LifecycleHooksModule,
     ViewchildModule,
-    CommunicationModule
+    CommunicationModule,
+    ChangeDetectionModule
   ],
   exports: [],
   providers: [],
