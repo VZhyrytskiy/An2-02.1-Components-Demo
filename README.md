@@ -21,6 +21,7 @@
 18. Sibling Communication
 19. Change Detection Strategy
 20. Custom Structural Directive
+21. Dynamic Component Loading
 
 To run this project type: `npm install`, `ng serve -o` in your command line tool.
 
