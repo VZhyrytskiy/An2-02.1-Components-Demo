@@ -1,10 +1,10 @@
-import { TaskAnswer2Page } from './app.po';
+import { V4Page } from './app.po';
 
-describe('task-answer2 App', function() {
-  let page: TaskAnswer2Page;
+describe('v4 App', () => {
+  let page: V4Page;
 
   beforeEach(() => {
-    page = new TaskAnswer2Page();
+    page = new V4Page();
   });
 
   it('should display message saying app works', () => {

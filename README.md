@@ -1,7 +1,7 @@
-# Angular2 Components Demo Project
+# Angular Components Demo Project
 
 ## Agenda
-1. What is Angular 2 App?
+1. What is Angular App?
 2. What is a Model?
 3. AppComponent
 4. AppModule
