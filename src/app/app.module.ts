@@ -11,6 +11,8 @@ import { ViewchildModule } from './components/viewchild/viewchild.module';
 import { CommunicationModule } from './components/communication/communication.module';
 import { ChangeDetectionModule } from './components/change-detection/change-detection.module';
 
+import { DirectivesModule } from './directives/directives.module';
+
 
 import { HostDemoComponent } from './components/host/host-demo/host-demo.component';
 
@@ -27,7 +29,8 @@ import { HostDemoComponent } from './components/host/host-demo/host-demo.compone
     LifecycleHooksModule,
     ViewchildModule,
     CommunicationModule,
-    ChangeDetectionModule
+    ChangeDetectionModule,
+    DirectivesModule
   ],
   exports: [],
   providers: [],
