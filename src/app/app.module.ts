@@ -10,6 +10,7 @@ import { LifecycleHooksModule } from './components/lifecycle-hooks/lifecycle-hoo
 import { ViewchildModule } from './components/viewchild/viewchild.module';
 import { CommunicationModule } from './components/communication/communication.module';
 import { ChangeDetectionModule } from './components/change-detection/change-detection.module';
+import { DynamicComponentLoadingModule } from './components/dynamic-component-loading/dynamic-component-loading.module';
 
 import { DirectivesModule } from './directives/directives.module';
 
@@ -30,7 +31,8 @@ import { HostDemoComponent } from './components/host/host-demo/host-demo.compone
     ViewchildModule,
     CommunicationModule,
     ChangeDetectionModule,
-    DirectivesModule
+    DirectivesModule,
+    DynamicComponentLoadingModule
   ],
   exports: [],
   providers: [],
