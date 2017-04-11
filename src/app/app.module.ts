@@ -3,7 +3,7 @@ import { NgModule, NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA } from '@angular/cor
 
 import { AppComponent } from './app.component';
 
-import { TasksModule } from './components/tasks/tasks.module';
+import { TasksModule } from './components/communication/parent-child-communication/tasks.module';
 import { ProjectionModule } from './components/projection/projection.module';
 import { StylingModule } from './components/styling/styling.module';
 import { LifecycleHooksModule } from './components/lifecycle-hooks/lifecycle-hooks.module';

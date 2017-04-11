@@ -1,36 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-host-demo',
   templateUrl: './host-demo.component.html',
   styleUrls: ['./host-demo.component.css'],
-  // tslint: Use@HostBindings and @HostListeners instead of the host property
-  host: {
-    // HostBindings
-    ['class']: 'headingClass',
-    // HostListeners
-    '(click)': 'clicked()',
-    '(mouseenter)': 'enter($event)',
-    '(mouseleave)': 'leave($event)'
-  }
 })
-export class HostDemoComponent implements OnInit {
-  headingClass = true;
-  constructor() { }
+export class HostDemoComponent {
+  @HostBinding('class') attrClass = 'headingClass';
 
-  ngOnInit() {
+  @HostListener('click') clicked() {
+    console.log('click event on host element');
   }
 
-
-  clicked() {
-    console.log('click event on host element');
-   }
-  enter(event: Event) {
+  @HostListener('mouseenter', ['$event']) enter(event: Event) {
     console.log('mouseenter event on host element');
   }
-  leave(event: Event) {
+  @HostListener('mouseleave',  ['$event']) leave(event: Event) {
     console.log('mouseleave event on host element');
   }
-
-
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Task } from './components/tasks/task.model';
-import { TasksService } from './components/tasks/services';
+import { Task } from './components/communication/parent-child-communication/task.model';
+import { TasksService } from './components/communication/parent-child-communication/services';
 
 
 @Component({

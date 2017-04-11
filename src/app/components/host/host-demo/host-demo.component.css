@@ -1,0 +1,5 @@
+:host.headingClass {
+  border: 2px solid red;
+  display: block;
+  padding: 10px;
+}
