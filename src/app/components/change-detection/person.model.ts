@@ -1,7 +1,7 @@
 export class Person {
   constructor(
-    private firstName: string,
-    private lastName: string
+    public firstName: string,
+    public lastName: string
   ) {}
 
   lastChange() {
