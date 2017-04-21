@@ -9,7 +9,7 @@
 6. Template Epressions
 7. Show a Collection
 8. Inputs
-9. Events
+9. Events (Outputs)
 10. DOM Events
 11. Custom Events / Outputs
 12. Types Of Bindings

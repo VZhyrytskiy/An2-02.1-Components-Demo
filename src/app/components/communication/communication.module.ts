@@ -1,12 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import {
-  SiblingContainerComponent,
-  Sibling1Component,
-  Sibling2Component,
-  CommunicatorService
-} from './sibling-communication';
+import { SiblingContainerComponent, Sibling1Component, Sibling2Component, CommunicatorService } from './sibling-communication';
+import { ClickStopComponent, ClickStopDirective } from './output/';
+import { TaskListComponent, TaskFormComponent, TaskComponent, TasksService } from './parent-child-communication';
 
 @NgModule({
   imports: [
@@ -15,9 +12,22 @@ import {
   declarations: [
     Sibling1Component,
     Sibling2Component,
-    SiblingContainerComponent
+    SiblingContainerComponent,
+    ClickStopDirective,
+    ClickStopComponent,
+    TaskListComponent,
+    TaskFormComponent,
+    TaskComponent
   ],
-  providers: [CommunicatorService],
-  exports: [SiblingContainerComponent]
+  providers: [
+    CommunicatorService,
+    TasksService
+  ],
+  exports: [
+    SiblingContainerComponent,
+    ClickStopComponent,
+    TaskListComponent,
+    TaskFormComponent
+  ]
 })
 export class CommunicationModule { }
