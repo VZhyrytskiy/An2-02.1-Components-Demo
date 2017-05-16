@@ -19,9 +19,10 @@
 16. Styling Components
 17. Component Lifecycle Hooks
 18. Sibling Communication
-19. Change Detection Strategy
-20. Custom Structural Directive
-21. Dynamic Component Loading
+19. Access via template reference variable
+20. Change Detection Strategy
+21. Custom Structural Directive
+22. Dynamic Component Loading
 
 To run this project type: `npm install`, `ng serve -o` in your command line tool.
 
