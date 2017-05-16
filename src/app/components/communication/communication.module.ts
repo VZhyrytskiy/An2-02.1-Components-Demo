@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { SiblingContainerComponent, Sibling1Component, Sibling2Component, CommunicatorService } from './sibling-communication';
 import { ClickStopComponent, ClickStopDirective } from './output/';
 import { TaskListComponent, TaskFormComponent, TaskComponent, TasksService } from './parent-child-communication';
+import { ParentComponent, ChildComponent } from './viewchild';
+
 
 @NgModule({
   imports: [
@@ -17,7 +19,9 @@ import { TaskListComponent, TaskFormComponent, TaskComponent, TasksService } fro
     ClickStopComponent,
     TaskListComponent,
     TaskFormComponent,
-    TaskComponent
+    TaskComponent,
+    ParentComponent,
+ChildComponent
   ],
   providers: [
     CommunicatorService,
@@ -27,7 +31,8 @@ import { TaskListComponent, TaskFormComponent, TaskComponent, TasksService } fro
     SiblingContainerComponent,
     ClickStopComponent,
     TaskListComponent,
-    TaskFormComponent
+    TaskFormComponent,
+    ParentComponent
   ]
 })
 export class CommunicationModule { }

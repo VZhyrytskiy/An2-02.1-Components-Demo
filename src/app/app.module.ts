@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { ProjectionModule } from './components/projection/projection.module';
 import { StylingModule } from './components/styling/styling.module';
 import { LifecycleHooksModule } from './components/lifecycle-hooks/lifecycle-hooks.module';
-import { ViewchildModule } from './components/viewchild/viewchild.module';
 import { CommunicationModule } from './components/communication/communication.module';
 import { ChangeDetectionModule } from './components/change-detection/change-detection.module';
 import { DynamicComponentLoadingModule } from './components/dynamic-component-loading/dynamic-component-loading.module';
@@ -26,7 +25,6 @@ import { HostDemoComponent } from './components/host/host-demo/host-demo.compone
     ProjectionModule,
     StylingModule,
     LifecycleHooksModule,
-    ViewchildModule,
     CommunicationModule,
     ChangeDetectionModule,
     DirectivesModule,
