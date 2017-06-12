@@ -1,4 +1,4 @@
-import { Directive, ElementRef, Output, EventEmitter, HostListener } from '@angular/core';
+import { Directive, Output, EventEmitter, HostListener } from '@angular/core';
 
 @Directive({
   // tslint:disable-next-line:directive-selector
@@ -7,10 +7,6 @@ import { Directive, ElementRef, Output, EventEmitter, HostListener } from '@angu
 export class ClickStopDirective {
   // tslint:disable-next-line:no-output-rename
   @Output('click.stop') clickStopEvent = new EventEmitter();
-
-  constructor(
-    private element: ElementRef
-  ) { }
 
   @HostListener('click', ['$event'])
   onClick(event) {
