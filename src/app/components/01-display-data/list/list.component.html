@@ -1,0 +1,26 @@
+<h5>Number of items: <span class="badge">{{items.length}}</span></h5>
+
+<ul>
+  <li>Action: {{item.action}}</li>
+  <li>Priority: {{item.priority}}</li>
+  <li>Estimate Hours: {{item.estHours}}</li>
+  <li>Actual Hours: {{item.actHours}}</li>
+  <li>Done: {{item.done}}</li>
+</ul>
+
+<div class="panel panel-default">
+  <div class="panel-heading">Items</div>
+  <div class="panel-body">
+    <ul>
+      <li *ngFor="let it of items">
+        <ul>
+          <li>Action: {{it.action}}</li>
+          <li>Priority: {{it.priority}}</li>
+          <li>Estimate Hours: {{it.estHours}}</li>
+          <li>Actual Hours: {{it.actHours}}</li>
+          <li>Done: {{it.done}}</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>

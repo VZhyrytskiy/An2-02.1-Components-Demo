@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Task } from './components/communication/parent-child-communication/models/task.model';
-import { TasksService } from './components/communication/parent-child-communication/';
+import { Task } from './components/02-communication/01-parent-child-communication/models/task.model';
+import { TasksService } from './components/02-communication/01-parent-child-communication/';
 
 
 @Component({
-  selector: 'app-todo',
+  selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

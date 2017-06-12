@@ -13,7 +13,7 @@ export class ClickStopDirective {
   ) { }
 
   @HostListener('click', ['$event'])
-  onMouseEnter(event) {
+  onClick(event) {
       event.stopPropagation();
       this.clickStopEvent.emit(event);
   }

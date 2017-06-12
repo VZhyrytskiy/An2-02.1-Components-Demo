@@ -3,10 +3,11 @@ import { NgModule, NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA } from '@angular/cor
 
 import { AppComponent } from './app.component';
 
+import { ListModule } from './components/01-display-data/list.module';
+import { CommunicationModule } from './components/02-communication/communication.module';
 import { ProjectionModule } from './components/projection/projection.module';
 import { StylingModule } from './components/styling/styling.module';
 import { LifecycleHooksModule } from './components/lifecycle-hooks/lifecycle-hooks.module';
-import { CommunicationModule } from './components/communication/communication.module';
 import { ChangeDetectionModule } from './components/change-detection/change-detection.module';
 import { DynamicComponentLoadingModule } from './components/dynamic-component-loading/dynamic-component-loading.module';
 
@@ -22,10 +23,11 @@ import { HostDemoComponent } from './components/host/host-demo/host-demo.compone
   ],
   imports: [
     BrowserModule,
+    ListModule,
+    CommunicationModule,
     ProjectionModule,
     StylingModule,
     LifecycleHooksModule,
-    CommunicationModule,
     ChangeDetectionModule,
     DirectivesModule,
     DynamicComponentLoadingModule

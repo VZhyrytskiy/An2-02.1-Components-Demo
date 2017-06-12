@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { SiblingContainerComponent, Sibling1Component, Sibling2Component, CommunicatorService } from './sibling-communication';
-import { ClickStopComponent, ClickStopDirective } from './output/';
-import { TaskListComponent, TaskFormComponent, TaskComponent, TasksService } from './parent-child-communication';
-import { ParentComponent, ChildComponent } from './viewchild';
+import { TaskListComponent, TaskFormComponent, TaskComponent, TasksService } from './01-parent-child-communication';
+import { ClickStopComponent, ClickStopDirective } from './02-output-event-directive/';
+import { ParentComponent, ChildComponent } from './03-viewchild';
+import { SiblingContainerComponent, Sibling1Component, Sibling2Component, CommunicatorService } from './04-sibling-communication';
 
 
 @NgModule({
