@@ -1,11 +1,11 @@
 import { Component, HostBinding, HostListener } from '@angular/core';
 
 @Component({
-  selector: 'app-host-demo',
-  templateUrl: './host-demo.component.html',
-  styleUrls: ['./host-demo.component.css'],
+  selector: 'app-host',
+  templateUrl: './host.component.html',
+  styleUrls: ['./host.component.css'],
 })
-export class HostDemoComponent {
+export class HostComponent {
   @HostBinding('class') attrClass = 'headingClass';
 
   @HostListener('click') clicked() {

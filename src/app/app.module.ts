@@ -5,26 +5,26 @@ import { AppComponent } from './app.component';
 
 import { ListModule } from './components/01-display-data/list.module';
 import { CommunicationModule } from './components/02-communication/communication.module';
-import { ProjectionModule } from './components/projection/projection.module';
-import { StylingModule } from './components/styling/styling.module';
-import { LifecycleHooksModule } from './components/lifecycle-hooks/lifecycle-hooks.module';
+import { HostModule } from './components/03-host/host.module';
+import { ProjectionModule } from './components/04-projection/projection.module';
+import { StylingModule } from './components/05-styling/styling.module';
+import { LifecycleHooksModule } from './components/06-lifecycle-hooks/lifecycle-hooks.module';
 import { ChangeDetectionModule } from './components/change-detection/change-detection.module';
 import { DynamicComponentLoadingModule } from './components/dynamic-component-loading/dynamic-component-loading.module';
 
 import { DirectivesModule } from './directives/directives.module';
 
 
-import { HostDemoComponent } from './components/host/host-demo/host-demo.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HostDemoComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
     ListModule,
     CommunicationModule,
+    HostModule,
     ProjectionModule,
     StylingModule,
     LifecycleHooksModule,
