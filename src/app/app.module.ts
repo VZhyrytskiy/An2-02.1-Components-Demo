@@ -9,8 +9,8 @@ import { HostModule } from './components/03-host/host.module';
 import { ProjectionModule } from './components/04-projection/projection.module';
 import { StylingModule } from './components/05-styling/styling.module';
 import { LifecycleHooksModule } from './components/06-lifecycle-hooks/lifecycle-hooks.module';
-import { ChangeDetectionModule } from './components/change-detection/change-detection.module';
-import { DynamicComponentLoadingModule } from './components/dynamic-component-loading/dynamic-component-loading.module';
+import { DynamicComponentLoadingModule } from './components/07-dynamic-component-loading/dynamic-component-loading.module';
+import { ChangeDetectionModule } from './components/08-change-detection-strategies/change-detection-strategies.module';
 
 import { DirectivesModule } from './directives/directives.module';
 

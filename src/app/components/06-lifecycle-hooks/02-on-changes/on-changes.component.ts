@@ -31,11 +31,11 @@ export class OnChangesComponent implements OnInit, OnChanges {
   ngOnChanges(changes: SimpleChanges): void {
     console.log('On Changes Hook');
 
-    for (let propName in changes) {
+    for (const propName in changes) {
       if (changes.hasOwnProperty (propName)) {
-        let chng = changes[propName];
-        let cur  = JSON.stringify(chng.currentValue);
-        let prev = JSON.stringify(chng.previousValue);
+        const chng = changes[propName];
+        const cur  = JSON.stringify(chng.currentValue);
+        const prev = JSON.stringify(chng.previousValue);
         console.log(`${propName}: currentValue = ${cur}, previousValue = ${prev}`);
         console.log(`Is First Change: ${chng.isFirstChange()}`);
       }

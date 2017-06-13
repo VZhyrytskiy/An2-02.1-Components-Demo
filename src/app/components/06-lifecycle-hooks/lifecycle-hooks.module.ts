@@ -2,17 +2,17 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
-import { OnInitOnDestroyComponent } from './on-init-on-destroy';
-import { OnChangesComponent } from './on-changes';
-import { DoCheckItemComponent } from './do-check-item';
-import { DoCheckItemListComponent } from './do-check-item-list';
-import { AftersComponent } from './afters';
+import { OnInitOnDestroyComponent } from './01-on-init-on-destroy';
+import { OnChangesComponent } from './02-on-changes';
+import { DoCheckItemComponent } from './03-do-check-item';
+import { DoCheckItemListComponent } from './04-do-check-item-list';
+import { AftersComponent } from './05-afters';
 
-import { AfterViewComponent } from './after-view';
-import { ChildViewComponent } from './after-view/child-view';
+import { AfterViewComponent } from './06-after-view';
+import { ChildViewComponent } from './06-after-view/child-view';
 
-import { AfterContentComponent } from './after-content';
-import { ChildContentComponent } from './after-content/child-content';
+import { AfterContentComponent } from './07-after-content';
+import { ChildContentComponent } from './07-after-content/child-content';
 
 
 @NgModule({
