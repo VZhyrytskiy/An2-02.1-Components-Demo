@@ -8,21 +8,43 @@
 5. Bootstrap Application and Show Single Data
 6. Template Epressions
 7. Show a Collection
-8. Inputs
-9. Events (Outputs)
-10. DOM Events
-11. Custom Events / Outputs
-12. Types Of Bindings
-13. Content Security
-14. Host Element
-15. Projection
-16. Styling Components
-17. Component Lifecycle Hooks
-18. Sibling Communication
-19. Access via template reference variable
-20. Change Detection Strategy
-21. Custom Structural Directive
-22. Dynamic Component Loading
+8. Communication
+
+    8.1. Inputs
+
+    8.2. Events (Outputs)
+
+    8.3. DOM Events
+
+    8.4. Custom Events / Outputs
+
+    8.5. Access via template reference variable
+
+    8.6. Sibling Communication
+
+9. Types Of Bindings
+10. Content Security
+11. Host Element
+12. Projection
+13. Styling Components
+14. Component Lifecycle Hooks
+
+    14.1. OnInit, OnDestroy
+
+    14.2. OnChanges
+
+    14.3. DoCheck Object, DoCheck Array
+
+    14.4. Afters
+
+    14.5. AfterViewXXX
+
+    14.6. AfterContentX
+
+15. Dynamic Component Loading
+16. Change Detection Strategy
+17. Custom Structural Directive
+
 
 To run this project type: `npm install`, `ng serve -o` in your command line tool.
 
