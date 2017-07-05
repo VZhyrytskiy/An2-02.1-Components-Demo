@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { NgModule, NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -22,6 +23,7 @@ import { DirectivesModule } from './directives/directives.module';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     ListModule,
     CommunicationModule,
     HostModule,

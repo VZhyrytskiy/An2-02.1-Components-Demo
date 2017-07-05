@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { TaskListComponent, TaskFormComponent, TaskComponent, TasksService } from './01-parent-child-communication';
 import { ClickStopComponent, ClickStopDirective } from './02-output-event-directive/';
@@ -9,7 +10,8 @@ import { SiblingContainerComponent, Sibling1Component, Sibling2Component, Commun
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   declarations: [
     Sibling1Component,

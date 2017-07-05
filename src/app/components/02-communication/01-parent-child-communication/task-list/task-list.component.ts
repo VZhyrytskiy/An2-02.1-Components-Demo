@@ -9,10 +9,9 @@ import { Task } from './../models/task.model';
 })
 export class TaskListComponent implements OnInit {
   @Input()  tasks: Array<Task>;
-  @Output() complete: EventEmitter<Task>;
+  @Output() complete: EventEmitter<Task> = new EventEmitter();;
 
   constructor() {
-    this.complete = new EventEmitter();
   }
 
   ngOnInit() {

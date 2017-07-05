@@ -9,7 +9,7 @@ import { Task } from './../../models/task.model';
 })
 export class TaskComponent {
     @Input() task: Task;
-    @Output() complete: EventEmitter<Task>;
+    @Output() complete: EventEmitter<Task> = new EventEmitter<Task>();
 
     @HostBinding('class') class = 'task';
 
@@ -18,7 +18,6 @@ export class TaskComponent {
     }
 
     constructor() {
-        this.complete = new EventEmitter<Task>();
     }
 
     completeTask(event: any): void {

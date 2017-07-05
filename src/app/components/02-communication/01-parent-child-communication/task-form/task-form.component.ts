@@ -8,18 +8,17 @@ import { Task } from './../models/task.model';
   styleUrls: ['task-form.component.css']
 })
 export class TaskFormComponent implements OnInit {
-  @Output() addTask: EventEmitter<Task>;
+  @Output() addTask: EventEmitter<Task> = new EventEmitter<Task>();
   value: string;
 
   constructor() {
-    this.addTask = new EventEmitter<Task>();
   }
 
   ngOnInit() {
   }
 
   onAddTask(newTask: {action: string, priority: number, estHours: number}): void {
-    let task = new Task(null,
+    const task = new Task(null,
       newTask.action,
       newTask.priority,
       newTask.estHours
