@@ -44,6 +44,7 @@
 15. Dynamic Component Loading
 16. Change Detection Strategy
 17. Custom Structural Directive
+18. Custom Input Element: parsers and formaters
 
 
 To run this project type: `npm install`, `ng serve -o` in your command line tool.

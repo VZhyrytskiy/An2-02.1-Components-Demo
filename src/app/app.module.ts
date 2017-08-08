@@ -12,6 +12,7 @@ import { StylingModule } from './components/05-styling/styling.module';
 import { LifecycleHooksModule } from './components/06-lifecycle-hooks/lifecycle-hooks.module';
 import { DynamicComponentLoadingModule } from './components/07-dynamic-component-loading/dynamic-component-loading.module';
 import { ChangeDetectionModule } from './components/08-change-detection-strategies/change-detection-strategies.module';
+import { CustomInputModule } from './components/09-custom-input/custom-input.module';
 
 import { DirectivesModule } from './directives/directives.module';
 
@@ -32,7 +33,8 @@ import { DirectivesModule } from './directives/directives.module';
     LifecycleHooksModule,
     ChangeDetectionModule,
     DirectivesModule,
-    DynamicComponentLoadingModule
+    DynamicComponentLoadingModule,
+    CustomInputModule
   ],
   exports: [],
   providers: [],
