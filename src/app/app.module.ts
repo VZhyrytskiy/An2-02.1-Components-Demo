@@ -4,19 +4,19 @@ import { NgModule, NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA } from '@angular/cor
 
 import { AppComponent } from './app.component';
 
-import { ListModule } from './components/01-display-data/list.module';
+/**
+ * Modules
+ */
+import { ChangeDetectionModule } from './components/08-change-detection-strategies/change-detection-strategies.module';
 import { CommunicationModule } from './components/02-communication/communication.module';
+import { CustomControlsModule } from './components/09-custom-controls/custom-controls.module';
+import { DirectivesModule } from './directives/directives.module';
+import { DynamicComponentLoadingModule } from './components/07-dynamic-component-loading/dynamic-component-loading.module';
 import { HostModule } from './components/03-host/host.module';
+import { LifecycleHooksModule } from './components/06-lifecycle-hooks/lifecycle-hooks.module';
+import { ListModule } from './components/01-display-data/list.module';
 import { ProjectionModule } from './components/04-projection/projection.module';
 import { StylingModule } from './components/05-styling/styling.module';
-import { LifecycleHooksModule } from './components/06-lifecycle-hooks/lifecycle-hooks.module';
-import { DynamicComponentLoadingModule } from './components/07-dynamic-component-loading/dynamic-component-loading.module';
-import { ChangeDetectionModule } from './components/08-change-detection-strategies/change-detection-strategies.module';
-import { CustomInputModule } from './components/09-custom-input/custom-input.module';
-
-import { DirectivesModule } from './directives/directives.module';
-
-
 
 @NgModule({
   declarations: [
@@ -25,16 +25,17 @@ import { DirectivesModule } from './directives/directives.module';
   imports: [
     BrowserModule,
     FormsModule,
-    ListModule,
-    CommunicationModule,
-    HostModule,
-    ProjectionModule,
-    StylingModule,
-    LifecycleHooksModule,
+
     ChangeDetectionModule,
+    CommunicationModule,
+    CustomControlsModule,
     DirectivesModule,
     DynamicComponentLoadingModule,
-    CustomInputModule
+    HostModule,
+    LifecycleHooksModule,
+    ListModule,
+    ProjectionModule,
+    StylingModule
   ],
   exports: [],
   providers: [],
