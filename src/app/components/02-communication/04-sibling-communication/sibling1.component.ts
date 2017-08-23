@@ -12,7 +12,7 @@ import { CommunicatorService } from './communicator.service';
   `
 })
 export class Sibling1Component  {
-  counter: number = 0;
+  counter = 0;
 
   constructor(
     private communicatorService: CommunicatorService)
