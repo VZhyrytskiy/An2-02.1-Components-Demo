@@ -10,8 +10,8 @@ export class Task {
     public actHours?: number,
     public done?: boolean
   ) {
-    this.id = null;
-    this.actHours = 0;
-    this.done = false;
+    this.id = id || null;
+    this.actHours = actHours || 0;
+    this.done = done || false;
   }
 }

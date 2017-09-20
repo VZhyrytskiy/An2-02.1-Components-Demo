@@ -5,7 +5,7 @@
         </h4>
     </div>
     <div class="panel-body">
-        <form (submit)="false">
+        <form>
           <div class="form-group">
             <label for="action">Action</label>
             <input type="text"
@@ -13,8 +13,6 @@
                 placeholder="Action"
                 #action
                 (keyup)="onKey($event)">
-                <!-- (keyup.enter)="method()" -->
-            <div>{{value}}</div>
           </div>
           <div class="form-group">
             <label for="priority">Priority</label>
@@ -33,7 +31,7 @@
                 placeholder="Est. Hours"
                 #estHours>
           </div>
-          <button type="submit"
+          <button type="button"
                   class="btn btn-primary"
                   (click)='onAddTask({"action": action.value, "priority": priority.value, "estHours": estHours.value})'>Add</button>
         </form>

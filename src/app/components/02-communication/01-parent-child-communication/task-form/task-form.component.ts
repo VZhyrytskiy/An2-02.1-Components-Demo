@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 import { Task } from './../models/task.model';
 
@@ -7,15 +7,9 @@ import { Task } from './../models/task.model';
   templateUrl: 'task-form.component.html',
   styleUrls: ['task-form.component.css']
 })
-export class TaskFormComponent implements OnInit {
+export class TaskFormComponent {
   @Output() addTask: EventEmitter<Task> = new EventEmitter<Task>();
   value: string;
-
-  constructor() {
-  }
-
-  ngOnInit() {
-  }
 
   onAddTask(newTask: {action: string, priority: number, estHours: number}): void {
     const task = new Task(null,

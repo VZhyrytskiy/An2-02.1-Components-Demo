@@ -1,0 +1,8 @@
+<app-task-list
+  [tasks]="tasks"
+  (complete)="onCompleteTask($event)">
+</app-task-list>
+
+<app-task-form
+  (addTask)="onAddTask($event)">
+</app-task-form>
