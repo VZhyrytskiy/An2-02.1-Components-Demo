@@ -1,18 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Task } from './components/02-communication/01-parent-child-communication/models/task.model';
-import { TasksService } from './components/02-communication/01-parent-child-communication/';
-
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  // Task Demo
-  task: Task;
-  // tasks: Array<Task>;
   // display = true;
 
   item: any = { action: 'Learn Angular 2', responsible: 'Vitaliy', done: false};
@@ -22,25 +15,6 @@ export class AppComponent implements OnInit {
   responsibles: string[];
   actions: string[];
 
-
-  constructor(
-    public tasksService: TasksService
-  ) { }
-
-  // ngOnInit() {
-  //   this.task = this.tasksService.getTask();
-  //   this.tasks = this.tasksService.getTasks();
-  // }
-
-  onCompleteTask(task: Task): void {
-    console.log('app component, onCompleteTask method', task);
-    task.done = true;
-  }
-
-  onAddTask(task: Task): void {
-    console.log('app component, onAddTask method', task);
-    this.tasks.push(task);
-  }
 
   // OnInitOnDestroyComponent Demo
 

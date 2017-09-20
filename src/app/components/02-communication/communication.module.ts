@@ -2,7 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
-import { TaskListComponent, TaskFormComponent, TaskComponent, TasksService } from './01-parent-child-communication';
+import {
+  TaskListComponent, TaskFormComponent,
+  TaskComponent, TasksService, ParentChildCommunicationComponent
+} from './01-parent-child-communication';
 import { ClickStopComponent, ClickStopDirective } from './02-output-event-directive/';
 import { ParentComponent, ChildComponent } from './03-viewchild';
 import { SiblingContainerComponent, Sibling1Component, Sibling2Component, CommunicatorService } from './04-sibling-communication';
@@ -23,7 +26,8 @@ import { SiblingContainerComponent, Sibling1Component, Sibling2Component, Commun
     TaskFormComponent,
     TaskComponent,
     ParentComponent,
-ChildComponent
+    ParentChildCommunicationComponent,
+    ChildComponent
   ],
   providers: [
     CommunicatorService,
@@ -32,8 +36,7 @@ ChildComponent
   exports: [
     SiblingContainerComponent,
     ClickStopComponent,
-    TaskListComponent,
-    TaskFormComponent,
+    ParentChildCommunicationComponent,
     ParentComponent
   ]
 })
