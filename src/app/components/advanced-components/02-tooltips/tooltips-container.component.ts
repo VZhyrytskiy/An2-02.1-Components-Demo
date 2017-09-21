@@ -9,7 +9,6 @@ import { TooltipContentComponent } from './tooltip-content.component';
       <p tooltip="Tooltip from text">Tooltip from text</p>
 
       <p [tooltip]="template">Tooltip from TemplateRef</p>
-
       <ng-template #template>
         <span style="color: lawngreen;">Tooltip from TemplateRef</span>
       </ng-template>
