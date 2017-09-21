@@ -2,8 +2,8 @@ import { Component, Input, OnInit, OnChanges, SimpleChanges } from '@angular/cor
 
 @Component({
   selector: 'app-on-changes',
-  templateUrl: 'on-changes.component.html',
-  styleUrls: ['on-changes.component.css']
+  templateUrl: './on-changes.component.html',
+  styleUrls: ['./on-changes.component.css']
 })
 export class OnChangesComponent implements OnInit, OnChanges {
   @Input() responsible: string;

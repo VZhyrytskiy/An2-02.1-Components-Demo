@@ -13,14 +13,7 @@ export class AppComponent implements OnInit {
   responsibles: string[];
   actions: string[];
 
-  // OnChangesComponent Demo
-  // responsible: string;
-  // action: string;
 
-  // setValues(actionField: HTMLInputElement, responsibleField: HTMLInputElement): void {
-  //     this.responsible = responsibleField.value;
-  //     this.action = actionField.value;
-  // }
 
   // DoCheckItemComponent Demo
 

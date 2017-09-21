@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { OnInitOnDestroyComponent, OnInitOnDestroyDemoComponent } from './01-on-init-on-destroy';
-import { OnChangesComponent } from './02-on-changes';
+import { OnChangesComponent, OnChangesDemoComponent } from './02-on-changes';
 import { DoCheckItemComponent } from './03-do-check-item';
 import { DoCheckItemListComponent } from './04-do-check-item-list';
 import { AftersComponent } from './05-afters';
@@ -24,17 +24,19 @@ import { ChildContentComponent } from './07-after-content/child-content';
     OnInitOnDestroyComponent,
     OnInitOnDestroyDemoComponent,
     OnChangesComponent,
+    OnChangesDemoComponent,
     DoCheckItemComponent,
     DoCheckItemListComponent,
     AftersComponent,
     AfterViewComponent,
     ChildViewComponent,
     AfterContentComponent,
-    ChildContentComponent
+    ChildContentComponent,
+    OnChangesDemoComponent
   ],
   exports: [
     OnInitOnDestroyDemoComponent,
-    OnChangesComponent,
+    OnChangesDemoComponent,
     DoCheckItemComponent,
     DoCheckItemListComponent,
     AftersComponent,
