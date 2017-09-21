@@ -3,8 +3,8 @@ AfterContentChecked, AfterViewInit, AfterViewChecked } from '@angular/core';
 
 @Component({
   selector: 'app-afters',
-  templateUrl: 'afters.component.html',
-  styleUrls: ['afters.component.css']
+  templateUrl: './afters.component.html',
+  styleUrls: ['./afters.component.css']
 })
 export class AftersComponent implements OnInit, OnDestroy, DoCheck, OnChanges, AfterContentInit,
 AfterContentChecked, AfterViewInit, AfterViewChecked {
