@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, AfterViewInit, ElementRef, ViewChild, ViewChildren, QueryList } from '@angular/core';
 
 import { ChildComponent } from './../child/child.component';
 
@@ -9,9 +9,18 @@ import { ChildComponent } from './../child/child.component';
 })
 export class ParentComponent implements AfterViewInit {
 
-  @ViewChild('input') inputField: ElementRef;
-  @ViewChild(ChildComponent) child: ChildComponent;
-  @ViewChild('child') childComp: ElementRef;
+  @ViewChild('input')
+  inputField: ElementRef;
+
+  @ViewChild(ChildComponent)
+  child: ChildComponent;
+
+  @ViewChildren(ChildComponent)
+  children: QueryList<ChildComponent>;
+
+  @ViewChild('child')
+  childComp: ElementRef;
+
   constructor() { }
 
   ngAfterViewInit() {
@@ -19,6 +28,8 @@ export class ParentComponent implements AfterViewInit {
     this.child.onClick();
 
     console.log(this.childComp);
+    console.log(this.children);
+    this.children.last.onClick();
   }
 
 }
