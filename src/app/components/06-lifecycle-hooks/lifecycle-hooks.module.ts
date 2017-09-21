@@ -7,12 +7,9 @@ import { OnChangesComponent, OnChangesDemoComponent } from './02-on-changes';
 import { DoCheckItemComponent, DoCheckItemListComponent, DoCheckDemoComponent } from './03-do-check';
 import { AftersComponent } from './04-afters';
 
-import { AfterViewComponent } from './06-after-view';
-import { ChildViewComponent } from './06-after-view/child-view';
+import { ChildViewComponent, AfterViewComponent } from './05-after-view';
 
-import { AfterContentComponent } from './07-after-content';
-import { ChildContentComponent } from './07-after-content/child-content';
-
+import { ChildContentComponent, AfterContentComponent } from './06-after-content';
 
 @NgModule({
   imports: [

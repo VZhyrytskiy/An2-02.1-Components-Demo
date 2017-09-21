@@ -1,6 +1,6 @@
 import { Component, AfterViewChecked, AfterViewInit, ViewChild } from '@angular/core';
 
-import { ChildViewComponent } from './child-view';
+import { ChildViewComponent } from './child-view/child-view.component';
 
 @Component({
   selector: 'app-after-view',

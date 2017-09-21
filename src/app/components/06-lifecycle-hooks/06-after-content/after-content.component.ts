@@ -1,6 +1,6 @@
 import { Component, AfterContentChecked, AfterContentInit, ContentChild } from '@angular/core';
 
-import { ChildContentComponent } from './child-content';
+import { ChildContentComponent } from './child-content/child-content.component';
 
 @Component({
   selector: 'app-after-content',
