@@ -10,7 +10,9 @@ import { Component2Component } from './../component-2/component-2.component';
   styleUrls: ['./container.component.css']
 })
 export class ContainerComponent implements AfterViewInit {
-  @ViewChild(TargetDirective) target: TargetDirective;
+  @ViewChild(TargetDirective)
+  target: TargetDirective;
+
   currentComponent = Component1Component;
   currentComponentType = 'Component1';
 
@@ -28,6 +30,7 @@ export class ContainerComponent implements AfterViewInit {
       this.currentComponentType = 'Component2';
     }
     else {
+      // console.log(2);
       this.currentComponent = Component1Component;
       this.currentComponentType = 'Component1';
     }
