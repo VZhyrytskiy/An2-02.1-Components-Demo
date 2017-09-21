@@ -6,21 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  // display = true;
-
   item: any = { action: 'Learn Angular 2', responsible: 'Vitaliy', done: false};
 
   // DoCheckItemListComponent Demo
   tasks: Array<any> = [];
   responsibles: string[];
   actions: string[];
-
-
-  // OnInitOnDestroyComponent Demo
-
-  // toggle(): void {
-  //   this.display = !this.display;
-  // }
 
   // OnChangesComponent Demo
   // responsible: string;
