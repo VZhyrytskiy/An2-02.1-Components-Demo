@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
       <h5>output-demo works!</h5>
       <div (click)="fromParent()">
         <button class="btn btn-danger" (click)="fromChild()">Click me (Click)</button>
-        <button class="btn btn-success"(click.stop)="fromChild()">Click me (Click.stop)</button>
+        <button class="btn btn-success" (click.stop)="fromChild()">Click me (Click.stop)</button>
       </div>
     </div>
   `
