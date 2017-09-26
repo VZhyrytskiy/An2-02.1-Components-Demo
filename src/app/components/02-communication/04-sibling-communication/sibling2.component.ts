@@ -15,7 +15,7 @@ import { CommunicatorService } from './communicator.service';
   `
 })
 export class Sibling2Component implements OnInit, OnDestroy {
-  sub: Subscription;
+  private sub: Subscription;
   input: string;
 
   constructor(
