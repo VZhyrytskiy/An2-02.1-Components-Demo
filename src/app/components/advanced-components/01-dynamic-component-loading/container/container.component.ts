@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, ViewChild, ComponentFactoryResolver, OnDestroy } from '@angular/core';
+import { Component, ViewChild, ComponentFactoryResolver, OnInit} from '@angular/core';
 
 import { DynamicComponent } from './../interfaces/dynamic-component.interface';
 import { TargetDirective } from './../directives/target.directive';
@@ -10,7 +10,7 @@ import { Component2Component } from './../component-2/component-2.component';
   templateUrl: './container.component.html',
   styleUrls: ['./container.component.css']
 })
-export class ContainerComponent implements AfterViewInit {
+export class ContainerComponent implements OnInit {
   // Получить экземпляр директивы
   @ViewChild(TargetDirective) target: TargetDirective;
 
@@ -20,21 +20,15 @@ export class ContainerComponent implements AfterViewInit {
     private componentFactoryResolver: ComponentFactoryResolver
   ) { }
 
-  ngAfterViewInit() {
-    // Если передаются какие-то данные компоненту или вызываются его методы,
-    // то необходимо, чтобы этот компонент создавался на следующим цикле обнаружения изменений,
-    // иначе будет Error: ExpressionChangedAfterItHasBeenCheckedError
-    setTimeout(() => {
-      this.loadComponent(this.currentComponent);
-    });
+  ngOnInit() {
+    this.loadComponent(this.currentComponent);
   }
 
   switchView() {
-    if (this.currentComponent.name === 'Component1Component') {
-      this.currentComponent = Component2Component;
-    } else {
-      this.currentComponent = Component1Component;
-    }
+    this.currentComponent = this.currentComponent.name === 'Component1Component'
+      ? Component2Component
+      : Component1Component;
+
     this.loadComponent(this.currentComponent);
   }
 
