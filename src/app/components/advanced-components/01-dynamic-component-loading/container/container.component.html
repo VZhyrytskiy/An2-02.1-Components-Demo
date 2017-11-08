@@ -1,5 +1,13 @@
 <div>
   <h3>Dynamic Component Loading Container</h3>
-  <ng-template target></ng-template>
+  <!--
+    Директива target указывает место, куда необходимо динамически вставлять компоненты.
+    <ng-template> - удобный элемент для динамически вставляемых компонент, поскольку он ничего не рендерит,
+    сам исчезает, а на его место добавляется компонент.
+
+    Если использовать, например, <div target></div>, то div не исчезнет,
+    а компонент будет добавлен после него.
+  -->
+  <ng-template appTarget></ng-template>
   <button (click)="switchView()" class="btn btn-primary">Switch View</button>
 </div>
