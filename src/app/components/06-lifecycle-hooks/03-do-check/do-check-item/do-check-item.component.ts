@@ -24,7 +24,7 @@ export class DoCheckItemComponent implements OnInit, DoCheck {
   }
 
   ngOnInit() {
-      this.differ = this.differs.find(this.item).create(this.changeDetector);
+      this.differ = this.differs.find(this.item).create();
   }
 
   ngDoCheck(): void {
