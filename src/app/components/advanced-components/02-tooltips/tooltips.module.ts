@@ -4,8 +4,7 @@ import {
   TooltipContentComponent,
   TooltipComponent,
   TooltipDirective,
-  TooltipsContainerComponent,
-  TooltipContainerDirective } from '.';
+  TooltipsDemoComponent } from '.';
 
 @NgModule({
   imports: [
@@ -15,11 +14,10 @@ import {
     TooltipContentComponent,
     TooltipComponent,
     TooltipDirective,
-    TooltipsContainerComponent,
-    TooltipContainerDirective
+    TooltipsDemoComponent
   ],
   exports: [
-    TooltipsContainerComponent
+    TooltipsDemoComponent
   ],
   entryComponents: [
     TooltipContentComponent,
