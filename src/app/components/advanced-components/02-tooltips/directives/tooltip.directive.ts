@@ -1,6 +1,7 @@
 import { ComponentFactoryResolver, ComponentRef, Directive,
-  ElementRef, Injector, Input, HostListener, OnDestroy, ReflectiveInjector,
-  Renderer2, TemplateRef, Type, ViewContainerRef } from '@angular/core';
+  ElementRef, Injector, Input, HostListener, OnDestroy, Renderer2,
+  TemplateRef, Type, ViewContainerRef
+} from '@angular/core';
 
 import { TooltipComponent } from './../components/tooltip/tooltip.component';
 
@@ -35,11 +36,10 @@ export class TooltipDirective implements OnDestroy {
     const factory =
       this.componentFactoryResolver.resolveComponentFactory(TooltipComponent);
 
-    // Возможно тут надо использовать StaticInjector с v.5
-    // Мы используем resolveAndCreate() метод,
+    // Мы используем Injector.create() метод,
     // который резолвит массив повайдеров и создает injector
     // с этих провайдеров.
-    const injector = ReflectiveInjector.resolveAndCreate(
+    const injector = Injector.create(
       [{
         provide: 'tooltipConfig',
         useValue: {
