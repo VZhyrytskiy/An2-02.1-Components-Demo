@@ -8,7 +8,6 @@ import { TasksService } from './services/tasks.service';
   templateUrl: './parent-child-communication.component.html'
 })
 export class ParentChildCommunicationComponent implements OnInit {
-  task: Task;
   tasks: Array<Task>;
   display = true;
 
@@ -17,7 +16,6 @@ export class ParentChildCommunicationComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.task = this.tasksService.getTask();
     this.tasks = this.tasksService.getTasks();
   }
 
