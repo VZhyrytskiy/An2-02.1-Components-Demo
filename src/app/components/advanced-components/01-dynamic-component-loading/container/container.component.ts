@@ -46,7 +46,7 @@ export class ContainerComponent implements OnInit {
     viewContainerRef.clear();
 
     // Добавить компонент в темплейт
-    // Метод createComponent() возвращает ссылку надинамически загруженый компонент.
+    // Метод createComponent() возвращает ссылку на динамически загруженый компонент.
     // Эту ссылку можно использовать для взаимодействия с компонентом,
     // например, для присвоения каких-то значений его свойствам или для вызова его методов.
     const componentRef = viewContainerRef.createComponent(componentFactory);
