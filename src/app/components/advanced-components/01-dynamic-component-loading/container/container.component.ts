@@ -4,17 +4,17 @@ import { DynamicComponent } from './../interfaces/dynamic-component.interface';
 import { TargetDirective } from './../directives/target.directive';
 import { Component1Component } from './../component-1/component-1.component';
 import { Component2Component } from './../component-2/component-2.component';
+import { ViewContainerRef } from '@angular/core/src/linker/view_container_ref';
 
 @Component({
   selector: 'app-dynamic-component-loading',
-  templateUrl: './container.component.html',
-  styleUrls: ['./container.component.css']
+  templateUrl: './container.component.html'
 })
 export class ContainerComponent implements OnInit {
   // Получить экземпляр директивы
   @ViewChild(TargetDirective) target: TargetDirective;
 
-  currentComponent: any = Component1Component;
+  private currentComponent: any = Component1Component;
 
   constructor(
     private componentFactoryResolver: ComponentFactoryResolver
