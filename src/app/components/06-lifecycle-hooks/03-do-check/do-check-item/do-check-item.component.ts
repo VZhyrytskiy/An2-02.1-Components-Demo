@@ -1,11 +1,6 @@
 import { Component, OnInit, DoCheck, ChangeDetectorRef, EventEmitter, Input, KeyValueDiffers, Output, SimpleChanges } from '@angular/core';
 
-interface IItem {
-  action: string;
-  responsible: string;
-  done: boolean;
-  priority?: boolean;
-}
+import { IItem } from './iitem.interface';
 
 @Component({
   selector: 'app-do-check-item',
@@ -14,9 +9,9 @@ interface IItem {
 })
 export class DoCheckItemComponent implements OnInit, DoCheck {
   @Input() item: IItem;
-  @Output() onRemove: EventEmitter<IItem> = new EventEmitter<IItem>();
+  @Output() remove: EventEmitter<IItem> = new EventEmitter<IItem>();
 
-  differ: any;
+  private differ: any;
 
   constructor(
     private differs: KeyValueDiffers,
@@ -56,8 +51,8 @@ export class DoCheckItemComponent implements OnInit, DoCheck {
 
   // remove item from collection
   // do-check-item-list demo
-  remove(): void {
-      this.onRemove.emit(this.item);
+  removeItem(): void {
+      this.remove.emit(this.item);
   }
 
   private logChange(action: string, item): void {

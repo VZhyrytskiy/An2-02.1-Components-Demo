@@ -6,6 +6,4 @@ import { Component, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./no-encapsulation.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class NoEncapsulationComponent {
-
-}
+export class NoEncapsulationComponent {}

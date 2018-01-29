@@ -4,10 +4,13 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-do-check-demo',
   template: `
     <section>
+      <h4>One Item:</h4>
       <app-do-check-item [item]="item"></app-do-check-item>
+
+      <h4>List of Items:</h4>
       <app-do-check-item-list
         [tasks]="tasks"
-        (onRemove)="removeTask($event)">
+        (remove)="removeTask($event)">
       </app-do-check-item-list>
       <button (click)="addTask()">Add</button>
     </section>

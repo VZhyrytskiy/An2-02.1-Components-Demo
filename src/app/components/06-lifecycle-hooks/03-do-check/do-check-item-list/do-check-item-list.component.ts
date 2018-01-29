@@ -8,8 +8,9 @@ import { Component, OnInit, DoCheck, ChangeDetectorRef, IterableDiffers, Input,
 })
 export class DoCheckItemListComponent implements OnInit, DoCheck {
   @Input() tasks: Array<any> = [];
-  @Output() onRemove: EventEmitter<any> = new EventEmitter<any>();
-  differ: any;
+  @Output() remove: EventEmitter<any> = new EventEmitter<any>();
+  
+  private differ: any;
 
   constructor(
     private differs: IterableDiffers,
@@ -31,7 +32,7 @@ export class DoCheckItemListComponent implements OnInit, DoCheck {
   }
 
   removeTask(task: any): void {
-    this.onRemove.emit(task);
+    this.remove.emit(task);
   }
 
 }

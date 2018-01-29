@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { InlineStyleComponent } from './inline-style';
-import { ExternalStyleComponent } from './external-style';
-import { NativeEncapsulationComponent } from './native-encapsulation';
-import { NoEncapsulationComponent } from './no-encapsulation';
+import {
+  ExternalStyleComponent,
+  InlineStyleComponent,
+  NativeEncapsulationComponent,
+  NoEncapsulationComponent
+} from '.';
 
 @NgModule({
-  imports: [
-    CommonModule
-  ],
+  imports: [CommonModule],
   declarations: [
     InlineStyleComponent,
     ExternalStyleComponent,
@@ -23,4 +23,4 @@ import { NoEncapsulationComponent } from './no-encapsulation';
     NoEncapsulationComponent
   ]
 })
-export class StylingModule { }
+export class StylingModule {}
