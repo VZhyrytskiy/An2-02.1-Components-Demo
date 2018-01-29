@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { DynamicComponent } from './../interfaces/dynamic-component.interface';
+import { DynamicComponent } from './../../interfaces/dynamic-component.interface';
 
 @Component({
   selector: 'app-component-2',

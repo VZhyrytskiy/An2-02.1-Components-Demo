@@ -1,10 +1,17 @@
-import { Component, ViewChild, ComponentFactoryResolver, OnInit} from '@angular/core';
+import {
+  Component,
+  ViewChild,
+  ViewContainerRef,
+  ComponentFactoryResolver,
+  OnInit
+} from '@angular/core';
 
-import { DynamicComponent } from './../interfaces/dynamic-component.interface';
-import { TargetDirective } from './../directives/target.directive';
-import { Component1Component } from './../component-1/component-1.component';
-import { Component2Component } from './../component-2/component-2.component';
-import { ViewContainerRef } from '@angular/core/src/linker/view_container_ref';
+import {
+  DynamicComponent,
+  TargetDirective,
+  Component1Component,
+  Component2Component
+} from '.';
 
 @Component({
   selector: 'app-dynamic-component-loading',
@@ -16,27 +23,26 @@ export class ContainerComponent implements OnInit {
 
   private currentComponent: any = Component1Component;
 
-  constructor(
-    private componentFactoryResolver: ComponentFactoryResolver
-  ) { }
+  constructor(private componentFactoryResolver: ComponentFactoryResolver) {}
 
   ngOnInit() {
     this.loadComponent(this.currentComponent);
   }
 
   switchView() {
-    this.currentComponent = this.currentComponent.name === 'Component1Component'
-      ? Component2Component
-      : Component1Component;
+    this.currentComponent =
+      this.currentComponent.name === 'Component1Component'
+        ? Component2Component
+        : Component1Component;
 
     this.loadComponent(this.currentComponent);
   }
 
   private loadComponent(component) {
     // Создать componentFactory используя componentFactoryResolver класс
-    const componentFactory =
-          this.componentFactoryResolver.resolveComponentFactory(component);
-
+    const componentFactory = this.componentFactoryResolver.resolveComponentFactory(
+      component
+    );
 
     // Получить место, куда необходимо добавлять компонент и очистить его
     // Используем для этого директиву target
@@ -57,5 +63,4 @@ export class ContainerComponent implements OnInit {
     // Вызвать метод компонента
     (<DynamicComponent>componentRef.instance).notify();
   }
-
 }
