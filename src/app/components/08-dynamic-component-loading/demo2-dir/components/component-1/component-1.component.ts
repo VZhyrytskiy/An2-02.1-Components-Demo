@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnDestroy } from '@angular/core';
 import { DynamicComponent } from './../../interfaces/dynamic-component.interface';
 
 @Component({
@@ -6,8 +6,12 @@ import { DynamicComponent } from './../../interfaces/dynamic-component.interface
   templateUrl: './component-1.component.html',
   styleUrls: ['./component-1.component.css']
 })
-export class Component1Component implements DynamicComponent {
+export class Component1Component implements DynamicComponent, OnDestroy {
   @Input() data: string;
+
+  ngOnDestroy() {
+    console.log('Component 1 is destroyed!!!');
+  }
 
   notify() {
     console.log('Component 1 is loaded.');
