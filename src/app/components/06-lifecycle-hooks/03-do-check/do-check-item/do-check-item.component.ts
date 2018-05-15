@@ -14,8 +14,8 @@ export class DoCheckItemComponent implements OnInit, DoCheck {
   private differ: any;
 
   constructor(
-    private differs: KeyValueDiffers,
-    private changeDetector: ChangeDetectorRef) {
+    private differs: KeyValueDiffers
+    ) {
   }
 
   ngOnInit() {

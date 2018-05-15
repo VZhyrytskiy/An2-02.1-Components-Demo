@@ -9,12 +9,12 @@ import { Component, OnInit, DoCheck, ChangeDetectorRef, IterableDiffers, Input,
 export class DoCheckItemListComponent implements OnInit, DoCheck {
   @Input() tasks: Array<any> = [];
   @Output() remove: EventEmitter<any> = new EventEmitter<any>();
-  
+
   private differ: any;
 
   constructor(
-    private differs: IterableDiffers,
-    private changeDetector: ChangeDetectorRef) {
+    private differs: IterableDiffers
+  ) {
   }
 
   ngOnInit() {
@@ -25,7 +25,7 @@ export class DoCheckItemListComponent implements OnInit, DoCheck {
     const changes = this.differ.diff(this.tasks);
 
     if (changes) {
-        changes.forEachAddedItem(r => console.log(r));
+        // changes.forEachAddedItem(r => console.log(r));
         changes.forEachAddedItem(r => console.log('Added', r.item));
         changes.forEachRemovedItem(r => console.log('Removed', r.item));
     }
