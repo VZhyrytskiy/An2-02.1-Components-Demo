@@ -3,7 +3,6 @@ import { Subscription } from 'rxjs';
 
 import { CommunicatorService } from './communicator.service';
 
-
 @Component({
   selector: 'app-sibling2',
   template: `
@@ -18,13 +17,12 @@ export class Sibling2Component implements OnInit, OnDestroy {
   private sub: Subscription;
   input: string;
 
-  constructor(
-    private communicatorService: CommunicatorService)
-  { }
+  constructor(private communicatorService: CommunicatorService) {}
 
   ngOnInit() {
     this.sub = this.communicatorService.channel$.subscribe(
-      data => this.input = data);
+      data => (this.input = data)
+    );
   }
   ngOnDestroy() {
     this.sub.unsubscribe();
