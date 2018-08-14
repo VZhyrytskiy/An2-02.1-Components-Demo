@@ -5,7 +5,8 @@ import {
   ExternalStyleComponent,
   InlineStyleComponent,
   NativeEncapsulationComponent,
-  NoEncapsulationComponent
+  NoEncapsulationComponent,
+  ShadowDomEncapsulationComponent
 } from '.';
 
 @NgModule({
@@ -14,13 +15,15 @@ import {
     InlineStyleComponent,
     ExternalStyleComponent,
     NativeEncapsulationComponent,
-    NoEncapsulationComponent
+    NoEncapsulationComponent,
+    ShadowDomEncapsulationComponent
   ],
   exports: [
     InlineStyleComponent,
     ExternalStyleComponent,
     NativeEncapsulationComponent,
-    NoEncapsulationComponent
+    NoEncapsulationComponent,
+    ShadowDomEncapsulationComponent
   ]
 })
 export class StylingModule {}

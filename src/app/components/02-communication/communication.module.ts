@@ -6,7 +6,7 @@ import {
   TaskListComponent, TaskFormComponent,
   TaskComponent, TasksService, ParentChildCommunicationComponent
 } from './01-parent-child-communication';
-import { ClickStopComponent, ClickStopDirective } from './02-output-event-directive/';
+import { ClickStopComponent, ClickStopDirective } from './02-output-event-directive';
 import { ParentComponent, ChildComponent } from './03-viewchild-viewchildren';
 import { SiblingContainerComponent, Sibling1Component, Sibling2Component, CommunicatorService } from './04-sibling-communication';
 
