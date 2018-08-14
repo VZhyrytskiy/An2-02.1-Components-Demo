@@ -43,13 +43,10 @@
 
 15. Dynamic Component Loading
 16. Change Detection Strategy
-17. Custom Structural Directive
-18. Custom Input Element: parsers and formaters
 
+To run this project type: `npm install`, `ng s -o` in your command line tool.
 
-To run this project type: `npm install`, `ng serve -o` in your command line tool.
-
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.6.3.
+This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.6.3 and updated to v6
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
