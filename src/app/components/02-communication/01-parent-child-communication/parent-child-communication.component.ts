@@ -9,7 +9,6 @@ import { TasksService } from './services/tasks.service';
 })
 export class ParentChildCommunicationComponent implements OnInit {
   tasks: Array<Task>;
-  display = true;
 
   constructor(
     public tasksService: TasksService

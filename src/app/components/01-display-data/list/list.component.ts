@@ -13,7 +13,7 @@ export class ListComponent implements OnInit {
   items: Array<Item>;
 
   constructor(
-    public listService: ListService
+    private listService: ListService
   ) { }
 
   ngOnInit() {
