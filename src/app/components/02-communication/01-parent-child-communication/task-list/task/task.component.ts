@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output, HostBinding, HostListener } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 import { Task } from './../../models/task.model';
 
@@ -8,20 +8,14 @@ import { Task } from './../../models/task.model';
   styleUrls: ['./task.component.css']
 })
 export class TaskComponent {
-    @Input() task: Task;
-    @Output() complete: EventEmitter<Task> = new EventEmitter<Task>();
+  @Input()
+  task: Task;
 
-    @HostBinding('class') class = 'task';
+  @Output()
+  complete: EventEmitter<Task> = new EventEmitter<Task>();
 
-    @HostListener('mouseenter', ['$event']) onMouseEnter(event) {
-      // console.log(event.target);
-    }
-
-    constructor() {
-    }
-
-    completeTask(event: any): void {
-        console.log('task component, completeTask method:', this.task);
-        this.complete.emit(this.task);
-    }
+  onCompleteTask(): void {
+    console.log('task component, completeTask method:', this.task);
+    this.complete.emit(this.task);
+  }
 }

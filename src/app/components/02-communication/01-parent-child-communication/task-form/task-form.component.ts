@@ -4,14 +4,20 @@ import { Task } from './../models/task.model';
 
 @Component({
   selector: 'app-task-form',
-  templateUrl: 'task-form.component.html',
-  styleUrls: ['task-form.component.css']
+  templateUrl: './task-form.component.html',
+  styleUrls: ['./task-form.component.css']
 })
 export class TaskFormComponent {
-  @Output() addTask: EventEmitter<Task> = new EventEmitter<Task>();
+  @Output()
+  addTask: EventEmitter<Task> = new EventEmitter<Task>();
 
-  onAddTask(newTask: {action: string, priority: number, estHours: number}): void {
-    const task = new Task(null,
+  onAddTask(newTask: {
+    action: string;
+    priority: number;
+    estHours: number;
+  }): void {
+    const task = new Task(
+      null,
       newTask.action,
       newTask.priority,
       newTask.estHours
