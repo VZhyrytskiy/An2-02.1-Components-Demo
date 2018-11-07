@@ -1,6 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { NgModule, NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import {
+  NgModule,
+  NO_ERRORS_SCHEMA,
+  CUSTOM_ELEMENTS_SCHEMA
+} from '@angular/core';
 
 import { AppComponent } from './app.component';
 
@@ -18,9 +22,7 @@ import { ProjectionModule } from './components/04-projection/projection.module';
 import { StylingModule } from './components/05-styling/styling.module';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     FormsModule,
@@ -32,11 +34,11 @@ import { StylingModule } from './components/05-styling/styling.module';
     LifecycleHooksModule,
     ListModule,
     ProjectionModule,
-    StylingModule,
+    StylingModule
   ],
   exports: [],
   providers: [],
   bootstrap: [AppComponent],
-  // schemas: [ CUSTOM_ELEMENTS_SCHEMA /* or NO_ERRORS_SCHEMA  */ ]
+  // schemas: [CUSTOM_ELEMENTS_SCHEMA /* or NO_ERRORS_SCHEMA  */]
 })
-export class AppModule { }
+export class AppModule {}

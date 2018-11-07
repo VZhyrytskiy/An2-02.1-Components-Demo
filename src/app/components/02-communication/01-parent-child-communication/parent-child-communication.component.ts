@@ -10,9 +10,7 @@ import { TasksService } from './services/tasks.service';
 export class ParentChildCommunicationComponent implements OnInit {
   tasks: Array<Task>;
 
-  constructor(
-    public tasksService: TasksService
-  ) { }
+  constructor(public tasksService: TasksService) {}
 
   ngOnInit() {
     this.tasks = this.tasksService.getTasks();
@@ -27,5 +25,4 @@ export class ParentChildCommunicationComponent implements OnInit {
     console.log('onAddTask method', task);
     this.tasks.push(task);
   }
-
 }

@@ -1,4 +1,11 @@
-import { Component, AfterViewInit, ElementRef, ViewChild, ViewChildren, QueryList } from '@angular/core';
+import {
+  Component,
+  AfterViewInit,
+  ElementRef,
+  ViewChild,
+  ViewChildren,
+  QueryList
+} from '@angular/core';
 
 import { ChildComponent } from './../child/child.component';
 
@@ -8,7 +15,6 @@ import { ChildComponent } from './../child/child.component';
   styleUrls: ['./parent.component.css']
 })
 export class ParentComponent implements AfterViewInit {
-
   @ViewChild('input')
   inputField: ElementRef;
 
@@ -21,15 +27,15 @@ export class ParentComponent implements AfterViewInit {
   @ViewChild('child')
   childComp: ElementRef;
 
-  constructor() { }
+  constructor() {}
 
   ngAfterViewInit() {
-    (<HTMLInputElement>this.inputField.nativeElement).value = 'Value From Parent';
+    (<HTMLInputElement>this.inputField.nativeElement).value =
+      'Value From Parent';
     this.child.onClick();
 
     console.log(this.childComp);
     console.log(this.children);
     this.children.last.onClick();
   }
-
 }
