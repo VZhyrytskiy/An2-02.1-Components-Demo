@@ -1,22 +1,38 @@
-import { Component, OnInit, OnDestroy, DoCheck, OnChanges, AfterContentInit,
-AfterContentChecked, AfterViewInit, AfterViewChecked } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  OnDestroy,
+  DoCheck,
+  OnChanges,
+  AfterContentInit,
+  AfterContentChecked,
+  AfterViewInit,
+  AfterViewChecked
+} from '@angular/core';
 
 @Component({
   selector: 'app-afters',
   templateUrl: './afters.component.html',
   styleUrls: ['./afters.component.css']
 })
-export class AftersComponent implements OnInit, OnDestroy, DoCheck, OnChanges, AfterContentInit,
-AfterContentChecked, AfterViewInit, AfterViewChecked {
-  counter: number;
+export class AftersComponent
+  implements
+    OnInit,
+    OnDestroy,
+    DoCheck,
+    OnChanges,
+    AfterContentInit,
+    AfterContentChecked,
+    AfterViewInit,
+    AfterViewChecked {
+  counter = 1;
 
   constructor() {
     console.log('[Constructor]');
-      this.counter = 1;
   }
 
   increment(): void {
-    console.log('[Increment]')
+    console.log('[Increment]');
     this.counter++;
   }
 
@@ -51,5 +67,4 @@ AfterContentChecked, AfterViewInit, AfterViewChecked {
   ngAfterViewChecked(): void {
     console.log('AfterViewChecked');
   }
-
 }
