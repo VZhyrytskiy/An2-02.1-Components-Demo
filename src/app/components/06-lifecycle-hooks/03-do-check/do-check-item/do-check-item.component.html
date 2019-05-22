@@ -4,9 +4,9 @@
     <div>Done: {{item.done}}</div>
     <div>Priority: {{item.priority ? "High" : "Normal"}}</div>
     <div>
-        <button (click)="setPriority()">Set Priority</button>
-        <button (click)="complete()">Complete</button>
-        <button (click)="clear()">Clear</button>
-        <button (click)="removeItem()">Remove</button>
+        <button (click)="onSetPriority()">Set Priority</button>
+        <button (click)="onComplete()">Complete</button>
+        <button (click)="onClearAction()">Clear</button>
+        <button (click)="onRemoveItem()">Remove</button>
     </div>
 </div>

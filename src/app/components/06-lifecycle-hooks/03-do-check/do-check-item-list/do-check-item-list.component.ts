@@ -2,12 +2,12 @@ import {
   Component,
   OnInit,
   DoCheck,
-  ChangeDetectorRef,
   IterableDiffers,
   Input,
   Output,
   EventEmitter
 } from '@angular/core';
+import { IItem } from '../do-check-item/iitem.interface';
 
 @Component({
   selector: 'app-do-check-item-list',
@@ -16,9 +16,12 @@ import {
 })
 export class DoCheckItemListComponent implements OnInit, DoCheck {
   @Input()
-  tasks: Array<any> = [];
-  @Output()
-  remove: EventEmitter<any> = new EventEmitter<any>();
+  tasks: Array<IItem> = [];
+
+  @Output() remove: EventEmitter<IItem> = new EventEmitter<IItem>();
+  @Output() setPriority: EventEmitter<IItem> = new EventEmitter<IItem>();
+  @Output() complete: EventEmitter<IItem> = new EventEmitter<IItem>();
+  @Output() clearAction: EventEmitter<IItem> = new EventEmitter<IItem>();
 
   private differ: any;
 
@@ -39,7 +42,19 @@ export class DoCheckItemListComponent implements OnInit, DoCheck {
     }
   }
 
-  removeTask(task: any): void {
-    this.remove.emit(task);
+  onSetPriority(item: IItem): void {
+    this.setPriority.emit(item);
+  }
+
+  onComplete(item: IItem): void {
+    this.complete.emit(item);
+  }
+
+  onClearAction(item: IItem): void {
+    this.clearAction.emit(item);
+  }
+
+  onRemove(item: IItem): void {
+    this.remove.emit(item);
   }
 }

@@ -1,28 +1,32 @@
 import { Component, OnInit } from '@angular/core';
+import { IItem } from './do-check-item/iitem.interface';
 
 @Component({
   selector: 'app-do-check-demo',
   template: `
     <section>
       <h4>One Item:</h4>
-      <app-do-check-item [item]="item"></app-do-check-item>
+      <app-do-check-item
+        [item]="tasks[0]"
+        (setPriority)="onSetPriority($event)"
+        (complete)="onComplete($event)"
+        (clearAction)="onClearAction($event)"
+      ></app-do-check-item>
 
       <h4>List of Items:</h4>
       <app-do-check-item-list
         [tasks]="tasks"
-        (remove)="removeTask($event)">
+        (remove)="onRemoveTask($event)"
+        (setPriority)="onSetPriority($event)"
+        (complete)="onComplete($event)"
+        (clearAction)="onClearAction($event)"
+      >
       </app-do-check-item-list>
-      <button (click)="addTask()">Add</button>
+      <button (click)="onAddTask()">Add</button>
     </section>
   `
 })
 export class DoCheckDemoComponent implements OnInit {
-  item = {
-    action: 'Learn Angular 2',
-    responsible: 'Vitaliy',
-    done: false
-  };
-
   tasks: Array<any> = [];
   responsibles: string[];
   actions: string[];
@@ -30,28 +34,44 @@ export class DoCheckDemoComponent implements OnInit {
   ngOnInit() {
     this.responsibles = ['Andrey', 'Boris', 'Helen', 'Joe'];
     this.actions = ['Estimate', 'Create', 'Delete', 'Implement', 'Deploy'];
-    this.addTask();
+    this.onAddTask();
   }
 
-  addTask(): void {
+  onSetPriority(item: IItem) {
+    const index = this.tasks.indexOf(item);
+    this.tasks[index].priority = true;
+  }
+
+  onComplete(item: IItem) {
+    const index = this.tasks.indexOf(item);
+    this.tasks[index].done = true;
+  }
+
+  onClearAction(item: IItem) {
+    console.log(item);
+    const index = this.tasks.indexOf(item);
+    delete this.tasks[index].action;
+  }
+
+  onAddTask(): void {
     this.tasks.push({
-        responsible: this.getRendomItem(this.responsibles),
-        action: this.getRendomItem(this.actions),
-        done: false
+      responsible: this.getRendomItem(this.responsibles),
+      action: this.getRendomItem(this.actions),
+      done: false
     });
   }
 
-  removeTask(task: any): void {
-      const pos = this.tasks.indexOf(task);
-      this.tasks.splice(pos, 1);
+  onRemoveTask(task: any): void {
+    const pos = this.tasks.indexOf(task);
+    this.tasks.splice(pos, 1);
   }
 
   private getRendomInt(max: number): number {
-      return Math.floor(Math.random() * (max + 1));
+    return Math.floor(Math.random() * (max + 1));
   }
 
   private getRendomItem(array: string[]): string {
-      const pos: number = this.getRendomInt(array.length - 1);
-      return array[pos];
+    const pos: number = this.getRendomInt(array.length - 1);
+    return array[pos];
   }
 }
