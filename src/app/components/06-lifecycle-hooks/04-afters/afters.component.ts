@@ -7,7 +7,8 @@ import {
   AfterContentInit,
   AfterContentChecked,
   AfterViewInit,
-  AfterViewChecked
+  AfterViewChecked,
+  Input
 } from '@angular/core';
 
 @Component({
@@ -25,7 +26,7 @@ export class AftersComponent
     AfterContentChecked,
     AfterViewInit,
     AfterViewChecked {
-  counter = 1;
+  @Input() counter = 1;
 
   constructor() {
     console.log('[Constructor]');
