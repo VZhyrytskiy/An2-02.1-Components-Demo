@@ -46,7 +46,7 @@
 
 To run this project type: `npm install`, `ng s -o` in your command line tool.
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.6.3 and updated to v6
+This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 8.0.0
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
@@ -57,7 +57,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
 ## Running unit tests
 
