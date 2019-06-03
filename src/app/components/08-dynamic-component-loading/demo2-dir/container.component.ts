@@ -19,7 +19,8 @@ import {
 })
 export class ContainerComponent implements OnInit {
   // Получить экземпляр директивы
-  @ViewChild(TargetDirective) target: TargetDirective;
+  // static = true, because it uses in ngOnInit
+  @ViewChild(TargetDirective, {static: true}) target: TargetDirective;
 
   private currentComponent: any = Component1Component;
 
