@@ -12,10 +12,10 @@ export class TaskComponent {
   task: Task;
 
   @Output()
-  complete: EventEmitter<Task> = new EventEmitter<Task>();
+  completeTask: EventEmitter<Task> = new EventEmitter<Task>();
 
   onCompleteTask(): void {
     console.log('task component, completeTask method:', this.task);
-    this.complete.emit(this.task);
+    this.completeTask.emit(this.task);
   }
 }

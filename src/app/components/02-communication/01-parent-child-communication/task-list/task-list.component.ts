@@ -12,10 +12,10 @@ export class TaskListComponent {
   tasks: Array<Task>;
 
   @Output()
-  complete: EventEmitter<Task> = new EventEmitter();
+  completeTask: EventEmitter<Task> = new EventEmitter();
 
   onCompleteTask(task: Task): void {
     console.log('task-list component, completeTask method', task);
-    this.complete.emit(task);
+    this.completeTask.emit(task);
   }
 }
