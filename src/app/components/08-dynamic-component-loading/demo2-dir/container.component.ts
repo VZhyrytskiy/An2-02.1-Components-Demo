@@ -20,7 +20,7 @@ import {
 export class ContainerComponent implements OnInit {
   // Получить экземпляр директивы
   // static = true, because it uses in ngOnInit
-  @ViewChild(TargetDirective, {static: true}) target: TargetDirective;
+  @ViewChild(TargetDirective, { static: true }) target: TargetDirective;
 
   private currentComponent: any = Component1Component;
 
@@ -59,9 +59,9 @@ export class ContainerComponent implements OnInit {
     const componentRef = viewContainerRef.createComponent(componentFactory);
 
     // Передать данные компоненту
-    (<DynamicComponent>componentRef.instance).data = 'Data for Component';
+    (componentRef.instance as DynamicComponent).data = 'Data for Component';
 
     // Вызвать метод компонента
-    (<DynamicComponent>componentRef.instance).notify();
+    (componentRef.instance as DynamicComponent).notify();
   }
 }

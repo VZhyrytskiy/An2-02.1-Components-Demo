@@ -9,7 +9,7 @@ import { IItem } from './do-check-item/iitem.interface';
       <app-do-check-item
         [item]="tasks[0]"
         (setPriority)="onSetPriority($event)"
-        (complete)="onComplete($event)"
+        (completeAction)="onCompleteAction($event)"
         (clearAction)="onClearAction($event)"
       ></app-do-check-item>
 
@@ -18,7 +18,7 @@ import { IItem } from './do-check-item/iitem.interface';
         [tasks]="tasks"
         (remove)="onRemoveTask($event)"
         (setPriority)="onSetPriority($event)"
-        (complete)="onComplete($event)"
+        (completeAction)="onCompleteAction($event)"
         (clearAction)="onClearAction($event)"
       >
       </app-do-check-item-list>
@@ -42,7 +42,7 @@ export class DoCheckDemoComponent implements OnInit {
     this.tasks[index].priority = true;
   }
 
-  onComplete(item: IItem) {
+  onCompleteAction(item: IItem) {
     const index = this.tasks.indexOf(item);
     this.tasks[index].done = true;
   }

@@ -20,7 +20,7 @@ export class DoCheckItemComponent implements OnInit, DoCheck {
 
   @Output() remove: EventEmitter<IItem> = new EventEmitter<IItem>();
   @Output() setPriority: EventEmitter<IItem> = new EventEmitter<IItem>();
-  @Output() complete: EventEmitter<IItem> = new EventEmitter<IItem>();
+  @Output() completeAction: EventEmitter<IItem> = new EventEmitter<IItem>();
   @Output() clearAction: EventEmitter<IItem> = new EventEmitter<IItem>();
 
   private differ: any;
@@ -49,9 +49,9 @@ export class DoCheckItemComponent implements OnInit, DoCheck {
   }
 
   // change value
-  onComplete(): void {
+  onCompleteAction(): void {
     this.item.done = true;
-    this.complete.emit(this.item);
+    this.completeAction.emit(this.item);
   }
 
   // remove value
