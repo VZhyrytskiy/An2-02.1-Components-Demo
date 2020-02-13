@@ -11,7 +11,7 @@ export class AfterViewComponent implements AfterViewChecked, AfterViewInit {
   private prevFirstName = '';
 
   // Query for a VIEW child of type `ChildViewComponent`
-  @ViewChild(ChildViewComponent, {static: false}) viewChild: ChildViewComponent;
+  @ViewChild(ChildViewComponent) viewChild: ChildViewComponent;
 
   ngAfterViewInit() {
     // viewChild is set after the view has been initialized

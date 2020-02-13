@@ -9,7 +9,7 @@ export class MessageComponent implements AfterContentInit {
   @Input()
   title: string;
 
-  @ContentChild('content', {static: false})
+  @ContentChild('content')
   content: ElementRef;
 
   ngAfterContentInit() {

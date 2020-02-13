@@ -4,26 +4,18 @@ import { CommonModule } from '@angular/common';
 import {
   ExternalStyleComponent,
   InlineStyleComponent,
-  NativeEncapsulationComponent,
   NoEncapsulationComponent,
   ShadowDomEncapsulationComponent
 } from '.';
 
+const components = [InlineStyleComponent,
+  ExternalStyleComponent,
+  NoEncapsulationComponent,
+  ShadowDomEncapsulationComponent];
+
 @NgModule({
   imports: [CommonModule],
-  declarations: [
-    InlineStyleComponent,
-    ExternalStyleComponent,
-    NativeEncapsulationComponent,
-    NoEncapsulationComponent,
-    ShadowDomEncapsulationComponent
-  ],
-  exports: [
-    InlineStyleComponent,
-    ExternalStyleComponent,
-    NativeEncapsulationComponent,
-    NoEncapsulationComponent,
-    ShadowDomEncapsulationComponent
-  ]
+  declarations: [...components],
+  exports: [...components]
 })
 export class StylingModule {}

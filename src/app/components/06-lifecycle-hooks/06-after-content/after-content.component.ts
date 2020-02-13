@@ -11,7 +11,7 @@ export class AfterContentComponent implements AfterContentChecked, AfterContentI
   private prevFirstName = '';
 
   // Query for a CONTENT child of type `ChildContentComponent`
-  @ContentChild(ChildContentComponent, {static: false}) contentChild: ChildContentComponent;
+  @ContentChild(ChildContentComponent) contentChild: ChildContentComponent;
 
   ngAfterContentInit() {
     // viewChild is set after the view has been initialized
