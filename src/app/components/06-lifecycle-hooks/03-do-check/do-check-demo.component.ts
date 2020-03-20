@@ -55,8 +55,8 @@ export class DoCheckDemoComponent implements OnInit {
 
   onAddTask(): void {
     this.tasks.push({
-      responsible: this.getRendomItem(this.responsibles),
-      action: this.getRendomItem(this.actions),
+      responsible: this.getRandomItem(this.responsibles),
+      action: this.getRandomItem(this.actions),
       done: false
     });
   }
@@ -66,12 +66,12 @@ export class DoCheckDemoComponent implements OnInit {
     this.tasks.splice(pos, 1);
   }
 
-  private getRendomInt(max: number): number {
+  private getRandomInt(max: number): number {
     return Math.floor(Math.random() * (max + 1));
   }
 
-  private getRendomItem(array: string[]): string {
-    const pos: number = this.getRendomInt(array.length - 1);
+  private getRandomItem(array: string[]): string {
+    const pos: number = this.getRandomInt(array.length - 1);
     return array[pos];
   }
 }
