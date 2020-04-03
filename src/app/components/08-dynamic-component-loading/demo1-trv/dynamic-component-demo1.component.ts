@@ -14,8 +14,7 @@ import { DynamicComponent } from './dynamic-component.component';
   styleUrls: ['./dynamic-component-demo1.component.css']
 })
 export class DynamicComponentDemo1Component implements AfterViewInit {
-  @ViewChild('vcr', { read: ViewContainerRef })
-  vcr: ViewContainerRef;
+  @ViewChild('vcr', { read: ViewContainerRef }) vcr: ViewContainerRef;
 
   constructor(private r: ComponentFactoryResolver) {}
 

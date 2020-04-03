@@ -30,7 +30,7 @@ export class ContainerComponent implements OnInit {
     this.loadComponent(this.currentComponent);
   }
 
-  switchView() {
+  onSwitchView() {
     this.currentComponent =
       this.currentComponent.name === 'Component1Component'
         ? Component2Component

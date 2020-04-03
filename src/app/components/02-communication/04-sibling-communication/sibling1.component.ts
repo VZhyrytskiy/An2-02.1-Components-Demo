@@ -15,8 +15,8 @@ export class Sibling1Component  {
   counter = 0;
 
   constructor(
-    private communicatorService: CommunicatorService)
-  { }
+    private communicatorService: CommunicatorService
+  ) {}
 
   onClick() {
     this.counter++;

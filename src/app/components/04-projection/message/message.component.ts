@@ -2,15 +2,13 @@ import { Component, Input, ContentChild, ElementRef, AfterContentInit} from '@an
 
 @Component({
   selector: 'app-message',
-  templateUrl: 'message.component.html',
-  styleUrls: ['message.component.css']
+  templateUrl: './message.component.html',
+  styleUrls: ['./message.component.css']
 })
 export class MessageComponent implements AfterContentInit {
-  @Input()
-  title: string;
+  @Input() title: string;
 
-  @ContentChild('content')
-  content: ElementRef;
+  @ContentChild('content') content: ElementRef;
 
   ngAfterContentInit() {
     console.log(this.content.nativeElement.innerText);

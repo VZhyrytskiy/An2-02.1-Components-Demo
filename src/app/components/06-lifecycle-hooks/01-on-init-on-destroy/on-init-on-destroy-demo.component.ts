@@ -4,15 +4,15 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-on-init-on-destroy-demo',
   template: `
     <section>
-      <button (click)="toggle()">Toggle</button>
-      <app-on-init-on-destroy *ngIf="display"></app-on-init-on-destroy>
+      <button class="btn btn-primary" (click)="onToggle()">Toggle</button>
+      <app-on-init-on-destroy *ngIf="isDisplay"></app-on-init-on-destroy>
     </section>
   `
 })
 export class OnInitOnDestroyDemoComponent {
-  display = true;
+  isDisplay = true;
 
-  toggle(): void {
-    this.display = !this.display;
+  onToggle(): void {
+    this.isDisplay = !this.isDisplay;
   }
 }

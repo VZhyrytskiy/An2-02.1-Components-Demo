@@ -8,14 +8,9 @@ import { Task } from './../models/task.model';
   styleUrls: ['./task-form.component.css']
 })
 export class TaskFormComponent {
-  @Output()
-  addTask: EventEmitter<Task> = new EventEmitter<Task>();
+  @Output() addTask: EventEmitter<Task> = new EventEmitter<Task>();
 
-  onAddTask(newTask: {
-    action: string;
-    priority: number;
-    estHours: number;
-  }): void {
+  onAddTask(newTask: Partial<Task>): void {
     const task = new Task(
       null,
       newTask.action,

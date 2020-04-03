@@ -8,10 +8,10 @@ import { ChildContentComponent } from './child-content/child-content.component';
   styleUrls: ['./after-content.component.css']
 })
 export class AfterContentComponent implements AfterContentChecked, AfterContentInit {
-  private prevFirstName = '';
-
   // Query for a CONTENT child of type `ChildContentComponent`
   @ContentChild(ChildContentComponent) contentChild: ChildContentComponent;
+
+  private prevFirstName = '';
 
   ngAfterContentInit() {
     // viewChild is set after the view has been initialized

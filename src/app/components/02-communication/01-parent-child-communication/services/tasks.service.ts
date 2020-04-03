@@ -2,7 +2,9 @@ import { Injectable } from '@angular/core';
 
 import { Task } from './../models/task.model';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class TasksService {
 
   constructor() { }

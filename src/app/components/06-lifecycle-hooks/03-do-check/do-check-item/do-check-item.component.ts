@@ -8,7 +8,7 @@ import {
   Output
 } from '@angular/core';
 
-import { IItem } from './iitem.interface';
+import { TaskModel } from './task.model';
 
 @Component({
   selector: 'app-do-check-item',
@@ -16,12 +16,12 @@ import { IItem } from './iitem.interface';
   styleUrls: ['./do-check-item.component.css']
 })
 export class DoCheckItemComponent implements OnInit, DoCheck {
-  @Input() item: IItem;
+  @Input() item: TaskModel;
 
-  @Output() remove: EventEmitter<IItem> = new EventEmitter<IItem>();
-  @Output() setPriority: EventEmitter<IItem> = new EventEmitter<IItem>();
-  @Output() completeAction: EventEmitter<IItem> = new EventEmitter<IItem>();
-  @Output() clearAction: EventEmitter<IItem> = new EventEmitter<IItem>();
+  @Output() remove: EventEmitter<TaskModel> = new EventEmitter<TaskModel>();
+  @Output() setPriority: EventEmitter<TaskModel> = new EventEmitter<TaskModel>();
+  @Output() completeAction: EventEmitter<TaskModel> = new EventEmitter<TaskModel>();
+  @Output() clearAction: EventEmitter<TaskModel> = new EventEmitter<TaskModel>();
 
   private differ: any;
 
@@ -50,7 +50,7 @@ export class DoCheckItemComponent implements OnInit, DoCheck {
 
   // change value
   onCompleteAction(): void {
-    this.item.done = true;
+    // this.item.done = true;
     this.completeAction.emit(this.item);
   }
 

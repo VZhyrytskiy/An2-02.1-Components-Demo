@@ -1,4 +1,9 @@
-import { Component, AfterViewChecked, AfterViewInit, ViewChild } from '@angular/core';
+import {
+  Component,
+  AfterViewChecked,
+  AfterViewInit,
+  ViewChild
+} from '@angular/core';
 
 import { ChildViewComponent } from './child-view/child-view.component';
 
@@ -8,17 +13,17 @@ import { ChildViewComponent } from './child-view/child-view.component';
   styleUrls: ['./after-view.component.css']
 })
 export class AfterViewComponent implements AfterViewChecked, AfterViewInit {
-  private prevFirstName = '';
-
   // Query for a VIEW child of type `ChildViewComponent`
   @ViewChild(ChildViewComponent) viewChild: ChildViewComponent;
+
+  private prevFirstName = '';
 
   ngAfterViewInit() {
     // viewChild is set after the view has been initialized
     console.log('AfterViewInit');
   }
 
-   ngAfterViewChecked() {
+  ngAfterViewChecked() {
     // viewChild is updated after the view has been checked
     if (this.prevFirstName === this.viewChild.firstName) {
       console.log('AfterViewChecked: (no change)');
@@ -27,5 +32,4 @@ export class AfterViewComponent implements AfterViewChecked, AfterViewInit {
       console.log(`AfterViewChecked: ${this.viewChild.firstName}`);
     }
   }
-
 }

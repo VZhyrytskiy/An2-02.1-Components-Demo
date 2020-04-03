@@ -1,4 +1,4 @@
-import { Component, HostBinding, HostListener } from '@angular/core';
+import { Component} from '@angular/core';
 
 @Component({
   selector: 'app-host', // <-- This is a host.
@@ -6,21 +6,4 @@ import { Component, HostBinding, HostListener } from '@angular/core';
   styleUrls: ['./host.component.css'],
 })
 export class HostComponent {
-  @HostBinding('class')
-  attrClass = 'headingClass';
-
-  @HostListener('click')
-  clicked() {
-    console.log('click event on host element');
-  }
-
-  @HostListener('mouseenter', ['$event'])
-  enter(event: Event) {
-    console.log('mouseenter event on host element');
-  }
-
-  @HostListener('mouseleave', ['$event'])
-  leave(event: Event) {
-    console.log('mouseleave event on host element');
-  }
 }

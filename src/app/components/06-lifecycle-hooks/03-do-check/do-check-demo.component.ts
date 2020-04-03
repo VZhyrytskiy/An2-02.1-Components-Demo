@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IItem } from './do-check-item/iitem.interface';
+import { TaskModel } from './do-check-item/task.model';
 
 @Component({
   selector: 'app-do-check-demo',
@@ -22,33 +22,31 @@ import { IItem } from './do-check-item/iitem.interface';
         (clearAction)="onClearAction($event)"
       >
       </app-do-check-item-list>
-      <button (click)="onAddTask()">Add</button>
+      <button class="btn btn-danger" (click)="onAddTask()">Add</button>
     </section>
   `
 })
 export class DoCheckDemoComponent implements OnInit {
-  tasks: Array<any> = [];
-  responsibles: string[];
-  actions: string[];
+  tasks: Array<TaskModel> = [];
+
+  private responsibles: string[] = ['Andrey', 'Boris', 'Helen', 'Joe'];
+  private actions: string[] = ['Estimate', 'Create', 'Delete', 'Implement', 'Deploy'];
 
   ngOnInit() {
-    this.responsibles = ['Andrey', 'Boris', 'Helen', 'Joe'];
-    this.actions = ['Estimate', 'Create', 'Delete', 'Implement', 'Deploy'];
     this.onAddTask();
   }
 
-  onSetPriority(item: IItem) {
+  onSetPriority(item: TaskModel) {
     const index = this.tasks.indexOf(item);
     this.tasks[index].priority = true;
   }
 
-  onCompleteAction(item: IItem) {
+  onCompleteAction(item: TaskModel) {
     const index = this.tasks.indexOf(item);
     this.tasks[index].done = true;
   }
 
-  onClearAction(item: IItem) {
-    console.log(item);
+  onClearAction(item: TaskModel) {
     const index = this.tasks.indexOf(item);
     delete this.tasks[index].action;
   }

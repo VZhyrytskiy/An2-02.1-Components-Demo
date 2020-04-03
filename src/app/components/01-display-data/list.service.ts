@@ -2,7 +2,9 @@ import { Injectable } from '@angular/core';
 
 import { Item } from './item.model';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class ListService {
 
   constructor() { }

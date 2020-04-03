@@ -6,7 +6,6 @@ import {
   TaskListComponent,
   TaskFormComponent,
   TaskComponent,
-  TasksService,
   ParentChildCommunicationComponent
 } from './01-parent-child-communication';
 import {
@@ -17,8 +16,7 @@ import { ParentComponent, ChildComponent } from './03-viewchild-viewchildren';
 import {
   SiblingContainerComponent,
   Sibling1Component,
-  Sibling2Component,
-  CommunicatorService
+  Sibling2Component
 } from './04-sibling-communication';
 import {
   SiblingContainer2Component,
@@ -27,7 +25,10 @@ import {
 } from './05-service-communication';
 
 @NgModule({
-  imports: [CommonModule, FormsModule],
+  imports: [
+    CommonModule,
+    FormsModule
+  ],
   declarations: [
     Sibling1Component,
     Sibling2Component,
@@ -44,7 +45,6 @@ import {
     ParentChildCommunicationComponent,
     ChildComponent
   ],
-  providers: [CommunicatorService, TasksService],
   exports: [
     SiblingContainerComponent,
     SiblingContainer2Component,

@@ -7,7 +7,7 @@ import {
   Output,
   EventEmitter
 } from '@angular/core';
-import { IItem } from '../do-check-item/iitem.interface';
+import { TaskModel } from '../do-check-item/task.model';
 
 @Component({
   selector: 'app-do-check-item-list',
@@ -15,13 +15,12 @@ import { IItem } from '../do-check-item/iitem.interface';
   styleUrls: ['./do-check-item-list.component.css']
 })
 export class DoCheckItemListComponent implements OnInit, DoCheck {
-  @Input()
-  tasks: Array<IItem> = [];
+  @Input() tasks: Array<TaskModel> = [];
 
-  @Output() remove: EventEmitter<IItem> = new EventEmitter<IItem>();
-  @Output() setPriority: EventEmitter<IItem> = new EventEmitter<IItem>();
-  @Output() completeAction: EventEmitter<IItem> = new EventEmitter<IItem>();
-  @Output() clearAction: EventEmitter<IItem> = new EventEmitter<IItem>();
+  @Output() remove: EventEmitter<TaskModel> = new EventEmitter<TaskModel>();
+  @Output() setPriority: EventEmitter<TaskModel> = new EventEmitter<TaskModel>();
+  @Output() completeAction: EventEmitter<TaskModel> = new EventEmitter<TaskModel>();
+  @Output() clearAction: EventEmitter<TaskModel> = new EventEmitter<TaskModel>();
 
   private differ: any;
 
@@ -36,25 +35,24 @@ export class DoCheckItemListComponent implements OnInit, DoCheck {
 
     if (changes) {
       console.log(changes);
-      // changes.forEachAddedItem(r => console.log(r));
       changes.forEachAddedItem(r => console.log('Added', r.item));
       changes.forEachRemovedItem(r => console.log('Removed', r.item));
     }
   }
 
-  onSetPriority(item: IItem): void {
+  onSetPriority(item: TaskModel): void {
     this.setPriority.emit(item);
   }
 
-  onCompleteAction(item: IItem): void {
+  onCompleteAction(item: TaskModel): void {
     this.completeAction.emit(item);
   }
 
-  onClearAction(item: IItem): void {
+  onClearAction(item: TaskModel): void {
     this.clearAction.emit(item);
   }
 
-  onRemove(item: IItem): void {
+  onRemove(item: TaskModel): void {
     this.remove.emit(item);
   }
 }

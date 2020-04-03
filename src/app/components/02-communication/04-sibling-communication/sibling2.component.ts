@@ -14,14 +14,15 @@ import { CommunicatorService } from './communicator.service';
   `
 })
 export class Sibling2Component implements OnInit, OnDestroy {
-  private sub: Subscription;
   input: string;
+
+  private sub: Subscription;
 
   constructor(private communicatorService: CommunicatorService) {}
 
   ngOnInit() {
     this.sub = this.communicatorService.channel$.subscribe(
-      data => (this.input = data)
+      data => this.input = data
     );
   }
   ngOnDestroy() {

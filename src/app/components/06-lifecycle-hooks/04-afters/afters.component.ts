@@ -33,8 +33,8 @@ export class AftersComponent
     console.log('[Constructor]');
   }
 
-  increment(): void {
-    console.log('[Increment]');
+  onIncrement(): void {
+    console.log('[OnIncrement]');
     this.counter++;
   }
 

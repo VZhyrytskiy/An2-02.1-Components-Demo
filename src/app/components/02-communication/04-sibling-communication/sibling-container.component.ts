@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-sibling-container',
@@ -9,11 +9,4 @@ import { Component, OnInit } from '@angular/core';
     </div>
   `
 })
-export class SiblingContainerComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-}
+export class SiblingContainerComponent {}

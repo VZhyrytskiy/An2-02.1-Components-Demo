@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HostComponent } from './host.component';
+import { HostDirective } from './host.directive';
+
+const compDirs = [HostComponent, HostDirective];
 
 @NgModule({
   imports: [
     CommonModule
   ],
-  declarations: [HostComponent],
-  exports: [HostComponent]
+  declarations: [...compDirs],
+  exports: [...compDirs]
 })
 export class HostModule { }
