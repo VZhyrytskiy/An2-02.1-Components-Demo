@@ -7,22 +7,23 @@ import {
   TaskFormComponent,
   TaskComponent,
   ParentChildCommunicationComponent
-} from './01-parent-child-communication';
+} from './01-input-output';
 import {
   ClickStopComponent,
   ClickStopDirective
 } from './02-output-event-directive';
 import { ParentComponent, ChildComponent } from './03-viewchild-viewchildren';
+import { ExportAsDemoComponent, ExportAsDirective } from './04-export-as';
 import {
   SiblingContainerComponent,
   Sibling1Component,
   Sibling2Component
-} from './04-sibling-communication';
+} from './05-service-communication-push';
 import {
   SiblingContainer2Component,
   Sibling3Component,
   Sibling4Component
-} from './05-service-communication';
+} from './06-service-communication-pull';
 
 @NgModule({
   imports: [
@@ -43,14 +44,17 @@ import {
     TaskComponent,
     ParentComponent,
     ParentChildCommunicationComponent,
-    ChildComponent
+    ChildComponent,
+    ExportAsDemoComponent,
+    ExportAsDirective
   ],
   exports: [
     SiblingContainerComponent,
     SiblingContainer2Component,
     ClickStopComponent,
     ParentChildCommunicationComponent,
-    ParentComponent
+    ParentComponent,
+    ExportAsDemoComponent
   ]
 })
 export class CommunicationModule {}
