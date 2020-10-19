@@ -24,6 +24,7 @@ import {
   Sibling3Component,
   Sibling4Component
 } from './06-service-communication-pull';
+import { TheSameComponent, TheSameDirective } from './07-the-same';
 
 @NgModule({
   imports: [
@@ -46,7 +47,9 @@ import {
     ParentChildCommunicationComponent,
     ChildComponent,
     ExportAsDemoComponent,
-    ExportAsDirective
+    ExportAsDirective,
+    TheSameComponent,
+    TheSameDirective
   ],
   exports: [
     SiblingContainerComponent,
@@ -54,7 +57,9 @@ import {
     ClickStopComponent,
     ParentChildCommunicationComponent,
     ParentComponent,
-    ExportAsDemoComponent
+    ExportAsDemoComponent,
+    TheSameComponent,
+    TheSameDirective
   ]
 })
 export class CommunicationModule {}
