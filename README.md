@@ -10,17 +10,19 @@
 7. Show a Collection
 8. Communication
 
-    8.1. Inputs
+    8.1. Inputs/Outputs
 
-    8.2. Events (Outputs)
+    8.2. Output Event Directive
 
-    8.3. DOM Events
+    8.3. ViewChild, ViewChildren
 
-    8.4. Custom Events / Outputs
+    8.4. ExportAs
 
-    8.5. Access via template reference variable
+    8.5. Service Communication (Push)
 
-    8.6. Sibling Communication
+    8.6. Service Communication (Pull)
+
+    8.7. Both component input and directive have the same name
 
 9. Types Of Bindings
 10. Content Security
