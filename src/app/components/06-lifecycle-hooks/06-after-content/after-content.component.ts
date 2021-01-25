@@ -13,12 +13,12 @@ export class AfterContentComponent implements AfterContentChecked, AfterContentI
 
   private prevFirstName = '';
 
-  ngAfterContentInit() {
+  ngAfterContentInit(): void {
     // viewChild is set after the view has been initialized
     console.log('AfterContentInit');
   }
 
-   ngAfterContentChecked() {
+   ngAfterContentChecked(): void {
     // viewChild is updated after the view has been checked
     if (this.prevFirstName === this.contentChild.firstName) {
       console.log('AfterContentChecked: (no change)');

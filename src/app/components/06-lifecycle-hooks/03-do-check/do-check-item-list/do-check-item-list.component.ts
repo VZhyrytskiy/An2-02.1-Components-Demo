@@ -26,7 +26,7 @@ export class DoCheckItemListComponent implements OnInit, DoCheck {
 
   constructor(private differs: IterableDiffers) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.differ = this.differs.find(this.tasks).create(null);
   }
 

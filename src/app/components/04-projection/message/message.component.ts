@@ -10,7 +10,7 @@ export class MessageComponent implements AfterContentInit {
 
   @ContentChild('content') content: ElementRef;
 
-  ngAfterContentInit() {
+  ngAfterContentInit(): void {
     console.log(this.content.nativeElement.innerText);
   }
 }

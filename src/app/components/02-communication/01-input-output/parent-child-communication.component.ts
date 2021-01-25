@@ -12,7 +12,7 @@ export class ParentChildCommunicationComponent implements OnInit {
 
   constructor(public tasksService: TasksService) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.tasks = this.tasksService.getTasks();
   }
 

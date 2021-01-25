@@ -9,11 +9,11 @@ import { DynamicComponent } from './../../interfaces/dynamic-component.interface
 export class Component1Component implements DynamicComponent, OnDestroy {
   @Input() data: string;
 
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     console.log('Component 1 is destroyed!!!');
   }
 
-  notify() {
+  notify(): void {
     console.log('Component 1 is loaded.');
   }
 }

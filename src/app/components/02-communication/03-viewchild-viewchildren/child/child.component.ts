@@ -6,11 +6,11 @@ import { Component, AfterViewInit } from '@angular/core';
   styleUrls: ['./child.component.css']
 })
 export class ChildComponent implements AfterViewInit {
-  ngAfterViewInit() {
+  ngAfterViewInit(): void {
     console.log(`From Child Component`);
   }
 
-  onClick() {
+  onClick(): void {
     console.log('Click method from child, called in Parent component');
   }
 }

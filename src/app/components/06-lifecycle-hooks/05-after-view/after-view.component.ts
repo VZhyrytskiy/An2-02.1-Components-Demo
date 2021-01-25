@@ -18,12 +18,12 @@ export class AfterViewComponent implements AfterViewChecked, AfterViewInit {
 
   private prevFirstName = '';
 
-  ngAfterViewInit() {
+  ngAfterViewInit(): void {
     // viewChild is set after the view has been initialized
     console.log('AfterViewInit');
   }
 
-  ngAfterViewChecked() {
+  ngAfterViewChecked(): void {
     // viewChild is updated after the view has been checked
     if (this.prevFirstName === this.viewChild.firstName) {
       console.log('AfterViewChecked: (no change)');

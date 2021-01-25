@@ -23,7 +23,7 @@ export class ParentComponent implements AfterViewInit {
 
   constructor() {}
 
-  ngAfterViewInit() {
+  ngAfterViewInit(): void {
     this.inputField.nativeElement.value = 'Value From Parent';
     this.child.onClick();
 

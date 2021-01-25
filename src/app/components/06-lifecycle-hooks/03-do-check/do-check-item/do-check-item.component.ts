@@ -27,7 +27,7 @@ export class DoCheckItemComponent implements OnInit, DoCheck {
 
   constructor(private differs: KeyValueDiffers) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.differ = this.differs.find(this.item).create();
   }
 

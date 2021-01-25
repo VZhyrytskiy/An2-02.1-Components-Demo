@@ -13,7 +13,7 @@ export class OnChangesComponent implements OnInit, OnChanges {
     console.log('On Constructor');
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     console.log('On Init Hook');
   }
     /*

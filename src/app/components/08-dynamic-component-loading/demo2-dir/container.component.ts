@@ -26,7 +26,7 @@ export class ContainerComponent implements OnInit {
 
   constructor(private componentFactoryResolver: ComponentFactoryResolver) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.loadComponent(this.currentComponent);
   }
 

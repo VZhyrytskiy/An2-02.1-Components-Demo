@@ -32,7 +32,7 @@ export class DoCheckDemoComponent implements OnInit {
   private responsibles: string[] = ['Andrey', 'Boris', 'Helen', 'Joe'];
   private actions: string[] = ['Estimate', 'Create', 'Delete', 'Implement', 'Deploy'];
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.onAddTask();
   }
 

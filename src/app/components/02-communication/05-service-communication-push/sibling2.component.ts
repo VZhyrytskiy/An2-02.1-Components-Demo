@@ -20,7 +20,7 @@ export class Sibling2Component implements OnInit, OnDestroy {
 
   constructor(private communicatorService: CommunicatorService) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.sub = this.communicatorService.channel$.subscribe(
       data => this.input = data
     );

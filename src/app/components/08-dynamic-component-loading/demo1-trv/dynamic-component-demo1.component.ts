@@ -18,7 +18,7 @@ export class DynamicComponentDemo1Component implements AfterViewInit {
 
   constructor(private r: ComponentFactoryResolver) {}
 
-  ngAfterViewInit() {
+  ngAfterViewInit(): void {
     const factory = this.r.resolveComponentFactory(DynamicComponent);
     this.vcr.createComponent(factory);
   }
