@@ -16,7 +16,7 @@ export class ListComponent implements OnInit {
     private listService: ListService
   ) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.item = this.listService.getItem();
     this.items = this.listService.getItems();
   }
