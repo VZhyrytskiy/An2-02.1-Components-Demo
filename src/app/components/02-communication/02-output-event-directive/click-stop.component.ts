@@ -14,11 +14,11 @@ import { Component } from '@angular/core';
 })
 export class ClickStopComponent {
 
-  fromParent() {
+  fromParent(): void {
     console.log('from parent');
   }
 
-  fromChild() {
+  fromChild(): void {
     console.log('from child');
   }
 
