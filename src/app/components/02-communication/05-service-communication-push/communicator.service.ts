@@ -12,7 +12,7 @@ export class CommunicatorService {
   public channel$ = this.channel.asObservable();
 
   // Service message commands
-  publishData(data: string) {
+  publishData(data: string): void {
     this.channel.next(data);
   }
 }

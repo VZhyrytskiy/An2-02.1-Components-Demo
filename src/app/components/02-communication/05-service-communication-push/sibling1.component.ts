@@ -18,7 +18,7 @@ export class Sibling1Component  {
     private communicatorService: CommunicatorService
   ) {}
 
-  onClick() {
+  onClick(): void {
     this.counter++;
     this.communicatorService.publishData(`Data from sibling 1(${this.counter})`);
   }

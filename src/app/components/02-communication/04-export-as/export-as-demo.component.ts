@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
 })
 export class ExportAsDemoComponent  {
 
-  onClick(d: any) {
+  onClick(d: any): void {
     console.log(d.getValue());
   }
 

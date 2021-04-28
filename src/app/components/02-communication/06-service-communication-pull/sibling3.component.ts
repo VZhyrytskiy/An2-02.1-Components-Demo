@@ -16,7 +16,7 @@ export class Sibling3Component {
 
   constructor(private dataService: DataService<string>) {}
 
-  onClick() {
+  onClick(): void {
     this.counter++;
     this.dataService.setData(`Data from sibling 1(${this.counter})`);
   }

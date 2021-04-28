@@ -25,7 +25,7 @@ export class Sibling2Component implements OnInit, OnDestroy {
       data => this.input = data
     );
   }
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     this.sub.unsubscribe();
   }
 }

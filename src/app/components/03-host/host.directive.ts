@@ -9,17 +9,17 @@ export class HostDirective {
   attrClass = 'headingClass';
 
   @HostListener('click')
-  clicked() {
+  clicked(): void {
     console.log('click event on host element');
   }
 
   @HostListener('mouseenter', ['$event'])
-  enter(event: Event) {
+  enter(event: Event): void {
     console.log('mouseenter event on host element');
   }
 
   @HostListener('mouseleave', ['$event'])
-  leave(event: Event) {
+  leave(event: Event): void {
     console.log('mouseleave event on host element');
   }
 

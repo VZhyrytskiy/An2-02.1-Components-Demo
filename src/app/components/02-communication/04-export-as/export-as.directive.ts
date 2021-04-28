@@ -5,7 +5,7 @@ import { Directive } from '@angular/core';
   exportAs: 'axa'
 })
 export class ExportAsDirective {
-  getValue() {
+  getValue(): number {
     return 100;
   }
 }
