@@ -36,17 +36,17 @@ export class DoCheckDemoComponent implements OnInit {
     this.onAddTask();
   }
 
-  onSetPriority(item: TaskModel) {
+  onSetPriority(item: TaskModel): void {
     const index = this.tasks.indexOf(item);
     this.tasks[index].priority = true;
   }
 
-  onCompleteAction(item: TaskModel) {
+  onCompleteAction(item: TaskModel): void {
     const index = this.tasks.indexOf(item);
     this.tasks[index].done = true;
   }
 
-  onClearAction(item: TaskModel) {
+  onClearAction(item: TaskModel): void {
     const index = this.tasks.indexOf(item);
     delete this.tasks[index].action;
   }
