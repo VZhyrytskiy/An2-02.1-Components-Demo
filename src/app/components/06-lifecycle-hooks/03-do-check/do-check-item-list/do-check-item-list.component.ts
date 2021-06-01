@@ -27,7 +27,8 @@ export class DoCheckItemListComponent implements OnInit, DoCheck {
   constructor(private differs: IterableDiffers) {}
 
   ngOnInit(): void {
-    this.differ = this.differs.find(this.tasks).create(null);
+    // TODO: remove null as a parameter?
+    this.differ = this.differs.find(this.tasks).create();
   }
 
   ngDoCheck(): void {
@@ -35,8 +36,9 @@ export class DoCheckItemListComponent implements OnInit, DoCheck {
 
     if (changes) {
       console.log(changes);
-      changes.forEachAddedItem(r => console.log('Added', r.item));
-      changes.forEachRemovedItem(r => console.log('Removed', r.item));
+      // TODO: replace type any
+      changes.forEachAddedItem((r: any) => console.log('Added', r.item));
+      changes.forEachRemovedItem((r: any) => console.log('Removed', r.item));
     }
   }
 

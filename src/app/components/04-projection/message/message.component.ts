@@ -6,9 +6,11 @@ import { Component, Input, ContentChild, ElementRef, AfterContentInit} from '@an
   styleUrls: ['./message.component.css']
 })
 export class MessageComponent implements AfterContentInit {
-  @Input() title: string;
+  @Input()
+  title!: string;
 
-  @ContentChild('content') content: ElementRef;
+  @ContentChild('content')
+  content!: ElementRef;
 
   ngAfterContentInit(): void {
     console.log(this.content.nativeElement.innerText);

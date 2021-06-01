@@ -21,8 +21,8 @@ import { Component, OnInit } from '@angular/core';
   `
 })
 export class OnChangesDemoComponent {
-  responsible: string;
-  action: string;
+  responsible!: string;
+  action!: string;
 
   onSetValues(
     actionField: HTMLInputElement,

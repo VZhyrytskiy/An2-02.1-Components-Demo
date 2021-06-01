@@ -1,5 +1,5 @@
 export interface TaskModel {
-    action: string;
+    action?: string;
     responsible: string;
     done: boolean;
     priority?: boolean;

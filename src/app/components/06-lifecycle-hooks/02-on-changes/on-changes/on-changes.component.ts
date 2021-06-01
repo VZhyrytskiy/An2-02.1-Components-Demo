@@ -6,8 +6,11 @@ import { Component, Input, OnInit, OnChanges, SimpleChanges } from '@angular/cor
   styleUrls: ['./on-changes.component.css']
 })
 export class OnChangesComponent implements OnInit, OnChanges {
-  @Input() responsible: string;
-  @Input() action: string;
+  @Input()
+  responsible!: string;
+  
+  @Input()
+  action!: string;
 
   constructor() {
     console.log('On Constructor');

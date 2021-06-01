@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class DataService<T> {
-  private data: T;
+  private data!: T;
 
   public setData(d: T): void {
     this.data = d;

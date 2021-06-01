@@ -11,8 +11,8 @@ import { Component, Input, OnInit } from '@angular/core';
   `
 })
 export class TheSameComponent implements OnInit {
-  // tslint:disable-next-line: no-input-rename
-  @Input('appTheSame') input: string;
+  @Input('appTheSame')
+  input!: string;
 
   ngOnInit(): void {
     console.log(`Component: ${this.input}`);

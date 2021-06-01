@@ -15,11 +15,17 @@ import { ChildComponent } from './../child/child.component';
   styleUrls: ['./parent.component.css']
 })
 export class ParentComponent implements AfterViewInit {
-  @ViewChild('input') inputField: ElementRef<HTMLInputElement>;
-  @ViewChild('child') childComp: ElementRef<ChildComponent>;
-  @ViewChild(ChildComponent) child: ChildComponent;
+  @ViewChild('input')
+  inputField!: ElementRef<HTMLInputElement>;
 
-  @ViewChildren(ChildComponent) children: QueryList<ChildComponent>;
+  @ViewChild('child')
+  childComp!: ElementRef<ChildComponent>;
+
+  @ViewChild(ChildComponent)
+  child!: ChildComponent;
+
+  @ViewChildren(ChildComponent)
+  children!: QueryList<ChildComponent>;
 
   constructor() {}
 

@@ -16,7 +16,8 @@ import { TaskModel } from './task.model';
   styleUrls: ['./do-check-item.component.css']
 })
 export class DoCheckItemComponent implements OnInit, DoCheck {
-  @Input() item: TaskModel;
+  @Input()
+  item!: TaskModel;
 
   @Output() remove: EventEmitter<TaskModel> = new EventEmitter<TaskModel>();
   @Output() setPriority: EventEmitter<TaskModel> = new EventEmitter<TaskModel>();
@@ -37,9 +38,10 @@ export class DoCheckItemComponent implements OnInit, DoCheck {
 
     if (changes) {
       console.log(changes);
-      changes.forEachAddedItem(item => this.logChange('added', item));
-      changes.forEachRemovedItem(item => this.logChange('removed', item));
-      changes.forEachChangedItem(item => this.logChange('changed', item));
+      // TODO: replace type any
+      changes.forEachAddedItem((item: any) => this.logChange('added', item));
+      changes.forEachRemovedItem((item: any) => this.logChange('removed', item));
+      changes.forEachChangedItem((item: any) => this.logChange('changed', item));
     }
   }
 
@@ -65,7 +67,7 @@ export class DoCheckItemComponent implements OnInit, DoCheck {
     this.remove.emit(this.item);
   }
 
-  private logChange(action: string, item): void {
+  private logChange(action: string, item: any): void {
     if (action === 'changed') {
       console.log(
         item.key,

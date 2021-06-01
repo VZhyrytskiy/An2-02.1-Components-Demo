@@ -5,7 +5,8 @@ import { Directive, OnInit, Input } from '@angular/core';
 })
 export class TheSameDirective implements OnInit {
 
-  @Input('appTheSame') input: string;
+  @Input('appTheSame')
+  input!: string;
 
   ngOnInit(): void {
     console.log(`Directive: ${this.input}`);
