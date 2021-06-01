@@ -9,7 +9,7 @@ import { Task } from './../models/task.model';
 })
 export class TaskListComponent {
   @Input()
-  tasks: Array<Task>;
+  tasks!: Array<Task>;
 
   @Output()
   completeTask: EventEmitter<Task> = new EventEmitter();

@@ -9,7 +9,7 @@ import { Task } from './../../models/task.model';
 })
 export class TaskComponent {
   @Input()
-  task: Task;
+  task!: Task;
 
   @Output()
   completeTask: EventEmitter<Task> = new EventEmitter<Task>();

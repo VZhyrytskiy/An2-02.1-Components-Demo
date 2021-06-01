@@ -8,7 +8,7 @@ import { TasksService } from './services/tasks.service';
   templateUrl: './parent-child-communication.component.html'
 })
 export class ParentChildCommunicationComponent implements OnInit {
-  tasks: Array<Task>;
+  tasks!: Array<Task>;
 
   constructor(public tasksService: TasksService) {}
 

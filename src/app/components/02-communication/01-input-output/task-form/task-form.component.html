@@ -32,10 +32,7 @@
           </div>
           <button type="button"
                   class="btn btn-primary"
-                  (click)='onAddTask({
-                    "action": action.value,
-                    "priority": priority.value,
-                    "estHours": estHours.value});
+                  (click)='onAddTask(action.value, +priority.value, +estHours.value);
                     action.value="";
                     priority.value="";
                     estHours.value="";'>Add</button>

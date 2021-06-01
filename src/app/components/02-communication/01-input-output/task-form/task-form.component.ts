@@ -10,12 +10,12 @@ import { Task } from './../models/task.model';
 export class TaskFormComponent {
   @Output() addTask: EventEmitter<Task> = new EventEmitter<Task>();
 
-  onAddTask(newTask: Partial<Task>): void {
+  onAddTask(action: string, priority: number, estHours: number): void {
     const task = new Task(
       null,
-      newTask.action,
-      newTask.priority,
-      newTask.estHours
+      action,
+      priority,
+      estHours
     );
 
     this.addTask.emit(task);
