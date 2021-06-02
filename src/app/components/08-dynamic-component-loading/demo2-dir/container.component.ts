@@ -3,7 +3,8 @@ import {
   ViewChild,
   ViewContainerRef,
   ComponentFactoryResolver,
-  OnInit
+  OnInit,
+  Type
 } from '@angular/core';
 
 import {
@@ -20,7 +21,7 @@ import {
 export class ContainerComponent implements OnInit {
   // Получить экземпляр директивы
   // static = true, because it uses in ngOnInit
-  @ViewChild(TargetDirective, { static: true }) target: TargetDirective;
+  @ViewChild(TargetDirective, { static: true }) target!: TargetDirective;
 
   private currentComponent: any = Component1Component;
 
@@ -39,7 +40,7 @@ export class ContainerComponent implements OnInit {
     this.loadComponent(this.currentComponent);
   }
 
-  private loadComponent(component) {
+  private loadComponent(component: Type<Component1Component | Component2Component>) {
     // Создать componentFactory используя componentFactoryResolver класс
     const componentFactory = this.componentFactoryResolver.resolveComponentFactory(
       component

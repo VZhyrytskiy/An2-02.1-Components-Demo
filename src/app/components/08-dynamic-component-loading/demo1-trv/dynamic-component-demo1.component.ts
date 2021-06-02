@@ -11,7 +11,7 @@ import {
   styleUrls: ['./dynamic-component-demo1.component.css']
 })
 export class DynamicComponentDemo1Component {
-  @ViewChild('vcr', { read: ViewContainerRef }) vcr: ViewContainerRef;
+  @ViewChild('vcr', { read: ViewContainerRef }) vcr!: ViewContainerRef;
 
   constructor(private r: ComponentFactoryResolver) {}
 

@@ -11,7 +11,6 @@ import {
   Input
 } from '@angular/core';
 
-// tslint:disable-next-line: no-conflicting-lifecycle
 @Component({
   selector: 'app-afters',
   templateUrl: './afters.component.html',

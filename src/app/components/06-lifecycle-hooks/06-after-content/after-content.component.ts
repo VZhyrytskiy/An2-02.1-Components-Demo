@@ -9,7 +9,7 @@ import { ChildContentComponent } from './child-content/child-content.component';
 })
 export class AfterContentComponent implements AfterContentChecked, AfterContentInit {
   // Query for a CONTENT child of type `ChildContentComponent`
-  @ContentChild(ChildContentComponent) contentChild: ChildContentComponent;
+  @ContentChild(ChildContentComponent) contentChild!: ChildContentComponent;
 
   private prevFirstName = '';
 

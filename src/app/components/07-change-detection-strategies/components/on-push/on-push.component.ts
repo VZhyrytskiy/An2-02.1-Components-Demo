@@ -9,5 +9,5 @@ import { Person } from '../../models/person.model';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class OnPushComponent {
-  @Input() person: Person;
+  @Input() person!: Person;
 }

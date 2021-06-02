@@ -14,7 +14,7 @@ import { ChildViewComponent } from './child-view/child-view.component';
 })
 export class AfterViewComponent implements AfterViewChecked, AfterViewInit {
   // Query for a VIEW child of type `ChildViewComponent`
-  @ViewChild(ChildViewComponent) viewChild: ChildViewComponent;
+  @ViewChild(ChildViewComponent) viewChild!: ChildViewComponent;
 
   private prevFirstName = '';
 

@@ -9,5 +9,5 @@ import { Person } from '../../models/person.model';
   changeDetection: ChangeDetectionStrategy.Default
 })
 export class DefaultComponent {
-  @Input() person: Person;
+  @Input() person!: Person;
 }
