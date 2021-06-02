@@ -5,7 +5,10 @@ import {
   IterableDiffers,
   Input,
   Output,
-  EventEmitter
+  EventEmitter,
+  IterableDiffer,
+  IterableChanges,
+  IterableChangeRecord
 } from '@angular/core';
 import { TaskModel } from '../do-check-item/task.model';
 
@@ -22,23 +25,21 @@ export class DoCheckItemListComponent implements OnInit, DoCheck {
   @Output() completeAction: EventEmitter<TaskModel> = new EventEmitter<TaskModel>();
   @Output() clearAction: EventEmitter<TaskModel> = new EventEmitter<TaskModel>();
 
-  private differ: any;
+  private differ!: IterableDiffer<TaskModel>  ;
 
   constructor(private differs: IterableDiffers) {}
 
   ngOnInit(): void {
-    // TODO: remove null as a parameter?
     this.differ = this.differs.find(this.tasks).create();
   }
 
   ngDoCheck(): void {
-    const changes = this.differ.diff(this.tasks);
+    const changes: IterableChanges<TaskModel> | null = this.differ.diff(this.tasks);
 
     if (changes) {
       console.log(changes);
-      // TODO: replace type any
-      changes.forEachAddedItem((r: any) => console.log('Added', r.item));
-      changes.forEachRemovedItem((r: any) => console.log('Removed', r.item));
+      changes.forEachAddedItem((r: IterableChangeRecord<TaskModel>) => console.log('Added', r.item));
+      changes.forEachRemovedItem((r: IterableChangeRecord<TaskModel>) => console.log('Removed', r.item));
     }
   }
 

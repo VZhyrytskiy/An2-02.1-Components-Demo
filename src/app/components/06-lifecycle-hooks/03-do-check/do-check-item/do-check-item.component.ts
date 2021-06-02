@@ -5,7 +5,9 @@ import {
   EventEmitter,
   Input,
   KeyValueDiffers,
-  Output
+  KeyValueDiffer,
+  Output,
+  KeyValueChangeRecord
 } from '@angular/core';
 
 import { TaskModel } from './task.model';
@@ -24,7 +26,7 @@ export class DoCheckItemComponent implements OnInit, DoCheck {
   @Output() completeAction: EventEmitter<TaskModel> = new EventEmitter<TaskModel>();
   @Output() clearAction: EventEmitter<TaskModel> = new EventEmitter<TaskModel>();
 
-  private differ: any;
+  private differ!: KeyValueDiffer<any, any>;
 
   constructor(private differs: KeyValueDiffers) {}
 
@@ -38,10 +40,9 @@ export class DoCheckItemComponent implements OnInit, DoCheck {
 
     if (changes) {
       console.log(changes);
-      // TODO: replace type any
-      changes.forEachAddedItem((item: any) => this.logChange('added', item));
-      changes.forEachRemovedItem((item: any) => this.logChange('removed', item));
-      changes.forEachChangedItem((item: any) => this.logChange('changed', item));
+      changes.forEachAddedItem((item: KeyValueChangeRecord<any, any>) => this.logChange('added', item));
+      changes.forEachRemovedItem((item: KeyValueChangeRecord<any, any>) => this.logChange('removed', item));
+      changes.forEachChangedItem((item: KeyValueChangeRecord<any, any>) => this.logChange('changed', item));
     }
   }
 
@@ -67,7 +68,7 @@ export class DoCheckItemComponent implements OnInit, DoCheck {
     this.remove.emit(this.item);
   }
 
-  private logChange(action: string, item: any): void {
+  private logChange(action: string, item: KeyValueChangeRecord<any, any>): void {
     if (action === 'changed') {
       console.log(
         item.key,
