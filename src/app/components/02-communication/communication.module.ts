@@ -25,6 +25,7 @@ import {
   Sibling4Component
 } from './06-service-communication-pull';
 import { TheSameComponent, TheSameDirective } from './07-the-same';
+import { ChildNgForComponent } from './03-viewchild-viewchildren/child-ng-for/child-ng-for.component';
 
 @NgModule({
   imports: [
@@ -49,7 +50,8 @@ import { TheSameComponent, TheSameDirective } from './07-the-same';
     ExportAsDemoComponent,
     ExportAsDirective,
     TheSameComponent,
-    TheSameDirective
+    TheSameDirective,
+    ChildNgForComponent
   ],
   exports: [
     SiblingContainerComponent,

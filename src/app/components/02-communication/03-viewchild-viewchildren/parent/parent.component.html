@@ -4,4 +4,7 @@
   <app-child></app-child>
   <app-child #child></app-child>
   <button (click)="child.onClick()">Call child method</button>
+
+  <app-child-ng-for [i]="i" *ngFor="let i of data"></app-child-ng-for>
+  <button (click)="onChangeData()">Change Data Array</button>
 </p>
