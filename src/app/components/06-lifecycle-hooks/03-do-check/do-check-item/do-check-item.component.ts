@@ -7,7 +7,9 @@ import {
   KeyValueDiffers,
   KeyValueDiffer,
   Output,
-  KeyValueChangeRecord
+  KeyValueChangeRecord,
+  SimpleChanges,
+  OnChanges
 } from '@angular/core';
 
 import { TaskModel } from './task.model';
@@ -17,7 +19,7 @@ import { TaskModel } from './task.model';
   templateUrl: './do-check-item.component.html',
   styleUrls: ['./do-check-item.component.css']
 })
-export class DoCheckItemComponent implements OnInit, DoCheck {
+export class DoCheckItemComponent implements OnInit, OnChanges, DoCheck {
   @Input()
   item!: TaskModel;
 
@@ -34,7 +36,13 @@ export class DoCheckItemComponent implements OnInit, DoCheck {
     this.differ = this.differs.find(this.item).create();
   }
 
+  ngOnChanges(ch: SimpleChanges): void {
+    console.log('ngOnChanges:');
+    console.log(ch);
+  }
+
   ngDoCheck(): void {
+    console.log('ngDoCheck:');
     // changes is an instance of DefaultKeyValueDiffer Class
     const changes = this.differ.diff(this.item);
 
