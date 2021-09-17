@@ -8,14 +8,20 @@ import { DataService } from './data.service';
     <p>
       sibling4
       <br />
-      Data from sibling 1: {{ input }}
+      <!-- case 1 -->
+      Data from sibling 1: {{ dataService.getData() }}
+      <!-- case 2 -->
+      <!-- Data from sibling 1: {{ input }} -->
     </p>
   `
 })
 export class Sibling4Component {
-  constructor(private dataService: DataService<string>) {}
+  // case 1
+  constructor(public dataService: DataService<string>) {}
 
-  get input(): string {
-    return this.dataService.getData();
-  }
+  // case 2
+  // constructor(private dataService: DataService<string>) {}
+  // get input(): string {
+    // return this.dataService.getData();
+  // }
 }
