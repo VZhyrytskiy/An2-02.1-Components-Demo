@@ -14,7 +14,7 @@ import { AppComponent } from './app.component';
 import { ChangeDetectionModule } from './components/07-change-detection-strategies/change-detection-strategies.module';
 import { CommunicationModule } from './components/02-communication/communication.module';
 import { DynamicComponentLoadingModule } from './components/08-dynamic-component-loading/dynamic-component-loading.module';
-import { HostModule } from './components/03-host/host.module';
+import { HostModule } from './components/03-host-binding-host-listener/host.module';
 import { LifecycleHooksModule } from './components/06-lifecycle-hooks/lifecycle-hooks.module';
 import { ListModule } from './components/01-display-data/list.module';
 import { ProjectionModule } from './components/04-projection/projection.module';
