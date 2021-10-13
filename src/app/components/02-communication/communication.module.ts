@@ -26,6 +26,7 @@ import {
 } from './06-service-communication-pull';
 import { TheSameComponent, TheSameDirective } from './07-the-same';
 import { ChildNgForComponent } from './03-viewchild-viewchildren/child-ng-for/child-ng-for.component';
+import { AccountComponent, GetPropsDirective } from './08-get-component-properties';
 
 @NgModule({
   imports: [
@@ -33,6 +34,8 @@ import { ChildNgForComponent } from './03-viewchild-viewchildren/child-ng-for/ch
     FormsModule
   ],
   declarations: [
+    AccountComponent,
+    GetPropsDirective,
     Sibling1Component,
     Sibling2Component,
     Sibling3Component,
@@ -54,6 +57,8 @@ import { ChildNgForComponent } from './03-viewchild-viewchildren/child-ng-for/ch
     ChildNgForComponent
   ],
   exports: [
+    AccountComponent,
+    GetPropsDirective,
     SiblingContainerComponent,
     SiblingContainer2Component,
     ClickStopComponent,
