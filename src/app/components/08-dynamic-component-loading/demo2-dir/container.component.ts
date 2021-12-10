@@ -1,11 +1,4 @@
-import {
-  Component,
-  ViewChild,
-  ViewContainerRef,
-  ComponentFactoryResolver,
-  OnInit,
-  Type
-} from '@angular/core';
+import { Component, ViewChild, OnInit, Type } from '@angular/core';
 
 import {
   DynamicComponent,
@@ -25,8 +18,6 @@ export class ContainerComponent implements OnInit {
 
   private currentComponent: any = Component1Component;
 
-  constructor(private componentFactoryResolver: ComponentFactoryResolver) {}
-
   ngOnInit(): void {
     this.loadComponent(this.currentComponent);
   }
@@ -41,11 +32,6 @@ export class ContainerComponent implements OnInit {
   }
 
   private loadComponent(component: Type<Component1Component | Component2Component>) {
-    // Создать componentFactory используя componentFactoryResolver класс
-    const componentFactory = this.componentFactoryResolver.resolveComponentFactory(
-      component
-    );
-
     // Получить место, куда необходимо добавлять компонент и очистить его
     // Используем для этого директиву target
     // Директива инжектит через свой конструктор viewContainerRef как публичное свойство,
@@ -57,7 +43,7 @@ export class ContainerComponent implements OnInit {
     // Метод createComponent() возвращает ссылку на динамически загруженый компонент.
     // Эту ссылку можно использовать для взаимодействия с компонентом,
     // например, для присвоения каких-то значений его свойствам или для вызова его методов.
-    const componentRef = viewContainerRef.createComponent(componentFactory);
+    const componentRef = viewContainerRef.createComponent(component);
 
     // Передать данные компоненту
     (componentRef.instance as DynamicComponent).data = 'Data for Component';

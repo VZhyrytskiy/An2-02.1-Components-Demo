@@ -1,9 +1,4 @@
-import {
-  Component,
-  ViewChild,
-  ViewContainerRef,
-  ComponentFactoryResolver
-} from '@angular/core';
+import { Component, ViewChild, ViewContainerRef } from '@angular/core';
 
 @Component({
   selector: 'app-dynamic-component-demo1',
@@ -13,13 +8,10 @@ import {
 export class DynamicComponentDemo1Component {
   @ViewChild('vcr', { read: ViewContainerRef }) vcr!: ViewContainerRef;
 
-  constructor(private r: ComponentFactoryResolver) {}
-
   onLoadComponent(): void {
     import('./dynamic-component.component')
     .then(module => {
-      const factory = this.r.resolveComponentFactory(module.DynamicComponent);
-      this.vcr.createComponent(factory);
+      this.vcr.createComponent(module.DynamicComponent);
     })
     .catch(reason => console.log(reason));
 
