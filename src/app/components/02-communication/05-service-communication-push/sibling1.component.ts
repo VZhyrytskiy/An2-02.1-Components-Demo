@@ -22,5 +22,4 @@ export class Sibling1Component  {
     this.counter++;
     this.communicatorService.publishData(`Data from sibling 1(${this.counter})`);
   }
-
 }

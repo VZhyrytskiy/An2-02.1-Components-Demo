@@ -34,7 +34,7 @@ export class ParentComponent implements AfterViewChecked {
   childNgFor!: ChildNgForComponent;
 
   @ViewChildren(ChildNgForComponent)
-  childrenNgFor!: QueryList<ChildComponent>;
+  childrenNgFor!: QueryList<ChildNgForComponent>;
 
   constructor() {}
 
