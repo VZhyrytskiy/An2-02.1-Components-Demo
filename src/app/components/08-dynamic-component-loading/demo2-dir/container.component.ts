@@ -1,7 +1,7 @@
-import { Component, ViewChild, OnInit, Type } from '@angular/core';
+import { Component, ViewChild, type OnInit, Type } from '@angular/core';
 
 import {
-  DynamicComponent,
+  type DynamicComponent,
   TargetDirective,
   Component1Component,
   Component2Component

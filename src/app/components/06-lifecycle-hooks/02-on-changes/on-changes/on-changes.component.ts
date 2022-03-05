@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, Input, type OnInit, type OnChanges, type SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-on-changes',
@@ -8,7 +8,7 @@ import { Component, Input, OnInit, OnChanges, SimpleChanges } from '@angular/cor
 export class OnChangesComponent implements OnInit, OnChanges {
   @Input()
   responsible!: string;
-  
+
   @Input()
   action!: string;
 

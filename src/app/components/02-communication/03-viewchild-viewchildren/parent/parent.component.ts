@@ -3,8 +3,8 @@ import {
   ElementRef,
   ViewChild,
   ViewChildren,
-  QueryList,
-  AfterViewChecked
+  type QueryList,
+  type AfterViewChecked
 } from '@angular/core';
 import { ChildNgForComponent } from '../child-ng-for/child-ng-for.component';
 

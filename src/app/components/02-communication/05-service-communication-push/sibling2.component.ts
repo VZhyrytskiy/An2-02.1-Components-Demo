@@ -1,5 +1,5 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { Component, type OnInit, type OnDestroy } from '@angular/core';
+import { type Subscription } from 'rxjs';
 
 import { CommunicatorService } from './communicator.service';
 

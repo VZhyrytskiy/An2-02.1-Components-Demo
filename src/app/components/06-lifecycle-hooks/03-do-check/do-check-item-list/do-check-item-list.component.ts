@@ -1,16 +1,6 @@
-import {
-  Component,
-  OnInit,
-  DoCheck,
-  IterableDiffers,
-  Input,
-  Output,
-  EventEmitter,
-  IterableDiffer,
-  IterableChanges,
-  IterableChangeRecord
-} from '@angular/core';
-import { TaskModel } from '../do-check-item/task.model';
+import { Component, IterableDiffers, Input, Output, EventEmitter } from '@angular/core';
+import type {OnInit, DoCheck, IterableDiffer, IterableChanges, IterableChangeRecord } from '@angular/core';
+import type { TaskModel } from '../do-check-item/task.model';
 
 @Component({
   selector: 'app-do-check-item-list',

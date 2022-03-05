@@ -1,5 +1,5 @@
-import {
-  Component,
+import { Component,  Input } from '@angular/core';
+import type {
   OnInit,
   OnDestroy,
   DoCheck,
@@ -7,8 +7,7 @@ import {
   AfterContentInit,
   AfterContentChecked,
   AfterViewInit,
-  AfterViewChecked,
-  Input
+  AfterViewChecked
 } from '@angular/core';
 
 @Component({

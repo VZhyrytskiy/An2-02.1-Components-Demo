@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
-import { Item } from './../item.model';
+import { Component, type OnInit } from '@angular/core';
+import { type Item } from './../item.model';
 import { ListService } from './../list.service';
 
 @Component({

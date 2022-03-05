@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { TaskModel } from './do-check-item/task.model';
+import { Component, type OnInit } from '@angular/core';
+import type { TaskModel } from './do-check-item/task.model';
 
 @Component({
   selector: 'app-do-check-demo',

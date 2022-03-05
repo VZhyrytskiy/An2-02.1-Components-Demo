@@ -1,4 +1,4 @@
-import { Directive, ElementRef, Host, Input, OnInit } from '@angular/core';
+import { Directive, ElementRef, Host, Input, type OnInit } from '@angular/core';
 import { AccountComponent } from './account.component';
 
 @Directive({

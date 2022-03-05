@@ -1,5 +1,5 @@
-import { Component, Input, OnDestroy, OnChanges, SimpleChanges } from '@angular/core';
-import { DynamicComponent } from './../../interfaces/dynamic-component.interface';
+import { Component, Input, type OnDestroy, type OnChanges, type SimpleChanges } from '@angular/core';
+import type { DynamicComponent } from './../../interfaces/dynamic-component.interface';
 
 @Component({
   selector: 'app-component-1',

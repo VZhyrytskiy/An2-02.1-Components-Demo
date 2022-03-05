@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, type AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-child',

@@ -1,4 +1,4 @@
-import { Component, AfterContentChecked, AfterContentInit, ContentChild } from '@angular/core';
+import { Component, type AfterContentChecked, type AfterContentInit, ContentChild } from '@angular/core';
 
 import { ChildContentComponent } from './child-content/child-content.component';
 

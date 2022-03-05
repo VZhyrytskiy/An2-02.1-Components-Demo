@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, type OnInit } from '@angular/core';
 
-import { Task } from './models/task.model';
+import { type Task } from './models/task.model';
 import { TasksService } from './services/tasks.service';
 
 @Component({

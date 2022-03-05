@@ -1,18 +1,6 @@
-import {
-  Component,
-  OnInit,
-  DoCheck,
-  EventEmitter,
-  Input,
-  KeyValueDiffers,
-  KeyValueDiffer,
-  Output,
-  KeyValueChangeRecord,
-  SimpleChanges,
-  OnChanges
-} from '@angular/core';
-
-import { TaskModel } from './task.model';
+import { Component, EventEmitter, Input, KeyValueDiffers, Output } from '@angular/core';
+import type { OnInit, DoCheck, KeyValueDiffer, KeyValueChangeRecord, SimpleChanges, OnChanges } from '@angular/core';
+import type { TaskModel } from './task.model';
 
 @Component({
   selector: 'app-do-check-item',

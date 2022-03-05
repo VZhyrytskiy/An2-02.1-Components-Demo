@@ -1,7 +1,7 @@
 import {
   Component,
-  AfterViewChecked,
-  AfterViewInit,
+  type AfterViewChecked,
+  type AfterViewInit,
   ViewChild
 } from '@angular/core';
 

@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, type OnDestroy, type OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-on-init-on-destroy',

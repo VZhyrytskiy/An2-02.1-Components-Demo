@@ -11,6 +11,10 @@ export class TaskFormComponent {
   @Output() addTask: EventEmitter<Task> = new EventEmitter<Task>();
 
   onAddTask(action: string, priority: number, estHours: number): void {
+    if (!(action && priority && estHours)) {
+      return;
+    }
+    
     const task = new Task(
       null,
       action,
