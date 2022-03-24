@@ -14,7 +14,7 @@ export class Underline2Directive {
   }
 
   @HostListener('mouseleave')
-  onMouseLeave(target: HTMLElement): void {
+  onMouseLeave(): void {
     this.textDecoration = 'none';
   }
 
