@@ -13,6 +13,8 @@ import { ChildViewComponent } from './child-view/child-view.component';
   styleUrls: ['./after-view.component.css']
 })
 export class AfterViewComponent implements AfterViewChecked, AfterViewInit {
+  content!: string;
+
   // Query for a VIEW child of type `ChildViewComponent`
   @ViewChild(ChildViewComponent) viewChild!: ChildViewComponent;
 
@@ -21,6 +23,12 @@ export class AfterViewComponent implements AfterViewChecked, AfterViewInit {
   ngAfterViewInit(): void {
     // viewChild is set after the view has been initialized
     console.log('AfterViewInit');
+    // postpone the update for one turn of the browser's JavaScript
+    // cycle, which triggers a new change-detection cycle.
+    // you can NOT move this code to the ngAfterViewChecked
+    setTimeout(() => {
+      this.content = this.viewChild.firstName;
+    }, 0);
   }
 
   ngAfterViewChecked(): void {
