@@ -8,8 +8,18 @@ import { type Task } from './../../models/task.model';
   styleUrls: ['./task.component.css']
 })
 export class TaskComponent {
+  private _task!: Task;
+
   @Input()
-  task!: Task;
+  get task(): Task {
+    return this._task;
+  };
+
+  set task(value: Task) {
+    // intercept input property changes w/ setter
+    console.log('intercept input property changes w/ setter');
+    this._task = value;
+  }
 
   @Output()
   completeTask: EventEmitter<Task> = new EventEmitter<Task>();
