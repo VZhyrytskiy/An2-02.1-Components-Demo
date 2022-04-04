@@ -1,4 +1,4 @@
-/* Multi Transclusion Demo */
+/* Multi-Slot Content Projection Demo */
 
 import { Component } from '@angular/core';
 

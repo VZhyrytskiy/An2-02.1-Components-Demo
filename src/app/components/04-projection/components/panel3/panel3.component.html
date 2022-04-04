@@ -1,0 +1,13 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <!--
+          If your component includes an <ng-content> element
+          without an select attribute, that instance receives all projected
+          components that do not match any of the other <ng-content> elements.
+        -->
+        <ng-content></ng-content>
+    </div>
+    <div class="panel-body">
+        <ng-content select="[data-panel-content]"></ng-content>
+    </div>
+</div>
