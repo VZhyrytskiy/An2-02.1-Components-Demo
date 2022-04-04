@@ -1,0 +1,24 @@
+/*
+   Any rule applied to this selector will affect the host element
+   and all its descendants (in this case, italicizing all contained text).
+*/
+:host {
+  font-style: italic;
+}
+
+/*
+  Use the function form to apply host styles conditionally by including another
+  selector inside parentheses after :host.
+  In this example the host's content also becomes bold
+  when the active CSS class is applied to the host element.
+*/
+:host(.active) {
+  font-weight: bold;
+}
+
+/*
+  Add selectors behind the :host to select child elements
+*/
+:host > p > span {
+  color: red;
+}

@@ -5,17 +5,23 @@ import {
   ExternalStyleComponent,
   InlineStyleComponent,
   NoEncapsulationComponent,
-  ShadowDomEncapsulationComponent
+  ShadowDomEncapsulationComponent,
+  HostSelectorComponent,
+  HostContextSelectorComponent
 } from '.';
 
-const components = [InlineStyleComponent,
+const components = [
+  InlineStyleComponent,
   ExternalStyleComponent,
   NoEncapsulationComponent,
-  ShadowDomEncapsulationComponent];
+  ShadowDomEncapsulationComponent,
+  HostSelectorComponent,
+  HostContextSelectorComponent
+];
 
 @NgModule({
   imports: [CommonModule],
-  declarations: [...components],
+  declarations: [...components, HostSelectorComponent, HostContextSelectorComponent],
   exports: [...components]
 })
 export class StylingModule {}

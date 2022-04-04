@@ -1,0 +1,19 @@
+:host {
+  display: block;
+  width: 25%;
+}
+
+/*
+  The :host-context() selector looks for a CSS class in any ancestor of the component host element,
+  up to the document root.
+  The :host-context() selector is only useful when combined with another selector.
+  Attribute theme is added to body tag
+*/
+:host-context([theme='dark']) {
+  background-color: black;
+  color: white;
+}
+:host-context([theme='light']) {
+  background-color: white;
+  color: black;
+}
