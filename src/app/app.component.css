@@ -2,3 +2,7 @@
 	border-radius: 50%;
 	width: 60px;
 }
+.content {
+  border: 1px dotted red;
+  margin: 25px;
+}

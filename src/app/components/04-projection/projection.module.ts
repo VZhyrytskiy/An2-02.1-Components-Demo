@@ -1,18 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { MessageComponent, Panel1Component, Panel2Component, Panel3Component } from './components';
+import { MessageComponent, Panel1Component, Panel2Component, Panel3Component, CardComponent } from './components';
 
 const comp = [
   MessageComponent,
   Panel1Component,
   Panel2Component,
-  Panel3Component
+  Panel3Component,
+  CardComponent
 ];
 
 @NgModule({
   imports: [CommonModule],
-  declarations: [...comp],
+  declarations: [...comp, CardComponent],
   exports: [...comp]
 })
 export class ProjectionModule {}
