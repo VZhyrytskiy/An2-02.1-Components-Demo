@@ -16,9 +16,10 @@ import { CommunicationModule } from './components/02-communication/communication
 import { DynamicComponentLoadingModule } from './components/08-dynamic-component-loading/dynamic-component-loading.module';
 import { HostModule } from './components/03-host-binding-host-listener/host.module';
 import { LifecycleHooksModule } from './components/06-lifecycle-hooks/lifecycle-hooks.module';
-import { ListModule } from './components/01-display-data/list.module';
+import { ListModule } from './components/01-display-data/01-list/list.module';
 import { ProjectionModule } from './components/04-projection/projection.module';
 import { StylingModule } from './components/05-styling/styling.module';
+import { SvgModule } from './components/01-display-data/02-svg/svg.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -33,7 +34,8 @@ import { StylingModule } from './components/05-styling/styling.module';
     LifecycleHooksModule,
     ListModule,
     ProjectionModule,
-    StylingModule
+    StylingModule,
+    SvgModule
   ],
   exports: [],
   providers: [],
