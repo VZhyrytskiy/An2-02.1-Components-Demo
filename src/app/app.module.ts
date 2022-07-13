@@ -20,6 +20,7 @@ import { ListModule } from './components/01-display-data/01-list/list.module';
 import { ProjectionModule } from './components/04-projection/projection.module';
 import { StylingModule } from './components/05-styling/styling.module';
 import { SvgModule } from './components/01-display-data/02-svg/svg.module';
+import { DirectivesModule } from './directives/directives.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -35,7 +36,8 @@ import { SvgModule } from './components/01-display-data/02-svg/svg.module';
     ListModule,
     ProjectionModule,
     StylingModule,
-    SvgModule
+    SvgModule,
+    DirectivesModule
   ],
   exports: [],
   providers: [],

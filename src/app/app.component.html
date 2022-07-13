@@ -120,3 +120,23 @@ Goto app.component.html and uncomment a chunk of code
 <h4>8. Dynamic Component Loading</h4>
 <!-- <app-dynamic-component-demo1></app-dynamic-component-demo1> -->
 <!-- <app-dynamic-component-loading></app-dynamic-component-loading> -->
+
+<h4>9. Structural Directives</h4>
+<h5>9.1. Custom-If Directive</h5>
+<!-- <p *appCustomIf="true">Hi. This is a visible paragraph.</p>
+<p *appCustomIf="false">Hi. This is a hidden paragraph.</p> -->
+
+<h5>9.2. Custom-For Directive</h5>
+<!-- <ul>
+  <li *appCustomFor="let value iterate values; let i = index">{{i+1}} {{value}}</li>
+<ul> -->
+
+<h5>9.3. Custom Carousel Directive</h5>
+<div *appCarousel="let image iterate images; let ctr = ctr">
+  <img [src]="image" />
+  <div>
+    <button (click)="ctr.prev()">Prev</button>
+    <button (click)="ctr.next()">Next</button>
+  </div>
+</div>
+
