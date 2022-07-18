@@ -19,6 +19,6 @@
 /*
   Add selectors behind the :host to select child elements
 */
-:host > p > span {
+:host(.active) > p > span {
   color: red;
 }
