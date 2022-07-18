@@ -1,13 +1,15 @@
-<h1>Hello. It works. Components Demo</h1>
+<h1>Modules/Components/Directives Demo</h1>
 <p><strong>
-Goto app.component.html and uncomment a chunk of code
+Note: goto app.component.html and uncomment a chunk of code to see the result
 </strong></p>
+<hr>
 
-<h4>1. Display data</h4>
-<h5>1.1. Display Single Data and Collection Demo</h5>
+<h4>1. Display Data Demo</h4>
+<h5>1.1. Display Single Data and Collection</h5>
 <!-- <app-list></app-list> -->
-<h5>1.2. Display Svg</h5>
+<h5>1.2. Display Svg/HTML+Svg</h5>
 <!-- <app-svg></app-svg> -->
+<hr>
 
 <h4>2. Communication Demo</h4>
 <h5>2.1. Inputs, Outputs</h5>
@@ -19,7 +21,7 @@ Goto app.component.html and uncomment a chunk of code
 <h5>2.3. Access via Template Reference Variable</h5>
 <!-- <app-parent></app-parent> -->
 
-<h5>2.4. ExportAs Demo</h5>
+<h5>2.4. ExportAs Property</h5>
 <!-- <app-export-as-demo></app-export-as-demo> -->
 
 <h5>2.5. Service Communication (Push)</h5>
@@ -28,31 +30,53 @@ Goto app.component.html and uncomment a chunk of code
  <h5>2.6. Service Communication (Pull)</h5>
  <!-- <app-sibling-container2></app-sibling-container2> -->
 
- <h5>2.7. The Same</h5>
+ <h5>2.7. The Same - is a directive and a component input</h5>
  <!-- appTheSame is a directive and a component input at same time -->
  <!-- <app-the-same appTheSame="Hello"></app-the-same> -->
 
 <h5>2.8. Access to Component Properties from Directive</h5>
 <!-- <app-account [balance]="150" get-props></app-account> -->
+<hr>
 
 <h4>3. Attribute Directives Demo</h4>
-<h5>3.1. Host Component</h5>
+<h5>3.1. Host Component & Directive</h5>
 <!-- <app-host appHost></app-host> -->
 
 <h5>3.2. Underline Directive</h5>
 <!-- <app-underline></app-underline> -->
 
-<h5>3.3. Only-Number Attribute Directive</h5>
+<h5>3.3. Only-Number Directive</h5>
 <!-- <app-only-number></app-only-number> -->
+<hr>
 
-<h4>4. Projection Content Demo</h4>
-<h5>4.1. Single-Slot Content Projection</h5>
+<h4>4. Structural Directives Demo</h4>
+<h5>4.1. Custom-If Directive</h5>
+<!-- <p *appCustomIf="true">Hi. This is a visible paragraph.</p>
+<p *appCustomIf="false">Hi. This is a hidden paragraph.</p> -->
+
+<h5>4.2. Custom-For Directive</h5>
+<!-- <ul>
+  <li *appCustomFor="let value iterate values; let i = index">{{i+1}} {{value}}</li>
+<ul> -->
+
+<h5>4.3. Custom Carousel Directive</h5>
+<!-- <div *appCarousel="let image iterate images; let ctr = ctr">
+  <img [src]="image" />
+  <div>
+    <button (click)="ctr.prev()">Prev</button>
+    <button (click)="ctr.next()">Next</button>
+  </div>
+</div> -->
+<hr>
+
+<h4>5. Projection Content Demo</h4>
+<h5>5.1. Single-Slot Content Projection</h5>
 <!-- Single-Slot Content Projection Demo -->
 <!-- <app-message title="Alert">
   <p #content>Some text for our alert message</p>
 </app-message> -->
 
- <h5>4.2. Multi-Slot Content Projection</h5>
+ <h5>5.2. Multi-Slot Content Projection</h5>
  <!-- <app-panel1>
   <panel-title>Panel Title</panel-title>
   <panel-content>
@@ -74,49 +98,55 @@ Goto app.component.html and uncomment a chunk of code
   </div>
 </app-panel3> -->
 
-<h5>4.3. Conditional Content Projection</h5>
+<h5>5.3. Conditional Content Projection</h5>
 <!-- <app-card>
   <ng-template #greet>
     <div class="content">Content: Hello</div>
   </ng-template>
 </app-card> -->
+<hr>
 
-<h4>5. Styling Demo</h4>
-<h5>5.1 Inline and External Styles</h5>
+<h4>6. Styling Demo</h4>
+<h5>6.1 Inline and External Styles</h5>
 <!-- <app-inline-style></app-inline-style>
 <app-external-style></app-external-style>
 <app-shadow-dom-encapsulation></app-shadow-dom-encapsulation>
 <app-no-encapsulation></app-no-encapsulation> -->
-<h5>5.2 Special Selectors</h5>
+<h5>6.2 Special Selectors</h5>
 <!-- <app-host-selector></app-host-selector>
 <app-host-selector class="active"></app-host-selector> -->
 <!-- <app-host-context-selector></app-host-context-selector> -->
+<hr>
 
-
-<h4>6. Lifecycle Hooks Demo</h4>
-<h5>6.1. OnInit and OnDestroy Hooks</h5>
+<h4>7. Lifecycle Hooks Demo</h4>
+<h5>7.1. OnInit and OnDestroy Hooks</h5>
 <!-- <app-on-init-on-destroy-demo></app-on-init-on-destroy-demo> -->
 
-<h5>6.2. OnChanges Hook</h5>
+<h5>7.2. OnChanges Hook</h5>
 <!-- <app-on-changes-demo></app-on-changes-demo> -->
 
-<h5>6.3. DoCheck Hook</h5>
+<h5>7.3. DoCheck Hook</h5>
 <!-- <app-do-check-demo></app-do-check-demo> -->
 
-<h5>6.4. AfterXXX Hooks</h5>
+<h5>7.4. AfterXXX Hooks</h5>
 <!-- <app-afters [counter]="10"></app-afters> -->
 
-<h5>6.5. AfterViewInit, AfterViewChecked Hooks</h5>
+<h5>7.5. AfterViewInit, AfterViewChecked Hooks</h5>
 <!-- <app-after-view></app-after-view> -->
 
-<h5>6.6. AfterContentInit, AfterContentChecked Hooks</h5>
+<h5>7.6. AfterContentInit, AfterContentChecked Hooks</h5>
 <!-- <app-after-content>
    <app-child-content></app-child-content>
 </app-after-content> -->
+<hr>
 
-<h4>7. Change Detection Strategies</h4>
+<h4>8. Change Detection Strategies</h4>
 <!-- <app-change-detection-container></app-change-detection-container> -->
+<hr>
 
-<h4>8. Dynamic Component Loading</h4>
+<h4>9. Dynamic Component Loading</h4>
 <!-- <app-dynamic-component-demo1></app-dynamic-component-demo1> -->
 <!-- <app-dynamic-component-loading></app-dynamic-component-loading> -->
+
+
+

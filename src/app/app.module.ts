@@ -11,15 +11,15 @@ import { AppComponent } from './app.component';
 /**
  * Modules
  */
-import { ChangeDetectionModule } from './components/07-change-detection-strategies/change-detection-strategies.module';
+import { ChangeDetectionModule } from './components/06-change-detection-strategies/change-detection-strategies.module';
 import { CommunicationModule } from './components/02-communication/communication.module';
-import { DynamicComponentLoadingModule } from './components/08-dynamic-component-loading/dynamic-component-loading.module';
-import { HostModule } from './components/03-host-binding-host-listener/host.module';
-import { LifecycleHooksModule } from './components/06-lifecycle-hooks/lifecycle-hooks.module';
+import { DynamicComponentLoadingModule } from './components/07-dynamic-component-loading/dynamic-component-loading.module';
+import { LifecycleHooksModule } from './components/05-lifecycle-hooks/lifecycle-hooks.module';
 import { ListModule } from './components/01-display-data/01-list/list.module';
-import { ProjectionModule } from './components/04-projection/projection.module';
-import { StylingModule } from './components/05-styling/styling.module';
+import { ProjectionModule } from './components/03-projection/projection.module';
+import { StylingModule } from './components/04-styling/styling.module';
 import { SvgModule } from './components/01-display-data/02-svg/svg.module';
+import { DirectivesModule } from './directives/directives.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -30,12 +30,12 @@ import { SvgModule } from './components/01-display-data/02-svg/svg.module';
     ChangeDetectionModule,
     CommunicationModule,
     DynamicComponentLoadingModule,
-    HostModule,
     LifecycleHooksModule,
     ListModule,
     ProjectionModule,
     StylingModule,
-    SvgModule
+    SvgModule,
+    DirectivesModule
   ],
   exports: [],
   providers: [],
