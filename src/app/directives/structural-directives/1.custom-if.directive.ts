@@ -7,7 +7,7 @@ export class CustomIfDirective implements OnInit {
 
 /**
  *  Shorthand Form
- *  <div *custom-if="visible">
+ *  <div *appCustomIf="visible">
  *    <span>You may see content</span>
  *  </div>
  *
