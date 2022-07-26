@@ -6,7 +6,7 @@ import {
   ChangeDetectionContainerComponent,
   DefaultComponent,
   OnPushComponent
-} from '.';
+} from './components';
 
 @NgModule({
   imports: [

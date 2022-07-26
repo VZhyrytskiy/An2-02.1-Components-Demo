@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 
-import type { Person } from '../../models/person.model';
+import type { Person } from './../../models/person.model';
 
 @Component({
   selector: 'app-on-push',

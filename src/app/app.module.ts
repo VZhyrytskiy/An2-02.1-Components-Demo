@@ -11,7 +11,7 @@ import { AppComponent } from './app.component';
 /**
  * Modules
  */
-import { ChangeDetectionModule } from './components/06-change-detection-strategies/change-detection-strategies.module';
+import { ChangeDetectionModule } from './components/06-change-detection-strategies/1.on-push/change-detection-strategies.module';
 import { CommunicationModule } from './components/02-communication/communication.module';
 import { DynamicComponentLoadingModule } from './components/07-dynamic-component-loading/dynamic-component-loading.module';
 import { LifecycleHooksModule } from './components/05-lifecycle-hooks/lifecycle-hooks.module';
@@ -20,6 +20,7 @@ import { ProjectionModule } from './components/03-projection/projection.module';
 import { StylingModule } from './components/04-styling/styling.module';
 import { SvgModule } from './components/01-display-data/02-svg/svg.module';
 import { DirectivesModule } from './directives/directives.module';
+import { TimersModule } from './components/06-change-detection-strategies/2.ngZone/timers/timers.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -28,6 +29,7 @@ import { DirectivesModule } from './directives/directives.module';
     FormsModule,
 
     ChangeDetectionModule,
+    TimersModule,
     CommunicationModule,
     DynamicComponentLoadingModule,
     LifecycleHooksModule,
