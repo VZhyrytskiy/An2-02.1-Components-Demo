@@ -46,7 +46,17 @@ export class ContainerComponent implements OnInit {
     const componentRef = viewContainerRef.createComponent(component);
 
     // Передать данные компоненту
+    // не запускает ngOnChanges
+    // not marked for check
     (componentRef.instance as DynamicComponent).data = 'Data for Component';
+
+    // since v14.1
+    // запускает ngOnChanges
+    // marked for check
+    componentRef.setInput('data', 'Data for Component');
+    // add type-safe
+    const data: keyof DynamicComponent = 'data';
+    componentRef.setInput(data, 'Data for Component');
 
     // Вызвать метод компонента
     (componentRef.instance as DynamicComponent).notify();
