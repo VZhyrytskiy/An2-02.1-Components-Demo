@@ -13,7 +13,7 @@ import { AppComponent } from './app.component';
  */
 import { ChangeDetectionModule } from './components/06-change-detection-strategies/1.on-push/change-detection-strategies.module';
 import { CommunicationModule } from './components/02-communication/communication.module';
-import { DynamicComponentLoadingModule } from './components/07-dynamic-component-loading/dynamic-component-loading.module';
+import { DynamicComponentLoadingModule } from './components/07-dynamic-component/dynamic-component-loading.module';
 import { LifecycleHooksModule } from './components/05-lifecycle-hooks/lifecycle-hooks.module';
 import { ListModule } from './components/01-display-data/01-list/list.module';
 import { ProjectionModule } from './components/03-projection/projection.module';
