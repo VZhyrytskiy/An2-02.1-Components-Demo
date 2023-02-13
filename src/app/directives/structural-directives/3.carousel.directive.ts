@@ -20,16 +20,6 @@ export class CarouselDirective implements OnInit {
     this.renderCurrentSlide();
   }
 
-  private renderCurrentSlide(){
-    const context: ContextType = {
-      ctr: this,
-      '$implicit': this.images[this.currentIndex]
-    };
-
-    this.container.clear();
-    this.container.createEmbeddedView(this.template, context);
-  }
-
   next() {
     this.currentIndex = this.currentIndex === this.images.length - 1 ? 0 : this.currentIndex + 1;
     this.renderCurrentSlide();
@@ -38,6 +28,16 @@ export class CarouselDirective implements OnInit {
   prev() {
     this.currentIndex = this.currentIndex - 1 < 0 ? this.images.length - 1: this.currentIndex - 1;
     this.renderCurrentSlide();
+  }
+
+  private renderCurrentSlide(){
+    const context: ContextType = {
+      ctr: this,
+      '$implicit': this.images[this.currentIndex]
+    };
+
+    this.container.clear();
+    this.container.createEmbeddedView(this.template, context);
   }
 
 }
