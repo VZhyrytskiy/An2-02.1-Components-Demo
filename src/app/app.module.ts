@@ -45,3 +45,4 @@ import { TimersModule } from './components/06-change-detection-strategies/2.ngZo
   // schemas: [CUSTOM_ELEMENTS_SCHEMA /* or NO_ERRORS_SCHEMA  */]
 })
 export class AppModule {}
+// test git
