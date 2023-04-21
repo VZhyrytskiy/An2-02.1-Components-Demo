@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-svg',
+  standalone: true,
   templateUrl: './svg.component.svg', // or .html
   styleUrls: ['./svg.component.css']
 })

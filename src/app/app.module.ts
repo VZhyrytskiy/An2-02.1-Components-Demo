@@ -17,11 +17,12 @@ import { DynamicComponentLoadingModule } from './components/07-dynamic-component
 import { LifecycleHooksModule } from './components/05-lifecycle-hooks/lifecycle-hooks.module';
 import { ProjectionModule } from './components/03-projection/projection.module';
 import { StylingModule } from './components/04-styling/styling.module';
-import { SvgModule } from './components/01-display-data/02-svg/svg.module';
 import { DirectivesModule } from './directives/directives.module';
 import { TimersModule } from './components/06-change-detection-strategies/2.ngZone/timers/timers.module';
 
 import { ListComponent } from './components/01-display-data/01-list/list/list.component';
+import { SvgComponent } from './components/01-display-data/02-svg/svg.component';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -36,11 +37,11 @@ import { ListComponent } from './components/01-display-data/01-list/list/list.co
     LifecycleHooksModule,
     ProjectionModule,
     StylingModule,
-    SvgModule,
     DirectivesModule,
 
     // standalone components
-    ListComponent
+    ListComponent,
+    SvgComponent
   ],
   exports: [],
   providers: [],
