@@ -15,12 +15,13 @@ import { ChangeDetectionModule } from './components/06-change-detection-strategi
 import { CommunicationModule } from './components/02-communication/communication.module';
 import { DynamicComponentLoadingModule } from './components/07-dynamic-component/dynamic-component-loading.module';
 import { LifecycleHooksModule } from './components/05-lifecycle-hooks/lifecycle-hooks.module';
-import { ListModule } from './components/01-display-data/01-list/list.module';
 import { ProjectionModule } from './components/03-projection/projection.module';
 import { StylingModule } from './components/04-styling/styling.module';
 import { SvgModule } from './components/01-display-data/02-svg/svg.module';
 import { DirectivesModule } from './directives/directives.module';
 import { TimersModule } from './components/06-change-detection-strategies/2.ngZone/timers/timers.module';
+
+import { ListComponent } from './components/01-display-data/01-list/list/list.component';
 
 @NgModule({
   declarations: [AppComponent],
@@ -33,11 +34,13 @@ import { TimersModule } from './components/06-change-detection-strategies/2.ngZo
     CommunicationModule,
     DynamicComponentLoadingModule,
     LifecycleHooksModule,
-    ListModule,
     ProjectionModule,
     StylingModule,
     SvgModule,
-    DirectivesModule
+    DirectivesModule,
+
+    // standalone components
+    ListComponent
   ],
   exports: [],
   providers: [],

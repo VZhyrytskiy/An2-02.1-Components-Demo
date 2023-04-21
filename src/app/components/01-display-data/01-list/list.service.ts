@@ -7,8 +7,6 @@ import { Item } from './item.model';
 })
 export class ListService {
 
-  constructor() { }
-
   getItem(): Item {
     return new Item(1, 'Create', 1, 8, 0, false);
   }
