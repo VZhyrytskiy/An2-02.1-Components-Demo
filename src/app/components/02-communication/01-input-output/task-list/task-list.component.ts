@@ -1,20 +1,24 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { NgForOf } from '@angular/common';
 
-import { type Task } from './../models/task.model';
+import { type TaskModel } from './../models/task.model';
+import { TaskComponent } from './task/task.component';
 
 @Component({
   selector: 'app-task-list',
+  standalone: true,
   templateUrl: './task-list.component.html',
-  styleUrls: ['./task-list.component.css']
+  styleUrls: ['./task-list.component.css'],
+  imports: [NgForOf, TaskComponent]
 })
 export class TaskListComponent {
   @Input()
-  tasks!: Array<Task>;
+  tasks!: Array<TaskModel>;
 
   @Output()
-  completeTask: EventEmitter<Task> = new EventEmitter();
+  completeTask: EventEmitter<TaskModel> = new EventEmitter();
 
-  onCompleteTask(task: Task): void {
+  onCompleteTask(task: TaskModel): void {
     console.log('task-list component, completeTask method', task);
     this.completeTask.emit(task);
   }

@@ -1,21 +1,22 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 
-import { Task } from './../models/task.model';
+import { TaskModel } from './../models/task.model';
 
 @Component({
   selector: 'app-task-form',
+  standalone: true,
   templateUrl: './task-form.component.html',
   styleUrls: ['./task-form.component.css']
 })
 export class TaskFormComponent {
-  @Output() addTask: EventEmitter<Task> = new EventEmitter<Task>();
+  @Output() addTask: EventEmitter<TaskModel> = new EventEmitter<TaskModel>();
 
   onAddTask(action: string, priority: number, estHours: number): void {
     if (!(action && priority && estHours)) {
       return;
     }
-    
-    const task = new Task(
+
+    const task = new TaskModel(
       null,
       action,
       priority,

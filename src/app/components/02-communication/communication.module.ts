@@ -3,12 +3,6 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import {
-  TaskListComponent,
-  TaskFormComponent,
-  TaskComponent,
-  ParentChildCommunicationComponent
-} from './01-input-output';
-import {
   ClickStopComponent,
   ClickStopDirective
 } from './02-output-event-directive';
@@ -44,11 +38,7 @@ import { AccountComponent, GetPropsDirective } from './08-get-component-properti
     SiblingContainer2Component,
     ClickStopDirective,
     ClickStopComponent,
-    TaskListComponent,
-    TaskFormComponent,
-    TaskComponent,
     ParentComponent,
-    ParentChildCommunicationComponent,
     ChildComponent,
     ExportAsDemoComponent,
     ExportAsDirective,
@@ -62,7 +52,6 @@ import { AccountComponent, GetPropsDirective } from './08-get-component-properti
     SiblingContainerComponent,
     SiblingContainer2Component,
     ClickStopComponent,
-    ParentChildCommunicationComponent,
     ParentComponent,
     ExportAsDemoComponent,
     TheSameComponent,

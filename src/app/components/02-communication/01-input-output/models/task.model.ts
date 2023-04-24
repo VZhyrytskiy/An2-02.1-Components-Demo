@@ -1,7 +1,7 @@
 /**
  * Task Model
  */
-export class Task {
+export class TaskModel {
   constructor(
     public id: number | null = null,
     public action: string,
