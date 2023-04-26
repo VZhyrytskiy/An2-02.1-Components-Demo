@@ -1,13 +1,14 @@
 import { Directive, Output, EventEmitter, HostListener } from '@angular/core';
 
 @Directive({
-  // tslint:disable-next-line: directive-selector
-  selector: '[click.stop]'
+  selector: '[click.stop]',
+  standalone: true
 })
 export class ClickStopDirective {
   @Output('click.stop') clickStopEvent = new EventEmitter();
 
-  @HostListener('click', ['$event']) onClick(event: any): void {
+  @HostListener('click', ['$event'])
+  onClick(event: any): void {
     event.stopPropagation();
     this.clickStopEvent.emit(event);
   }

@@ -23,6 +23,7 @@ import { TimersModule } from './components/06-change-detection-strategies/2.ngZo
 import { ListComponent } from './components/01-display-data/01-list/list/list.component';
 import { SvgComponent } from './components/01-display-data/02-svg/svg.component';
 import { ParentChildCommunicationComponent } from './components/02-communication/01-input-output';
+import { ClickStopComponent } from './components/02-communication/02-output-event-directive';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { ParentChildCommunicationComponent } from './components/02-communication
     // standalone components
     ListComponent,
     SvgComponent,
-    ParentChildCommunicationComponent
+    ParentChildCommunicationComponent,
+    ClickStopComponent
   ],
   exports: [],
   providers: [],

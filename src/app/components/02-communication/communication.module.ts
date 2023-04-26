@@ -2,10 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
-import {
-  ClickStopComponent,
-  ClickStopDirective
-} from './02-output-event-directive';
 import { ParentComponent, ChildComponent } from './03-viewchild-viewchildren';
 import { ExportAsDemoComponent, ExportAsDirective } from './04-export-as';
 import {
@@ -36,8 +32,6 @@ import { AccountComponent, GetPropsDirective } from './08-get-component-properti
     Sibling4Component,
     SiblingContainerComponent,
     SiblingContainer2Component,
-    ClickStopDirective,
-    ClickStopComponent,
     ParentComponent,
     ChildComponent,
     ExportAsDemoComponent,
@@ -51,7 +45,6 @@ import { AccountComponent, GetPropsDirective } from './08-get-component-properti
     GetPropsDirective,
     SiblingContainerComponent,
     SiblingContainer2Component,
-    ClickStopComponent,
     ParentComponent,
     ExportAsDemoComponent,
     TheSameComponent,

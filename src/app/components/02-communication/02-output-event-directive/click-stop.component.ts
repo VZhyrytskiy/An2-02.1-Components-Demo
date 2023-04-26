@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
+import { ClickStopDirective } from './click-stop.directive';
 
 @Component({
   selector: 'app-click-stop',
+  standalone: true,
   template: `
     <div>
       <h5>output-demo works!</h5>
@@ -10,7 +12,8 @@ import { Component } from '@angular/core';
         <button class="btn btn-success" (click.stop)="fromChild()">Click me (Click.stop)</button>
       </div>
     </div>
-  `
+  `,
+  imports: [ClickStopDirective]
 })
 export class ClickStopComponent {
 
