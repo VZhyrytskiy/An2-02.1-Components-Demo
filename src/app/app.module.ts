@@ -24,6 +24,7 @@ import { ListComponent } from './components/01-display-data/01-list/list/list.co
 import { SvgComponent } from './components/01-display-data/02-svg/svg.component';
 import { ParentChildCommunicationComponent } from './components/02-communication/01-input-output';
 import { ClickStopComponent } from './components/02-communication/02-output-event-directive';
+import { ParentComponent } from './components/02-communication/03-viewchild-viewchildren';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { ClickStopComponent } from './components/02-communication/02-output-even
     ListComponent,
     SvgComponent,
     ParentChildCommunicationComponent,
-    ClickStopComponent
+    ClickStopComponent,
+    ParentComponent
   ],
   exports: [],
   providers: [],

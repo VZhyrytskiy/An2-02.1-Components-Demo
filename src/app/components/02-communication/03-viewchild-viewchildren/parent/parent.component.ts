@@ -6,14 +6,17 @@ import {
   type QueryList,
   type AfterViewChecked
 } from '@angular/core';
-import { ChildNgForComponent } from '../child-ng-for/child-ng-for.component';
+import { NgForOf } from '@angular/common';
 
+import { ChildNgForComponent } from '../child-ng-for/child-ng-for.component';
 import { ChildComponent } from './../child/child.component';
 
 @Component({
   selector: 'app-parent',
+  standalone: true,
   templateUrl: './parent.component.html',
-  styleUrls: ['./parent.component.css']
+  styleUrls: ['./parent.component.css'],
+  imports: [ChildComponent, ChildNgForComponent, NgForOf]
 })
 export class ParentComponent implements AfterViewChecked {
   @ViewChild('input')

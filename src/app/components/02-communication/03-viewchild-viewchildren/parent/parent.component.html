@@ -1,10 +1,12 @@
 <p>
-  parent works!
-  <input type="text" #input />
+  <label for="id1">Text:</label>
+  <input id="id1" type="text" #input>
+
   <app-child></app-child>
   <app-child #child></app-child>
-  <button (click)="child.onClick()">Call child method</button>
+
+  <button class="btn btn-warning" (click)="child.onClick()">Call child method</button>
 
   <app-child-ng-for [i]="i" *ngFor="let i of data"></app-child-ng-for>
-  <button (click)="onChangeData()">Change Data Array</button>
+  <button class="btn btn-success" (click)="onChangeData()">Change Data Array</button>
 </p>
