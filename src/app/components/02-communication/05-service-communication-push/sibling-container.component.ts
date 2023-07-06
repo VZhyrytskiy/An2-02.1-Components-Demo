@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
+import { Sibling1Component } from './sibling1.component';
+import { Sibling2Component } from './sibling2.component';
 
 @Component({
   selector: 'app-sibling-container',
-  template: `
-    <div>
-      <app-sibling1></app-sibling1>
-      <app-sibling2></app-sibling2>
-    </div>
-  `
+  standalone: true,
+  templateUrl: './sibling-container.component.html',
+  imports: [Sibling1Component, Sibling2Component]
 })
 export class SiblingContainerComponent {}

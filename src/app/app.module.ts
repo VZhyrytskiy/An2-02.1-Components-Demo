@@ -26,6 +26,7 @@ import { ParentChildCommunicationComponent } from './components/02-communication
 import { ClickStopComponent } from './components/02-communication/02-output-event-directive';
 import { ParentComponent } from './components/02-communication/03-viewchild-viewchildren';
 import { ExportAsDemoComponent } from './components/02-communication/04-export-as';
+import { SiblingContainerComponent } from './components/02-communication/05-service-communication-push';
 
 
 @NgModule({
@@ -49,7 +50,8 @@ import { ExportAsDemoComponent } from './components/02-communication/04-export-a
     ParentChildCommunicationComponent,
     ClickStopComponent,
     ParentComponent,
-    ExportAsDemoComponent
+    ExportAsDemoComponent,
+    SiblingContainerComponent
   ],
   exports: [],
   providers: [],

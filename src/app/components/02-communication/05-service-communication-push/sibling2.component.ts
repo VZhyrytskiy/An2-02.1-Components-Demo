@@ -5,6 +5,7 @@ import { CommunicatorService } from './communicator.service';
 
 @Component({
   selector: 'app-sibling2',
+  standalone: true,
   template: `
     <p>
       sibling2

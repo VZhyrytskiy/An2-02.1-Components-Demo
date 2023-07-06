@@ -2,12 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
-import { ExportAsDemoComponent, ExportAsDirective } from './04-export-as';
-import {
-  SiblingContainerComponent,
-  Sibling1Component,
-  Sibling2Component
-} from './05-service-communication-push';
 import {
   SiblingContainer2Component,
   Sibling3Component,
@@ -24,11 +18,8 @@ import { AccountComponent, GetPropsDirective } from './08-get-component-properti
   declarations: [
     AccountComponent,
     GetPropsDirective,
-    Sibling1Component,
-    Sibling2Component,
     Sibling3Component,
     Sibling4Component,
-    SiblingContainerComponent,
     SiblingContainer2Component,
     TheSameComponent,
     TheSameDirective,
@@ -36,7 +27,6 @@ import { AccountComponent, GetPropsDirective } from './08-get-component-properti
   exports: [
     AccountComponent,
     GetPropsDirective,
-    SiblingContainerComponent,
     SiblingContainer2Component,
     TheSameComponent,
     TheSameDirective
