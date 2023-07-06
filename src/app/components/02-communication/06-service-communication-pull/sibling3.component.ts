@@ -4,6 +4,7 @@ import { DataService } from './data.service';
 
 @Component({
   selector: 'app-sibling3',
+  standalone: true,
   template: `
     <p>
       sibling3

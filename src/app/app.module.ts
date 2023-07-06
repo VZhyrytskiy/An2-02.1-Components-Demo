@@ -27,6 +27,7 @@ import { ClickStopComponent } from './components/02-communication/02-output-even
 import { ParentComponent } from './components/02-communication/03-viewchild-viewchildren';
 import { ExportAsDemoComponent } from './components/02-communication/04-export-as';
 import { SiblingContainerComponent } from './components/02-communication/05-service-communication-push';
+import { SiblingContainer2Component } from './components/02-communication/06-service-communication-pull';
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { SiblingContainerComponent } from './components/02-communication/05-serv
     ClickStopComponent,
     ParentComponent,
     ExportAsDemoComponent,
-    SiblingContainerComponent
+    SiblingContainerComponent,
+    SiblingContainer2Component
   ],
   exports: [],
   providers: [],
