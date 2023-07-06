@@ -28,6 +28,8 @@ import { ParentComponent } from './components/02-communication/03-viewchild-view
 import { ExportAsDemoComponent } from './components/02-communication/04-export-as';
 import { SiblingContainerComponent } from './components/02-communication/05-service-communication-push';
 import { SiblingContainer2Component } from './components/02-communication/06-service-communication-pull';
+import { TheSameComponent } from './components/02-communication/07-the-same/the-same.component';
+import { TheSameDirective } from './components/02-communication/07-the-same/the-same.directive';
 
 
 @NgModule({
@@ -53,7 +55,9 @@ import { SiblingContainer2Component } from './components/02-communication/06-ser
     ParentComponent,
     ExportAsDemoComponent,
     SiblingContainerComponent,
-    SiblingContainer2Component
+    SiblingContainer2Component,
+    TheSameComponent,
+    TheSameDirective
   ],
   exports: [],
   providers: [],

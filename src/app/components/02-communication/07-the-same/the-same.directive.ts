@@ -1,7 +1,8 @@
 import { Directive, type OnInit, Input } from '@angular/core';
 
 @Directive({
-  selector: '[appTheSame]'
+  selector: '[appTheSame]',
+  standalone: true
 })
 export class TheSameDirective implements OnInit {
 
