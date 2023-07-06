@@ -2,7 +2,8 @@ import { Directive, ElementRef, Host, Input, type OnInit } from '@angular/core';
 import { AccountComponent } from './account.component';
 
 @Directive({
-  selector: '[get-props]'
+  selector: '[get-props]',
+  standalone: true
 })
 export class GetPropsDirective implements OnInit {
   @Input() balance!: number;

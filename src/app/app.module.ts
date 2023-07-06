@@ -12,7 +12,6 @@ import { AppComponent } from './app.component';
  * Modules
  */
 import { ChangeDetectionModule } from './components/06-change-detection-strategies/1.on-push/change-detection-strategies.module';
-import { CommunicationModule } from './components/02-communication/communication.module';
 import { DynamicComponentLoadingModule } from './components/07-dynamic-component/dynamic-component-loading.module';
 import { LifecycleHooksModule } from './components/05-lifecycle-hooks/lifecycle-hooks.module';
 import { ProjectionModule } from './components/03-projection/projection.module';
@@ -30,6 +29,8 @@ import { SiblingContainerComponent } from './components/02-communication/05-serv
 import { SiblingContainer2Component } from './components/02-communication/06-service-communication-pull';
 import { TheSameComponent } from './components/02-communication/07-the-same/the-same.component';
 import { TheSameDirective } from './components/02-communication/07-the-same/the-same.directive';
+import { AccountComponent } from './components/02-communication/08-get-component-properties/account.component';
+import { GetPropsDirective } from './components/02-communication/08-get-component-properties/get-props.directive';
 
 
 @NgModule({
@@ -40,7 +41,6 @@ import { TheSameDirective } from './components/02-communication/07-the-same/the-
 
     ChangeDetectionModule,
     TimersModule,
-    CommunicationModule,
     DynamicComponentLoadingModule,
     LifecycleHooksModule,
     ProjectionModule,
@@ -57,7 +57,9 @@ import { TheSameDirective } from './components/02-communication/07-the-same/the-
     SiblingContainerComponent,
     SiblingContainer2Component,
     TheSameComponent,
-    TheSameDirective
+    TheSameDirective,
+    AccountComponent,
+    GetPropsDirective
   ],
   exports: [],
   providers: [],
