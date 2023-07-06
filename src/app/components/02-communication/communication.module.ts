@@ -30,8 +30,6 @@ import { AccountComponent, GetPropsDirective } from './08-get-component-properti
     Sibling4Component,
     SiblingContainerComponent,
     SiblingContainer2Component,
-    ExportAsDemoComponent,
-    ExportAsDirective,
     TheSameComponent,
     TheSameDirective,
   ],
@@ -40,7 +38,6 @@ import { AccountComponent, GetPropsDirective } from './08-get-component-properti
     GetPropsDirective,
     SiblingContainerComponent,
     SiblingContainer2Component,
-    ExportAsDemoComponent,
     TheSameComponent,
     TheSameDirective
   ]

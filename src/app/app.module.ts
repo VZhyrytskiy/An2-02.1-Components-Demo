@@ -25,6 +25,7 @@ import { SvgComponent } from './components/01-display-data/02-svg/svg.component'
 import { ParentChildCommunicationComponent } from './components/02-communication/01-input-output';
 import { ClickStopComponent } from './components/02-communication/02-output-event-directive';
 import { ParentComponent } from './components/02-communication/03-viewchild-viewchildren';
+import { ExportAsDemoComponent } from './components/02-communication/04-export-as';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { ParentComponent } from './components/02-communication/03-viewchild-view
     SvgComponent,
     ParentChildCommunicationComponent,
     ClickStopComponent,
-    ParentComponent
+    ParentComponent,
+    ExportAsDemoComponent
   ],
   exports: [],
   providers: [],

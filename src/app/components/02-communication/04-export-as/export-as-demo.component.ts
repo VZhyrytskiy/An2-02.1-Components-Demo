@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
+import { ExportAsDirective } from './export-as.directive';
 
 @Component({
   selector: 'app-export-as-demo',
-  templateUrl: './export-as-demo.component.html'
+  standalone: true,
+  templateUrl: './export-as-demo.component.html',
+  imports: [ExportAsDirective]
 })
 export class ExportAsDemoComponent  {
 
