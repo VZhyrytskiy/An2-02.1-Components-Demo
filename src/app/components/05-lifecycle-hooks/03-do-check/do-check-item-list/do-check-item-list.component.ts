@@ -1,11 +1,16 @@
 import { Component, IterableDiffers, Input, Output, EventEmitter } from '@angular/core';
 import type {OnInit, DoCheck, IterableDiffer, IterableChanges, IterableChangeRecord } from '@angular/core';
-import type { TaskModel } from '../do-check-item/task.model';
+import type { TaskModel } from '../task.model';
+import { NgForOf } from '@angular/common';
+import { DoCheckItemComponent } from '../do-check-item/do-check-item.component';
+
 
 @Component({
   selector: 'app-do-check-item-list',
+  standalone: true,
   templateUrl: './do-check-item-list.component.html',
-  styleUrls: ['./do-check-item-list.component.css']
+  styleUrls: ['./do-check-item-list.component.css'],
+  imports: [NgForOf, DoCheckItemComponent]
 })
 export class DoCheckItemListComponent implements OnInit, DoCheck {
   @Input() tasks: Array<TaskModel> = [];

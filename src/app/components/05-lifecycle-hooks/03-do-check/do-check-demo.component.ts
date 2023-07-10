@@ -1,8 +1,11 @@
 import { Component, type OnInit } from '@angular/core';
-import type { TaskModel } from './do-check-item/task.model';
+import type { TaskModel } from './task.model';
+import { DoCheckItemComponent } from './do-check-item/do-check-item.component';
+import { DoCheckItemListComponent } from './do-check-item-list/do-check-item-list.component';
 
 @Component({
   selector: 'app-do-check-demo',
+  standalone: true,
   template: `
     <section>
       <h4>One Item:</h4>
@@ -24,7 +27,8 @@ import type { TaskModel } from './do-check-item/task.model';
       </app-do-check-item-list>
       <button class="btn btn-danger" (click)="onAddTask()">Add</button>
     </section>
-  `
+  `,
+  imports: [DoCheckItemComponent, DoCheckItemListComponent]
 })
 export class DoCheckDemoComponent implements OnInit {
   tasks: Array<TaskModel> = [];

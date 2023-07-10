@@ -1,9 +1,10 @@
 import { Component, EventEmitter, Input, KeyValueDiffers, Output } from '@angular/core';
 import type { OnInit, DoCheck, KeyValueDiffer, KeyValueChangeRecord, SimpleChanges, OnChanges } from '@angular/core';
-import type { TaskModel } from './task.model';
+import type { TaskModel } from '../task.model';
 
 @Component({
   selector: 'app-do-check-item',
+  standalone: true,
   templateUrl: './do-check-item.component.html',
   styleUrls: ['./do-check-item.component.css']
 })

@@ -2,6 +2,7 @@ import { Component, type OnDestroy, type OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-on-init-on-destroy',
+  standalone: true,
   templateUrl: './on-init-on-destroy.component.html',
   styleUrls: ['./on-init-on-destroy.component.css']
 })

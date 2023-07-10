@@ -2,6 +2,7 @@ import { Component, Input, type OnInit, type OnChanges, type SimpleChanges } fro
 
 @Component({
   selector: 'app-on-changes',
+  standalone: true,
   templateUrl: './on-changes.component.html',
   styleUrls: ['./on-changes.component.css']
 })

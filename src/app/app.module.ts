@@ -13,7 +13,6 @@ import { AppComponent } from './app.component';
  */
 import { ChangeDetectionModule } from './components/06-change-detection-strategies/1.on-push/change-detection-strategies.module';
 import { DynamicComponentLoadingModule } from './components/07-dynamic-component/dynamic-component-loading.module';
-import { LifecycleHooksModule } from './components/05-lifecycle-hooks/lifecycle-hooks.module';
 import { DirectivesModule } from './directives/directives.module';
 import { TimersModule } from './components/06-change-detection-strategies/2.ngZone/timers/timers.module';
 
@@ -45,6 +44,15 @@ import {
   NoEncapsulationComponent,
   ShadowDomEncapsulationComponent,
 } from './components/04-styling';
+import {
+  OnInitOnDestroyDemoComponent,
+  AfterContentComponent,
+  AfterViewComponent,
+  AftersComponent,
+  DoCheckDemoComponent,
+  OnChangesDemoComponent,
+  ChildContentComponent,
+} from './components/05-lifecycle-hooks';
 
 @NgModule({
   declarations: [AppComponent],
@@ -55,7 +63,6 @@ import {
     ChangeDetectionModule,
     TimersModule,
     DynamicComponentLoadingModule,
-    LifecycleHooksModule,
     DirectivesModule,
 
     // standalone components
@@ -82,6 +89,15 @@ import {
     HostSelectorComponent,
     NoEncapsulationComponent,
     ShadowDomEncapsulationComponent,
+
+    /* Lifecycle Hooks */
+    OnInitOnDestroyDemoComponent,
+    OnChangesDemoComponent,
+    DoCheckDemoComponent,
+    AftersComponent,
+    AfterViewComponent,
+    AfterContentComponent,
+    ChildContentComponent
   ],
   exports: [],
   providers: [],

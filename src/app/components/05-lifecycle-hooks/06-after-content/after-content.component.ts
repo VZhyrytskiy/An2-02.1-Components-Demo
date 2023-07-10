@@ -4,6 +4,7 @@ import { ChildContentComponent } from './child-content/child-content.component';
 
 @Component({
   selector: 'app-after-content',
+  standalone: true,
   templateUrl: './after-content.component.html',
   styleUrls: ['./after-content.component.css']
 })

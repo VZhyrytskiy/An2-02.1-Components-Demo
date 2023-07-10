@@ -12,6 +12,7 @@ import type {
 
 @Component({
   selector: 'app-afters',
+  standalone: true,
   templateUrl: './afters.component.html',
   styleUrls: ['./afters.component.css']
 })
