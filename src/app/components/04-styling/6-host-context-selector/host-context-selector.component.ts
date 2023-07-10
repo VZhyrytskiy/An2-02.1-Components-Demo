@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-host-context-selector',
+  standalone: true,
   templateUrl: './host-context-selector.component.html',
   styleUrls: ['./host-context-selector.component.css']
 })

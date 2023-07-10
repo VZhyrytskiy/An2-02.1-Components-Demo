@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-inline-style',
+  standalone: true,
   templateUrl: './inline-style.component.html',
   styles: [`
     section {
