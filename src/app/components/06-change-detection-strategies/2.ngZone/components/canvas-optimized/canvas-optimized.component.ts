@@ -1,12 +1,15 @@
-import { Component, ElementRef, AfterViewInit, ViewChild, NgZone, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ElementRef, AfterViewInit, ViewChild, NgZone } from '@angular/core';
 import { Color } from '../../interfaces/color.interface';
 
+
+
 @Component({
-  selector: 'app-canvas',
-  templateUrl: './canvas.component.html',
-  styleUrls: ['./canvas.component.css'],
+  selector: 'app-canvas-optimized',
+  standalone: true,
+  templateUrl: './canvas-optimized.component.html',
+  styleUrls: ['./canvas-optimized.component.css']
 })
-export class CanvasComponent implements AfterViewInit {
+export class CanvasOptimizedComponent implements AfterViewInit {
 
   @ViewChild('canvas') canvas!: ElementRef<HTMLCanvasElement>;
 
@@ -18,12 +21,16 @@ export class CanvasComponent implements AfterViewInit {
   };
   private stagePhase = 0;
 
+  constructor(private ngZone: NgZone) { }
+
   ngAfterViewInit() {
-    // Angular runs change detection on every 10ms
-    this.interval = window.setInterval(() => {
-      this.setNextColor()
-      this.paint();
-    }, 10);
+    // Angular dosn't run change detection on every 10 ms
+    this.ngZone.runOutsideAngular(() => {
+      this.interval = window.setInterval(() => {
+        this.setNextColor()
+        this.paint();
+      }, 10)
+    });
   }
 
   ngOnDestroy() {
@@ -61,7 +68,7 @@ export class CanvasComponent implements AfterViewInit {
 
   private paint() {
     const el = this.canvas.nativeElement;
-    const ctx = el.getContext('2d');
+    var ctx = el.getContext('2d');
     ctx!.fillStyle = `rgb(${this.color.r}, ${this.color.g}, ${this.color.b})`;
     ctx!.fillRect(0, 0, el.width, el.height);
   }

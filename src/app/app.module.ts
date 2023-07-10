@@ -11,10 +11,8 @@ import { AppComponent } from './app.component';
 /**
  * Modules
  */
-import { ChangeDetectionModule } from './components/06-change-detection-strategies/1.on-push/change-detection-strategies.module';
 import { DynamicComponentLoadingModule } from './components/07-dynamic-component/dynamic-component-loading.module';
 import { DirectivesModule } from './directives/directives.module';
-import { TimersModule } from './components/06-change-detection-strategies/2.ngZone/timers/timers.module';
 
 import { ListComponent, SvgComponent } from './components/01-display-data';
 import {
@@ -53,6 +51,10 @@ import {
   OnChangesDemoComponent,
   ChildContentComponent,
 } from './components/05-lifecycle-hooks';
+import {
+  ChangeDetectionContainerComponent,
+  TimersComponent,
+} from './components/06-change-detection-strategies';
 
 @NgModule({
   declarations: [AppComponent],
@@ -60,8 +62,6 @@ import {
     BrowserModule,
     FormsModule,
 
-    ChangeDetectionModule,
-    TimersModule,
     DynamicComponentLoadingModule,
     DirectivesModule,
 
@@ -97,10 +97,12 @@ import {
     AftersComponent,
     AfterViewComponent,
     AfterContentComponent,
-    ChildContentComponent
+    ChildContentComponent,
+
+    /* ChangeDetection Strategies */
+    ChangeDetectionContainerComponent,
+    TimersComponent,
   ],
-  exports: [],
-  providers: [],
   bootstrap: [AppComponent],
   // schemas: [CUSTOM_ELEMENTS_SCHEMA]
   // schemas: [NO_ERRORS_SCHEMA]
