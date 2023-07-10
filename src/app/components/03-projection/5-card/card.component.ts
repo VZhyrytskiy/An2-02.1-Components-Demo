@@ -1,9 +1,12 @@
+import { NgIf, NgTemplateOutlet } from '@angular/common';
 import { type AfterContentInit, Component, ContentChild, Input } from '@angular/core';
 
 @Component({
   selector: 'app-card',
+  standalone: true,
   templateUrl: './card.component.html',
-  styleUrls: ['./card.component.css']
+  styleUrls: ['./card.component.css'],
+  imports: [NgIf, NgTemplateOutlet]
 })
 export class CardComponent implements AfterContentInit {
   @Input() expanded = true;

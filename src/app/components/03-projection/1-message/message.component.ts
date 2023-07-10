@@ -2,6 +2,7 @@ import { Component, Input, ContentChild, ElementRef, type AfterContentInit} from
 
 @Component({
   selector: 'app-message',
+  standalone: true,
   templateUrl: './message.component.html',
   styleUrls: ['./message.component.css']
 })

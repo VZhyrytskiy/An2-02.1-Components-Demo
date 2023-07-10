@@ -14,7 +14,6 @@ import { AppComponent } from './app.component';
 import { ChangeDetectionModule } from './components/06-change-detection-strategies/1.on-push/change-detection-strategies.module';
 import { DynamicComponentLoadingModule } from './components/07-dynamic-component/dynamic-component-loading.module';
 import { LifecycleHooksModule } from './components/05-lifecycle-hooks/lifecycle-hooks.module';
-import { ProjectionModule } from './components/03-projection/projection.module';
 import { StylingModule } from './components/04-styling/styling.module';
 import { DirectivesModule } from './directives/directives.module';
 import { TimersModule } from './components/06-change-detection-strategies/2.ngZone/timers/timers.module';
@@ -32,6 +31,13 @@ import {
   ParentComponent,
   ExportAsDemoComponent,
 } from './components/02-communication';
+import {
+  MessageComponent,
+  Panel1Component,
+  Panel2Component,
+  Panel3Component,
+  CardComponent,
+} from './components/03-projection';
 
 @NgModule({
   declarations: [AppComponent],
@@ -43,7 +49,6 @@ import {
     TimersModule,
     DynamicComponentLoadingModule,
     LifecycleHooksModule,
-    ProjectionModule,
     StylingModule,
     DirectivesModule,
 
@@ -60,11 +65,17 @@ import {
     TheSameDirective,
     AccountComponent,
     GetPropsDirective,
+    MessageComponent,
+    Panel1Component,
+    Panel2Component,
+    Panel3Component,
+    CardComponent,
   ],
   exports: [],
   providers: [],
   bootstrap: [AppComponent],
-  // schemas: [CUSTOM_ELEMENTS_SCHEMA /* or NO_ERRORS_SCHEMA  */]
+  // schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  // schemas: [NO_ERRORS_SCHEMA]
 })
 export class AppModule {}
 // test git

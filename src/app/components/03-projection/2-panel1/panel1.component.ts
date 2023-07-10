@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-panel1',
+  standalone: true,
   templateUrl: './panel1.component.html',
   styleUrls: ['./panel1.component.css']
 })
