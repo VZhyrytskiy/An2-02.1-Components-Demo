@@ -2,13 +2,16 @@ import { Component, InjectionToken, Injector, type OnInit } from '@angular/core'
 import { Tab1Component } from '../components/tab1/tab1.component';
 import { Tab2Component } from '../components/tab2/tab2.component';
 import { DynamicService } from '../dynamic.service';
+import { NgClass, NgComponentOutlet, NgForOf } from '@angular/common';
 
 export const token = new InjectionToken<string>('');
 
 @Component({
   selector: 'app-tab-container',
+  standalone: true,
   templateUrl: './tab-container.component.html',
-  styleUrls: ['./tab-container.component.css']
+  styleUrls: ['./tab-container.component.css'],
+  imports: [NgClass, NgForOf, NgComponentOutlet]
 })
 export class TabContainerComponent implements OnInit {
   tabs = [{

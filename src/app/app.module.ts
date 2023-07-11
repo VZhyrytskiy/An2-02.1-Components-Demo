@@ -11,7 +11,6 @@ import { AppComponent } from './app.component';
 /**
  * Modules
  */
-import { DynamicComponentLoadingModule } from './components/07-dynamic-component/dynamic-component-loading.module';
 import { DirectivesModule } from './directives/directives.module';
 
 import { ListComponent, SvgComponent } from './components/01-display-data';
@@ -55,6 +54,11 @@ import {
   ChangeDetectionContainerComponent,
   TimersComponent,
 } from './components/06-change-detection-strategies';
+import {
+  ContainerComponent,
+  DynamicComponentDemo1Component,
+  TabContainerComponent,
+} from './components/07-dynamic-component';
 
 @NgModule({
   declarations: [AppComponent],
@@ -62,7 +66,6 @@ import {
     BrowserModule,
     FormsModule,
 
-    DynamicComponentLoadingModule,
     DirectivesModule,
 
     // standalone components
@@ -102,6 +105,11 @@ import {
     /* ChangeDetection Strategies */
     ChangeDetectionContainerComponent,
     TimersComponent,
+
+    /* Dynamic Components */
+    ContainerComponent,
+    DynamicComponentDemo1Component,
+    TabContainerComponent,
   ],
   bootstrap: [AppComponent],
   // schemas: [CUSTOM_ELEMENTS_SCHEMA]

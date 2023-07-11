@@ -3,6 +3,7 @@ import type { DynamicComponent } from './../../interfaces/dynamic-component.inte
 
 @Component({
   selector: 'app-component-1',
+  standalone: true,
   templateUrl: './component-1.component.html',
   styleUrls: ['./component-1.component.css']
 })

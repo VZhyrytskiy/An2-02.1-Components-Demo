@@ -1,15 +1,16 @@
 import { Component, ViewChild, type OnInit, Type } from '@angular/core';
+import { TargetDirective } from './directives/target.directive';
+import { Component1Component } from './components/component-1/component-1.component';
+import { Component2Component } from './components/component-2/component-2.component';
+import { DynamicComponent } from './interfaces/dynamic-component.interface';
 
-import {
-  type DynamicComponent,
-  TargetDirective,
-  Component1Component,
-  Component2Component
-} from '.';
+
 
 @Component({
   selector: 'app-dynamic-component-loading',
-  templateUrl: './container.component.html'
+  standalone: true,
+  templateUrl: './container.component.html',
+  imports: [TargetDirective]
 })
 export class ContainerComponent implements OnInit {
   // Получить экземпляр директивы

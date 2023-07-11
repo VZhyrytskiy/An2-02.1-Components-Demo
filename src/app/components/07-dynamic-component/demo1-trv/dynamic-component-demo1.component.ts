@@ -2,6 +2,7 @@ import { Component, ViewChild, ViewContainerRef } from '@angular/core';
 
 @Component({
   selector: 'app-dynamic-component-demo1',
+  standalone: true,
   templateUrl: './dynamic-component-demo1.component.html',
   styleUrls: ['./dynamic-component-demo1.component.css']
 })

@@ -4,6 +4,7 @@ import { token } from './../../tab-container/tab-container.component';
 
 @Component({
   selector: 'app-tab2',
+  standalone: true,
   templateUrl: './tab2.component.html',
   styleUrls: ['./tab2.component.css']
 })
