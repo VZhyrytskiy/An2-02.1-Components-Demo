@@ -1,7 +1,8 @@
 import { Directive, Input, OnInit, TemplateRef, ViewContainerRef } from '@angular/core';
 
 @Directive({
-  selector: '[appCustomIf]'
+  selector: '[appCustomIf]',
+  standalone: true
 })
 export class CustomIfDirective implements OnInit {
 

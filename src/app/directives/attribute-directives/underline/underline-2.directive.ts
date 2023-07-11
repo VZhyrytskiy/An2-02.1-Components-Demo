@@ -1,7 +1,8 @@
 import { Directive, HostBinding, HostListener } from '@angular/core';
 
 @Directive({
-  selector: '[underline2]'
+  selector: '[underline2]',
+  standalone: true
 })
 export class Underline2Directive {
 

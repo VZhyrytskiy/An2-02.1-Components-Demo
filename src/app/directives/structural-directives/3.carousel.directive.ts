@@ -3,7 +3,8 @@ import { Directive, Input, OnInit, TemplateRef, ViewContainerRef } from '@angula
 type ContextType = { ctr: CarouselDirective, '$implicit': string };
 
 @Directive({
-  selector: '[appCarousel]'
+  selector: '[appCarousel]',
+  standalone: true
 })
 export class CarouselDirective implements OnInit {
 

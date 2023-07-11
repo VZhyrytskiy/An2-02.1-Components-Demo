@@ -1,7 +1,8 @@
 import { Directive, HostBinding, HostListener } from '@angular/core';
 
 @Directive({
-  selector: '[appHost]'
+  selector: '[appHost]',
+  standalone: true
 })
 export class HostDirective {
 

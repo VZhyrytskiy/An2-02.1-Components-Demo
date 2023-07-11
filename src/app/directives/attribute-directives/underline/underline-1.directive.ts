@@ -1,7 +1,8 @@
 import { Directive, ElementRef, HostListener } from '@angular/core';
 
 @Directive({
-  selector: '[underline1]'
+  selector: '[underline1]',
+  standalone: true
 })
 export class Underline1Directive {
 
