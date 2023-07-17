@@ -9,7 +9,7 @@ import { type AfterContentInit, Component, ContentChild, Input } from '@angular/
   imports: [NgIf, NgTemplateOutlet]
 })
 export class CardComponent implements AfterContentInit {
-  @Input() expanded = true;
+  @Input({ required: false }) expanded = true;
 
   @ContentChild('greet') content!: any;
 

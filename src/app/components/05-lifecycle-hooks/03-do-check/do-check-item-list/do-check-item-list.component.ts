@@ -13,7 +13,7 @@ import { DoCheckItemComponent } from '../do-check-item/do-check-item.component';
   imports: [NgForOf, DoCheckItemComponent]
 })
 export class DoCheckItemListComponent implements OnInit, DoCheck {
-  @Input() tasks: Array<TaskModel> = [];
+  @Input({ required: true }) tasks: Array<TaskModel> = [];
 
   @Output() remove: EventEmitter<TaskModel> = new EventEmitter<TaskModel>();
   @Output() setPriority: EventEmitter<TaskModel> = new EventEmitter<TaskModel>();

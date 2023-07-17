@@ -8,7 +8,7 @@ type ContextType = { ctr: CarouselDirective, '$implicit': string };
 })
 export class CarouselDirective implements OnInit {
 
-  @Input('appCarouselIterate') images!: string[];
+  @Input({ required: true, alias: 'appCarouselIterate' }) images!: string[];
 
   currentIndex = 0;
 

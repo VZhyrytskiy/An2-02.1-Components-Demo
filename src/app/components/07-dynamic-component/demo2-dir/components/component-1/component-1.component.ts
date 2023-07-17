@@ -11,7 +11,7 @@ export class Component1Component implements DynamicComponent, OnChanges, OnDestr
   private _data!: string;
 
   // works when there is a direct assignment
-  @Input() set data(value: string) {
+  @Input({ required: true }) set data(value: string) {
     this._data = value;
     console.log('setter:');
     console.log(value);

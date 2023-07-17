@@ -13,5 +13,5 @@ import type { Person } from './../../models/person.model';
   imports: [FormsModule, DatePipe]
 })
 export class DefaultComponent {
-  @Input() person!: Person;
+  @Input({ required: true }) person!: Person;
 }

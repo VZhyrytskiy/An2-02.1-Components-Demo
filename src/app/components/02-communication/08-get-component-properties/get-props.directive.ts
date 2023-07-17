@@ -6,7 +6,8 @@ import { AccountComponent } from './account.component';
   standalone: true
 })
 export class GetPropsDirective implements OnInit {
-  @Input() balance!: number;
+  @Input({ required: true })
+  balance!: number;
 
   constructor(
     private el: ElementRef,

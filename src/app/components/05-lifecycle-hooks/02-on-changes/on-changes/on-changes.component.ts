@@ -7,10 +7,10 @@ import { Component, Input, type OnInit, type OnChanges, type SimpleChanges } fro
   styleUrls: ['./on-changes.component.css']
 })
 export class OnChangesComponent implements OnInit, OnChanges {
-  @Input()
+  @Input({ required: true })
   responsible!: string;
 
-  @Input()
+  @Input({ required: true })
   action!: string;
 
   constructor() {

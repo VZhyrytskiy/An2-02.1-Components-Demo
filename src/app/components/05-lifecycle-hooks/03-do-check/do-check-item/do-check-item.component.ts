@@ -9,7 +9,7 @@ import type { TaskModel } from '../task.model';
   styleUrls: ['./do-check-item.component.css']
 })
 export class DoCheckItemComponent implements OnInit, OnChanges, DoCheck {
-  @Input()
+  @Input({ required: true })
   item!: TaskModel;
 
   @Output() remove: EventEmitter<TaskModel> = new EventEmitter<TaskModel>();

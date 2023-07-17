@@ -26,7 +26,7 @@ export class CustomIfDirective implements OnInit {
  */
 
   // the name of the input is the same as the name of the directive
-  @Input() appCustomIf!: boolean;
+  @Input({ required: true }) appCustomIf!: boolean;
 
   constructor(
     // a reference to content enclosed within the <ng-template>

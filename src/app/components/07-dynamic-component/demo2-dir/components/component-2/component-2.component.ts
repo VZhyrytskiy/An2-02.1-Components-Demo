@@ -8,7 +8,7 @@ import type { DynamicComponent } from './../../interfaces/dynamic-component.inte
   styleUrls: ['./component-2.component.css']
 })
 export class Component2Component implements DynamicComponent, OnDestroy {
-  @Input() data!: string;
+  @Input({ required: true }) data!: string;
 
   ngOnDestroy(): void {
     console.log('Component 2 is destroyed!!!');

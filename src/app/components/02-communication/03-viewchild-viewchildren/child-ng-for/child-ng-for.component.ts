@@ -7,5 +7,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./child-ng-for.component.css']
 })
 export class ChildNgForComponent {
-  @Input() i!: number;
+  @Input({ required: true }) i!: number;
 }

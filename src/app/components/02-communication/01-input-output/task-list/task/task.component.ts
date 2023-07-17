@@ -11,7 +11,7 @@ import { type TaskModel } from './../../models/task.model';
 export class TaskComponent {
   private _task!: TaskModel;
 
-  @Input()
+  @Input({ required: true })
   get task(): TaskModel {
     return this._task;
   };

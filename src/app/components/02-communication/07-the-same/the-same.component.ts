@@ -12,7 +12,7 @@ import { Component, Input, type OnInit } from '@angular/core';
   `
 })
 export class TheSameComponent implements OnInit {
-  @Input('appTheSame')
+  @Input({ required: true, alias: 'appTheSame'})
   input!: string;
 
   ngOnInit(): void {

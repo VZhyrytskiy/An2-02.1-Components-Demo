@@ -10,7 +10,7 @@ import { Component, Input } from '@angular/core';
              </div>`
 })
 export class AccountComponent {
-  @Input() balance!: number;
+  @Input({ required: true }) balance!: number;
 
   minBalance: number = 100;
 }

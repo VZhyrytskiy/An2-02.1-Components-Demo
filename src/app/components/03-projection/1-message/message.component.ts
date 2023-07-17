@@ -7,7 +7,7 @@ import { Component, Input, ContentChild, ElementRef, type AfterContentInit} from
   styleUrls: ['./message.component.css']
 })
 export class MessageComponent implements AfterContentInit {
-  @Input()
+  @Input({ required: true })
   title!: string;
 
   @ContentChild('content')

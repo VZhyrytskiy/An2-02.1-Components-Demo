@@ -13,7 +13,7 @@ export class CustomForDirective implements OnInit {
  */
 
   // a name of an input is a name of a directive + the keyword before array values
-  @Input('appCustomForIterate') items!: any[];
+  @Input({ required: true, alias: 'appCustomForIterate' }) items!: any[];
 
   constructor(
     // a value for the parameter of type is {'$implicit': any, index: number}

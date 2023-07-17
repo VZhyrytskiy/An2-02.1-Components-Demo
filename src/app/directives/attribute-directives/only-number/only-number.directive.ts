@@ -5,7 +5,7 @@ import { Directive, ElementRef, HostListener, Input } from '@angular/core';
   standalone: true
 })
 export class OnlyNumberDirective {
-  @Input() config: { color: string; } = { color: 'red' };
+  @Input({ required: false }) config: { color: string; } = { color: 'red' };
 
   input!: HTMLInputElement;
 
