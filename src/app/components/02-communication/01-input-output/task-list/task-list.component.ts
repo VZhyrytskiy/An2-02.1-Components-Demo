@@ -12,8 +12,12 @@ import { TaskComponent } from './task/task.component';
   imports: [NgForOf, TaskComponent]
 })
 export class TaskListComponent {
-  @Input()
-  tasks!: Array<TaskModel>;
+  // input is configurable as `required` and bound to `data-input` attribute,
+  // `transform` is a function which transforms the input value before assigning it
+  // to the directive/component instance.
+  // old-fashion way @Input('data-input')
+  @Input( { required: true, alias: 'data-input', transform: (value: TaskModel[]) => value })
+  tasks!: TaskModel[];
 
   @Output()
   completeTask: EventEmitter<TaskModel> = new EventEmitter();
