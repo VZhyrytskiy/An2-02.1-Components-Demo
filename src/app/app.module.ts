@@ -25,6 +25,7 @@ import * as dirs from './directives';
     comp.ExportAsDemoComponent,
     comp.SiblingContainerComponent,
     comp.SiblingContainer2Component,
+    comp.SiblingContainer3Component,
     comp.TheSameComponent,
     comp.TheSameDirective,
     comp.AccountComponent,
