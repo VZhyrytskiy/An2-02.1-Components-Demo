@@ -69,6 +69,11 @@ import * as dirs from './directives';
     dirs.OnlyNumberComponent,
     dirs.UnderlineComponent,
 
+    /** Directive Composition API */
+    dirs.HostCompositionComponent,
+    dirs.ZooComponent,
+    dirs.ColorComponent,
+
     // // /* Structural directives */
     dirs.CustomIfDirective,
     dirs.CustomForDirective,
