@@ -74,6 +74,7 @@ import * as dirs from './directives';
     dirs.HostCompositionComponent,
     dirs.ZooComponent,
     dirs.ColorComponent,
+    dirs.CustomNgIfComponent,
 
     // // /* Structural directives */
     dirs.CustomIfDirective,

@@ -14,7 +14,7 @@ export class CustomIfDirective implements OnInit {
  *
  *  FullForm
  *  // wraps a template in ng-template element
- *  <ng-template [ngIf]="visible">
+ *  <ng-template [appCustomIf]="visible">
  *    <div>
  *      <span>You may see content</span>
  *    </div>
