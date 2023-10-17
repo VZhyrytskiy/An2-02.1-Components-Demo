@@ -14,14 +14,15 @@ export const token = new InjectionToken<string>('');
   imports: [NgClass, NgForOf, NgComponentOutlet]
 })
 export class TabContainerComponent implements OnInit {
+  // tabs info
   tabs = [{
-    tab: 'Tab1',
+    label: 'Tab1',
     component: Tab1Component,
     data: 'This is the first Tab',
     isActive: true
   },
   {
-    tab: 'Tab2',
+    label: 'Tab2',
     component: Tab2Component,
     data: 'This is the second tab',
     isActive: false
@@ -38,7 +39,7 @@ export class TabContainerComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    // get data from children components
+    // get data from children components (Tabs)
     this.service.getObservable().subscribe((data) => {
       this.receivedData = data;
     });

@@ -17,11 +17,13 @@ export class Tab1Component implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    // get data from parent component (TabContainer)
     this.dataIn = this.inject.get(token);
   }
 
   sendData() {
+    // send data to parent component (TabContainer)
     this.serv.outputFromDynamicComponent('Sent data from Tab1');
-    }
+  }
 
 }

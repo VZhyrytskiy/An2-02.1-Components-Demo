@@ -1,9 +1,9 @@
 <ul class="nav">
-  <li *ngFor="let x of tabs; let i = index" class="nav-item">
-    <a [ngClass]="x.isActive ? 'activeTab' : ''"
+  <li *ngFor="let tab of tabs; let i = index" class="nav-item">
+    <a [ngClass]="tab.isActive ? 'activeTab' : ''"
        class="nav-link"
-       (click)="onTabClick(x.component, x.data, i)">
-       {{x.tab}}
+       (click)="onTabClick(tab.component, tab.data, i)">
+       {{tab.label}}
     </a>
   </li>
 </ul>

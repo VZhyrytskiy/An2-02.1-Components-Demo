@@ -12,6 +12,7 @@ export class DynamicService {
   getObservable() {
     return this.output.asObservable();
   }
+
   outputFromDynamicComponent(data: string) {
     this.output.next(data);
   }
