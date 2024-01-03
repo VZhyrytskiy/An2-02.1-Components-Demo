@@ -4,12 +4,12 @@ import { Component } from '@angular/core';
   selector: 'app-svg',
   standalone: true,
   templateUrl: './svg.component.svg', // or .html
-  styleUrls: ['./svg.component.css']
+  styleUrl: './svg.component.css',
 })
-export class SvgComponent  {
+export class SvgComponent {
   fillColor = 'rgb(255, 0, 0)';
 
-  changeColor() {
+  onChangeColor(): void {
     const r = Math.floor(Math.random() * 256);
     const g = Math.floor(Math.random() * 256);
     const b = Math.floor(Math.random() * 256);

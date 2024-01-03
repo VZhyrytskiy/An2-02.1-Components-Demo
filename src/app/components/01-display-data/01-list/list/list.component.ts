@@ -1,5 +1,4 @@
 import { Component, inject, type OnInit } from '@angular/core';
-import { NgForOf } from '@angular/common';
 
 import { type Item } from './../item.model';
 import { ListService } from './../list.service';
@@ -8,8 +7,7 @@ import { ListService } from './../list.service';
   selector: 'app-list',
   standalone: true,
   templateUrl: './list.component.html',
-  styleUrls: ['./list.component.css'],
-  imports: [NgForOf]
+  styleUrl: './list.component.css',
 })
 export class ListComponent implements OnInit {
   item!: Item;

@@ -1,3 +1,6 @@
+svg {
+  width: 100%;
+}
 svg rect {
   cursor: pointer;
 }
