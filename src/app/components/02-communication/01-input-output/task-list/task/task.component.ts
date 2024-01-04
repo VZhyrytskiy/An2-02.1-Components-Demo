@@ -6,7 +6,7 @@ import { type TaskModel } from './../../models/task.model';
   selector: 'app-task',
   standalone: true,
   templateUrl: './task.component.html',
-  styleUrls: ['./task.component.css']
+  styleUrl: './task.component.css'
 })
 export class TaskComponent {
   private _task!: TaskModel;

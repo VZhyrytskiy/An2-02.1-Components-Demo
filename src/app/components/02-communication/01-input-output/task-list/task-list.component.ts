@@ -8,7 +8,7 @@ import { TaskComponent } from './task/task.component';
   selector: 'app-task-list',
   standalone: true,
   templateUrl: './task-list.component.html',
-  styleUrls: ['./task-list.component.css'],
+  styleUrl: './task-list.component.css',
   imports: [NgForOf, TaskComponent]
 })
 export class TaskListComponent {

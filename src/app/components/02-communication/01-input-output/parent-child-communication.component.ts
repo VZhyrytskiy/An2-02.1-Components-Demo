@@ -1,4 +1,4 @@
-import { Component, type OnInit } from '@angular/core';
+import { Component, inject, type OnInit } from '@angular/core';
 
 import { type TaskModel } from './models/task.model';
 import { TasksService } from './services/tasks.service';
@@ -12,9 +12,10 @@ import { TaskFormComponent } from './task-form/task-form.component';
   imports: [TaskListComponent, TaskFormComponent]
 })
 export class ParentChildCommunicationComponent implements OnInit {
-  tasks!: Array<TaskModel>;
+  // dependencies
+  private tasksService = inject(TasksService);
 
-  constructor(private tasksService: TasksService) {}
+  tasks!: Array<TaskModel>;
 
   ngOnInit(): void {
     this.tasks = this.tasksService.getTasks();

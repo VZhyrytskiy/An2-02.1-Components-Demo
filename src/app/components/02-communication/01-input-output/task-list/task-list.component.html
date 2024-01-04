@@ -1,6 +1,3 @@
-<app-task
-    *ngFor="let task of tasks"
-    [task]="task"
-    (completeTask)="onCompleteTask($event)">
-</app-task>
-
+@for(task of tasks; track task.id) {
+<app-task [task]="task" (completeTask)="onCompleteTask($event)" />
+}
