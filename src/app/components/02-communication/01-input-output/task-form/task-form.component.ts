@@ -6,7 +6,7 @@ import { TaskModel } from './../models/task.model';
   selector: 'app-task-form',
   standalone: true,
   templateUrl: './task-form.component.html',
-  styleUrls: ['./task-form.component.css']
+  styleUrl: './task-form.component.css'
 })
 export class TaskFormComponent {
   @Output() addTask: EventEmitter<TaskModel> = new EventEmitter<TaskModel>();
