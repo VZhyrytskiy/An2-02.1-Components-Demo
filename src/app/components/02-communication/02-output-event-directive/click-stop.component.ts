@@ -7,22 +7,24 @@ import { ClickStopDirective } from './click-stop.directive';
   template: `
     <div>
       <h5>output-demo works!</h5>
-      <div (click)="fromParent()">
-        <button class="btn btn-danger" (click)="fromChild()">Click me (Click)</button>
-        <button class="btn btn-success" (click.stop)="fromChild()">Click me (Click.stop)</button>
+      <div (click)="onParentClick()">
+        <button class="btn btn-danger" (click)="onChildClick()">
+          Click me (Click)
+        </button>
+        <button class="btn btn-success" (click.stop)="onChildClick()">
+          Click me (Click.stop)
+        </button>
       </div>
     </div>
   `,
-  imports: [ClickStopDirective]
+  imports: [ClickStopDirective],
 })
 export class ClickStopComponent {
-
-  fromParent(): void {
-    console.log('from parent');
+  onParentClick(): void {
+    console.log('click event occurs on a parent div element');
   }
 
-  fromChild(): void {
-    console.log('from child');
+  onChildClick(): void {
+    console.log('click event occurs on a child button element');
   }
-
 }
