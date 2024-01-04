@@ -3,10 +3,14 @@ import { Directive } from '@angular/core';
 @Directive({
   selector: '[appExportAs]',
   standalone: true,
-  exportAs: 'axa'
+  exportAs: 'referenceToDirectiveInstance' // <= outside directive name
 })
 export class ExportAsDirective {
+  // directive data
+  private data = 100;
+
+  // directive api
   getValue(): number {
-    return 100;
+    return this.data;
   }
 }

@@ -5,12 +5,10 @@ import { ExportAsDirective } from './export-as.directive';
   selector: 'app-export-as-demo',
   standalone: true,
   templateUrl: './export-as-demo.component.html',
-  imports: [ExportAsDirective]
+  imports: [ExportAsDirective],
 })
-export class ExportAsDemoComponent  {
-
-  onClick(d: any): void {
+export class ExportAsDemoComponent {
+  onClick(d: ExportAsDirective): void {
     console.log(d.getValue());
   }
-
 }
