@@ -1,15 +1,18 @@
 <h1>Modules/Components/Directives Demo</h1>
-<p><strong>
-Note: goto app.component.html and uncomment a chunk of code to see the result
-</strong></p>
-<hr>
+<p>
+  <strong>
+    Note: goto app.component.html and uncomment a chunk of code to see the
+    result
+  </strong>
+</p>
+<hr />
 
 <h4>1. Display Data Demo</h4>
 <h5>1.1. Display Single Data and Collection</h5>
 <!-- <app-list></app-list> -->
 <h5>1.2. Display Svg/HTML+Svg</h5>
 <!-- <app-svg></app-svg> -->
-<hr>
+<hr />
 
 <h4>2. Communication Demo</h4>
 <h5>2.1. Inputs, Outputs</h5>
@@ -25,21 +28,21 @@ Note: goto app.component.html and uncomment a chunk of code to see the result
 <!-- <app-export-as-demo /> -->
 
 <h5>2.5. Service Communication (Push Subject)</h5>
- <!-- <app-sibling-container /> -->
+<!-- <app-sibling-container /> -->
 
- <h5>2.6. Service Communication (Push Signal)</h5>
- <!-- <app-sibling-container3></app-sibling-container3> -->
+<h5>2.6. Service Communication (Push Signal)</h5>
+<!-- <app-sibling-container3 /> -->
 
- <h5>2.7. Service Communication (Pull)</h5>
- <!-- <app-sibling-container2></app-sibling-container2> -->
+<h5>2.7. Service Communication (Pull)</h5>
+<!-- <app-sibling-container2></app-sibling-container2> -->
 
- <h5>2.8. The Same - is a directive and a component input</h5>
- <!-- appTheSame is a directive and a component input at same time -->
- <!-- <app-the-same appTheSame="Hello"></app-the-same> -->
+<h5>2.8. The Same - is a directive and a component input</h5>
+<!-- appTheSame is a directive and a component input at same time -->
+<!-- <app-the-same appTheSame="Hello"></app-the-same> -->
 
 <h5>2.9. Access to Component Properties from Directive</h5>
 <!-- <app-account [balance]="150" get-props></app-account> -->
-<hr>
+<hr />
 
 <h4>3. Attribute Directives Demo</h4>
 <h5>3.1. Host Component & Directive</h5>
@@ -51,7 +54,7 @@ Note: goto app.component.html and uncomment a chunk of code to see the result
 <h5>3.3. Only-Number Directive</h5>
 <!-- <app-only-number></app-only-number> -->
 
-<hr>
+<hr />
 
 <h4>4. Directive Composition</h4>
 <h5>4.1. Simple Directive Composition</h5>
@@ -60,10 +63,13 @@ Note: goto app.component.html and uncomment a chunk of code to see the result
 <!-- <app-zoo></app-zoo> -->
 <h5>4.3. Pass Data to Directive</h5>
 <!-- <app-color-p color="blue"></app-color-p> -->
-<h5>4.4. Build custome directive on base of ngIf directive using Directive Composition</h5>
+<h5>
+  4.4. Build custome directive on base of ngIf directive using Directive
+  Composition
+</h5>
 <!-- <app-custom-if></app-custom-if> -->
 
-<hr>
+<hr />
 
 <h4>5. Structural Directives Demo</h4>
 <h5>5.1. Custom-If Directive</h5>
@@ -92,15 +98,15 @@ Note: goto app.component.html and uncomment a chunk of code to see the result
   <p #content>Some text for our alert message</p>
 </app-message> -->
 
- <h5>6.2. Multi-Slot Content Projection</h5>
- <!-- <app-panel1>
+<h5>6.2. Multi-Slot Content Projection</h5>
+<!-- <app-panel1>
   <panel-title>Panel Title</panel-title>
   <panel-content>
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
   </panel-content>
 </app-panel1> -->
 
- <!-- <app-panel2>
+<!-- <app-panel2>
   <div data-panel-title>Panel Title</div>
   <div data-panel-content>
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -120,7 +126,7 @@ Note: goto app.component.html and uncomment a chunk of code to see the result
     <div class="content">Content: Hello</div>
   </ng-template>
 </app-card> -->
-<hr>
+<hr />
 
 <h4>7. Styling Demo</h4>
 <h5>7.1 Inline and External Styles</h5>
@@ -132,7 +138,7 @@ Note: goto app.component.html and uncomment a chunk of code to see the result
 <!-- <app-host-selector></app-host-selector>
 <app-host-selector class="active"></app-host-selector> -->
 <!-- <app-host-context-selector></app-host-context-selector> -->
-<hr>
+<hr />
 
 <h4>8. Lifecycle Hooks Demo</h4>
 <h5>8.1. OnInit and OnDestroy Hooks</h5>
@@ -154,17 +160,14 @@ Note: goto app.component.html and uncomment a chunk of code to see the result
 <!-- <app-after-content>
    <app-child-content></app-child-content>
 </app-after-content> -->
-<hr>
+<hr />
 
 <h4>9. Change Detection Strategies & NgZone</h4>
 <!-- <app-change-detection-container></app-change-detection-container> -->
 <!-- <app-timers></app-timers> -->
-<hr>
+<hr />
 
 <h4>10. Dynamic Component Loading</h4>
 <!-- <app-dynamic-component-demo1></app-dynamic-component-demo1> -->
 <!-- <app-dynamic-component-loading></app-dynamic-component-loading> -->
 <!-- <app-tab-container></app-tab-container> -->
-
-
-
