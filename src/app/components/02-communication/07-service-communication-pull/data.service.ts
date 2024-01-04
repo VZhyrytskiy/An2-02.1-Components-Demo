@@ -1,16 +1,18 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class DataService<T> {
   private data!: T;
 
-  public setData(d: T): void {
-    this.data = d;
+  // api to read data
+  getData(): T {
+    return this.data;
   }
 
-  public getData(): T {
-    return this.data;
+  // api to send data
+  setData(d: T): void {
+    this.data = d;
   }
 }

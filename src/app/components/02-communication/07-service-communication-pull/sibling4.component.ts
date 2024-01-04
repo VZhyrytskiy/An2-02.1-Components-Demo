@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 
 import { DataService } from './data.service';
 
@@ -12,17 +12,18 @@ import { DataService } from './data.service';
       <!-- case 1 -->
       Data from sibling 1: {{ dataService.getData() }}
       <!-- case 2 -->
-      <!-- Data from sibling 1: {{ input }} -->
+      <!-- Data from sibling 1: {{ content }} -->
     </p>
-  `
+  `,
 })
 export class Sibling4Component {
   // case 1
-  constructor(public dataService: DataService<string>) {}
+  dataService = inject(DataService<string>);
 
   // case 2
-  // constructor(private dataService: DataService<string>) {}
-  // get input(): string {
-    // return this.dataService.getData();
+  // private dataService = inject(DataService<string>);
+
+  // get content(): string {
+  //   return this.dataService.getData();
   // }
 }
