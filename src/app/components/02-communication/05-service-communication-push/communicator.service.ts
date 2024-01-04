@@ -4,15 +4,14 @@ import { Subject } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class CommunicatorService {
-  // Observable string sources
-  private channel = new Subject<string>();
+export class CommunicatorService<T> {
+  private channel$$ = new Subject<T>();
 
-  // Observable string streams
-  public channel$ = this.channel.asObservable();
+  // api to read data
+  channel$ = this.channel$$.asObservable();
 
-  // Service message commands
-  publishData(data: string): void {
-    this.channel.next(data);
+  // api to send data
+  publish(data: T): void {
+    this.channel$$.next(data);
   }
 }

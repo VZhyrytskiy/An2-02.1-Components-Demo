@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 
 import { CommunicatorService } from './communicator.service';
 
@@ -7,20 +7,17 @@ import { CommunicatorService } from './communicator.service';
   standalone: true,
   template: `
     <p>
-      sibling1
+      sibling1 component
       <button class="btn btn-primary" (click)="onClick()">Pass Data</button>
     </p>
   `
 })
 export class Sibling1Component  {
-  counter = 0;
-
-  constructor(
-    private communicatorService: CommunicatorService
-  ) {}
+  private communicatorService = inject(CommunicatorService<string>);
+  private counter = 0;
 
   onClick(): void {
     this.counter++;
-    this.communicatorService.publishData(`Data from sibling 1(${this.counter})`);
+    this.communicatorService.publish(`Data from sibling 1(${this.counter})`);
   }
 }
