@@ -4,7 +4,7 @@ import { Component, type AfterViewInit } from '@angular/core';
   selector: 'app-child',
   standalone: true,
   templateUrl: './child.component.html',
-  styleUrls: ['./child.component.css']
+  styleUrl: './child.component.css'
 })
 export class ChildComponent implements AfterViewInit {
   ngAfterViewInit(): void {

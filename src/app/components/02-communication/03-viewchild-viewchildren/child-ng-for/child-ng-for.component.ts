@@ -4,7 +4,7 @@ import { Component, Input } from '@angular/core';
   selector: 'app-child-ng-for',
   standalone: true,
   templateUrl: './child-ng-for.component.html',
-  styleUrls: ['./child-ng-for.component.css']
+  styleUrl: './child-ng-for.component.css'
 })
 export class ChildNgForComponent {
   @Input({ required: true }) i!: number;

@@ -15,7 +15,7 @@ import { ChildComponent } from './../child/child.component';
   selector: 'app-parent',
   standalone: true,
   templateUrl: './parent.component.html',
-  styleUrls: ['./parent.component.css'],
+  styleUrl: './parent.component.css',
   imports: [ChildComponent, ChildNgForComponent, NgForOf]
 })
 export class ParentComponent implements AfterViewChecked {
@@ -31,15 +31,13 @@ export class ParentComponent implements AfterViewChecked {
   @ViewChildren(ChildComponent)
   children!: QueryList<ChildComponent>;
 
-  data = [1, 2, 3];
-
   @ViewChild(ChildNgForComponent)
   childNgFor!: ChildNgForComponent;
 
   @ViewChildren(ChildNgForComponent)
   childrenNgFor!: QueryList<ChildNgForComponent>;
 
-  constructor() {}
+  data = [1, 2, 3];
 
   ngAfterViewChecked(): void {
     this.inputField.nativeElement.value = 'Value From Parent';
