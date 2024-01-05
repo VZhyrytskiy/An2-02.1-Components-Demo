@@ -1,30 +1,29 @@
-import { Component, Directive, ElementRef, Input } from '@angular/core';
+import { Component, Directive, ElementRef, Input, OnInit, inject } from '@angular/core';
 
 @Directive({
-  standalone: true
+  standalone: true,
 })
-export class ColorDirective {
-  @Input() color: string = 'red';
+export class ColorDirective implements OnInit {
+  private el = inject(ElementRef);
 
-  constructor(private el: ElementRef) {
-  }
+  @Input() color: string = 'red';
 
   ngOnInit(): void {
     this.el.nativeElement.style.color = this.color;
   }
 }
 
-
 @Component({
   selector: 'app-color-p',
   standalone: true,
   template: '<p>One day I went to the zoo to look at the animals.</p>',
-  hostDirectives: [{
-    directive: ColorDirective,
-    inputs: ['color'],
-    // outputs: [...]
-  }]
+  hostDirectives: [
+    {
+      directive: ColorDirective,
+      // to pass data to the directive input use the inputs property
+      inputs: ['color'],
+      // outputs: [...]
+    },
+  ],
 })
-export class ColorComponent {
-
-}
+export class ColorComponent {}
