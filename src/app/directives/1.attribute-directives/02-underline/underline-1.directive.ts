@@ -1,14 +1,13 @@
-import { Directive, ElementRef, HostListener } from '@angular/core';
+import { Directive, ElementRef, HostListener, inject } from '@angular/core';
 
 @Directive({
   selector: '[underline1]',
-  standalone: true
+  standalone: true,
 })
 export class Underline1Directive {
-
+  // dependencies
   // use ElementRef
-  constructor(private el: ElementRef) {
-  }
+  private el = inject(ElementRef);
 
   @HostListener('mouseenter', ['$event'])
   onMouseEnter(event: Event): void {
@@ -21,5 +20,4 @@ export class Underline1Directive {
     // use target
     target.style.textDecoration = 'none';
   }
-
 }

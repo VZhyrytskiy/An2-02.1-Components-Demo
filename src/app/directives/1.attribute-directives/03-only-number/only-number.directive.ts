@@ -1,4 +1,4 @@
-import { Directive, ElementRef, HostListener, Input } from '@angular/core';
+import { Directive, ElementRef, HostListener, Input, inject } from '@angular/core';
 
 @Directive({
   selector: '[only-number]',
@@ -7,11 +7,7 @@ import { Directive, ElementRef, HostListener, Input } from '@angular/core';
 export class OnlyNumberDirective {
   @Input({ required: false }) config: { color: string; } = { color: 'red' };
 
-  input!: HTMLInputElement;
-
-  constructor(el: ElementRef) {
-    this.input = el.nativeElement;
-  }
+  input: HTMLInputElement = inject(ElementRef).nativeElement;;
 
   @HostListener('keyup', ['$event.key'])
   onKeyUp(char: string): void {

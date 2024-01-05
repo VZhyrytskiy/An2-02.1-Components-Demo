@@ -7,10 +7,11 @@ import { OnlyNumberDirective } from './only-number.directive';
   template: `
     <div>
       <label>Enter only numbers:</label>
-      <input type="text" only-number [config]="{ color: 'yellow' }" />
+      <input type="text" only-number [config]="config" />
     </div>
   `,
-  imports: [OnlyNumberDirective]
+  imports: [OnlyNumberDirective],
 })
 export class OnlyNumberComponent {
+  config = { color: 'yellow' };
 }
