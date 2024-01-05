@@ -5,7 +5,6 @@ import { Directive, type OnInit, Input } from '@angular/core';
   standalone: true
 })
 export class TheSameDirective implements OnInit {
-
   @Input({ required: true, alias: 'appTheSame'})
   input!: string;
 

@@ -7,6 +7,8 @@ import { Component, Input, type OnInit } from '@angular/core';
     <p>
       appTheSame is a directive and a component input at the same time.
       <br>
+      They both take the same input and output it to the console.
+      <br>
       Look in the console.
     </p>
   `
