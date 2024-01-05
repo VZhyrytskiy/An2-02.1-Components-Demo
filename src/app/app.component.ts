@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  values = [10, 20, 30];
   images = [
     '/assets/images/1.jpg',
     '/assets/images/2.jpg',
