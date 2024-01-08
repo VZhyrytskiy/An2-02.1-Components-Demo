@@ -4,8 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-external-style',
   standalone: true,
   templateUrl: './external-style.component.html',
-  styleUrls: ['./external-style.component.css']
+  // for external styles, we need to use styleUrls: [] or styleUrl: ''
+  styleUrl: './external-style.component.css',
 })
-export class ExternalStyleComponent {
-
-}
+export class ExternalStyleComponent {}

@@ -4,7 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-inline-style',
   standalone: true,
   templateUrl: './inline-style.component.html',
-  styles: [`
+  // styles can be an array of strings or a single string
+  styles: `
     section {
       width: 25%;
       margin: 25px auto;
@@ -15,7 +16,7 @@ import { Component } from '@angular/core';
       text-align: center;
       margin-bottom: 20px;
     }
-  `]
+  `
 })
 export class InlineStyleComponent {
 }

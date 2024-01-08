@@ -1,16 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-host-context-selector',
   standalone: true,
   templateUrl: './host-context-selector.component.html',
-  styleUrls: ['./host-context-selector.component.css']
+  styleUrl: './host-context-selector.component.css',
 })
-export class HostContextSelectorComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-}
+export class HostContextSelectorComponent {}
