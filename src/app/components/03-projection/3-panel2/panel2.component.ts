@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   selector: 'app-panel2',
   standalone: true,
   templateUrl: './panel2.component.html',
-  styleUrls: ['./panel2.component.css']
+  styleUrl: './panel2.component.css'
 })
 export class Panel2Component {
 }

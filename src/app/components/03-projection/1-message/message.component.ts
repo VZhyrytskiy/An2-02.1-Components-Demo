@@ -4,7 +4,7 @@ import { Component, Input, ContentChild, ElementRef, type AfterContentInit} from
   selector: 'app-message',
   standalone: true,
   templateUrl: './message.component.html',
-  styleUrls: ['./message.component.css']
+  styleUrl: './message.component.css'
 })
 export class MessageComponent implements AfterContentInit {
   @Input({ required: true })

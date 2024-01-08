@@ -1,7 +1,9 @@
 <div class="cont">
   <p>card works!</p>
   <button class="btn btn-primary" (click)="toggle()">Toggle</button>
-  <div *ngIf="expanded">
+  @if(expanded) {
+  <div>
     <ng-container [ngTemplateOutlet]="content"></ng-container>
   </div>
+  }
 </div>
