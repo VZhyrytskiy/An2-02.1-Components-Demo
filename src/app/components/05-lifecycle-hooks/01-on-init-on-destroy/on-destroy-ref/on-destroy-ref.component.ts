@@ -4,18 +4,19 @@ import { Component, DestroyRef, inject } from '@angular/core';
   selector: 'app-on-destroy-ref',
   standalone: true,
   templateUrl: './on-destroy-ref.component.html',
-  styleUrls: ['./on-destroy-ref.component.css'],
+  styleUrl: './on-destroy-ref.component.css',
 })
 export class OnDestroyRefComponent {
-  constructor() {
-    const destroyRef = inject(DestroyRef);
+  // it is possible to inject the DestroyRef in injection context,
+  // not only in the class
+  private destroyRef = inject(DestroyRef);
 
-    // register a destroy callback
-    const unregisterFn = destroyRef.onDestroy(() => {
-      console.log('On Destroy Hook from destroyRef');
-    });
+  // register a destroy callback
+  unregisterFn = this.destroyRef.onDestroy(() => {
+    console.log('onDestroy Callback from destroyRef');
+  });
 
-    // stop the destroy callback from executing if needed
-    // unregisterFn();
-  }
+  // if you need to stop the destroy callback from executing,
+  // run this function
+  // unregisterFn();
 }

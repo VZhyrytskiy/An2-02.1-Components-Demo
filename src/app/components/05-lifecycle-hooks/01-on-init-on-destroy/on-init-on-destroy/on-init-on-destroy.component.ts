@@ -4,19 +4,19 @@ import { Component, type OnDestroy, type OnInit } from '@angular/core';
   selector: 'app-on-init-on-destroy',
   standalone: true,
   templateUrl: './on-init-on-destroy.component.html',
-  styleUrls: ['./on-init-on-destroy.component.css']
+  styleUrl: './on-init-on-destroy.component.css'
 })
 export class OnInitOnDestroyComponent implements OnDestroy, OnInit {
 
   constructor() {
-    console.log('On Constructor');
+    console.log('constructor');
   }
 
   ngOnInit(): void {
-    console.log('On Init Hook');
+    console.log('ngOnInit Hook');
   }
 
   ngOnDestroy(): void {
-    console.log('On Destroy Hook');
+    console.log('ngOnDestroy Hook');
   }
 }
