@@ -58,6 +58,7 @@ import * as dirs from './directives';
     /* ChangeDetection Strategies */
     comp.ChangeDetectionContainerComponent,
     comp.TimersComponent,
+    comp.ChechOnceChangedComponent,
 
     /* Dynamic Components */
     comp.ContainerComponent,
