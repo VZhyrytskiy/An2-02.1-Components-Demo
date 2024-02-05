@@ -6,17 +6,19 @@ import { OnChangesComponent } from './on-changes/on-changes.component';
   standalone: true,
   template: `
     <section>
-      <div>
+      <div class="layout">
         <label>Action:</label>
         <input
+          class="w250"
           type="text"
           #actionField
           (keyup)="onSetValues(actionField, responsibleField)"
         />
       </div>
-      <div>
+      <div class="layout">
         <label>Responsible:</label>
         <input
+        class="w250"
           type="text"
           #responsibleField
           (keyup)="onSetValues(actionField, responsibleField)"
@@ -27,6 +29,15 @@ import { OnChangesComponent } from './on-changes/on-changes.component';
     </section>
   `,
   imports: [OnChangesComponent],
+  styles: `
+  .layout {
+    display: flex;
+    flex-direction: column;
+  }
+  .w250 {
+    width: 250px;
+  }
+  `,
 })
 export class OnChangesDemoComponent {
   responsible!: string;

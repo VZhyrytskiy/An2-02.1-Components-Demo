@@ -1,9 +1,18 @@
 <div class="mb25">
-  <button class="btn btn-danger mr25" (click)="setZone(true)">Show regular</button>
-  <button class="btn btn-success" (click)="setZone(false)">Show optimized</button>
+  <button class="btn btn-danger mr25" (click)="setZone(true)">
+    Show regular
+  </button>
+  <button class="btn btn-success" (click)="setZone(false)">
+    Show optimized
+  </button>
 </div>
+
 <p>See console</p>
+
 <div>
-    <app-canvas *ngIf="inZone"></app-canvas>
-    <app-canvas-optimized *ngIf="!inZone"></app-canvas-optimized>
+  @if(inZone) {
+  <app-canvas />
+  } @else {
+  <app-canvas-optimized />
+  }
 </div>

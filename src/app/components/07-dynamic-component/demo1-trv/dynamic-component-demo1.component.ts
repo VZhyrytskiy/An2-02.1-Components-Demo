@@ -4,7 +4,7 @@ import { Component, ViewChild, ViewContainerRef } from '@angular/core';
   selector: 'app-dynamic-component-demo1',
   standalone: true,
   templateUrl: './dynamic-component-demo1.component.html',
-  styleUrls: ['./dynamic-component-demo1.component.css']
+  styleUrl: './dynamic-component-demo1.component.css'
 })
 export class DynamicComponentDemo1Component {
   @ViewChild('vcr', { read: ViewContainerRef }) vcr!: ViewContainerRef;

@@ -8,11 +8,11 @@ import { Component } from '@angular/core';
           I am a Dynamic Component
         </div>
     `,
-  styles: [`
+  styles: `
     .dyn-comp {
       border: 2px dotted red;
       margin: 20px;
     }
-  `]
+  `
 })
 export class DynamicComponent {}

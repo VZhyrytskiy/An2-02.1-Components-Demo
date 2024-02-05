@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-child-content',
   standalone: true,
   templateUrl: './child-content.component.html',
-  styleUrls: ['./child-content.component.css'],
+  styleUrl: './child-content.component.css',
   imports: [FormsModule, ChildContentComponent]
 })
 export class ChildContentComponent {

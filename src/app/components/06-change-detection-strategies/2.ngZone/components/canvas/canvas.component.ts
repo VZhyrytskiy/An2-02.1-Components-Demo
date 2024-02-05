@@ -5,7 +5,7 @@ import { Color } from '../../interfaces/color.interface';
   selector: 'app-canvas',
   standalone: true,
   templateUrl: './canvas.component.html',
-  styleUrls: ['./canvas.component.css'],
+  styleUrl: './canvas.component.css',
 })
 export class CanvasComponent implements AfterViewInit {
 

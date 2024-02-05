@@ -6,7 +6,7 @@ import { ChildContentComponent } from './child-content/child-content.component';
   selector: 'app-after-content',
   standalone: true,
   templateUrl: './after-content.component.html',
-  styleUrls: ['./after-content.component.css']
+  styleUrl: './after-content.component.css'
 })
 export class AfterContentComponent implements AfterContentChecked, AfterContentInit {
   content!: string;

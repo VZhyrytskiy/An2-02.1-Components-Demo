@@ -1,11 +1,15 @@
 <ul class="nav">
-  <li *ngFor="let tab of tabs; let i = index" class="nav-item">
-    <a [ngClass]="tab.isActive ? 'activeTab' : ''"
-       class="nav-link"
-       (click)="onTabClick(tab.component, tab.data, i)">
-       {{tab.label}}
+  @for(tab of tabs; track tab.label) {
+  <li class="nav-item">
+    <a
+      [ngClass]="tab.isActive ? 'activeTab' : ''"
+      class="nav-link"
+      (click)="onTabClick(tab.component, tab.data, $index)"
+    >
+      {{ tab.label }}
     </a>
   </li>
+  }
 </ul>
 
 <!-- ngComponentOutletInjector: Optional custom Injector that will be used as parent for the Component.
@@ -17,7 +21,7 @@
 -->
 <ng-container
   [ngComponentOutlet]="activeComponent"
-  [ngComponentOutletInjector]="myInjector">
-</ng-container>
+  [ngComponentOutletInjector]="myInjector"
+/>
 
 <p>Data received from Tab Component: {{ receivedData }}</p>

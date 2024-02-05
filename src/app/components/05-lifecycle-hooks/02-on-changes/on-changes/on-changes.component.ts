@@ -4,7 +4,7 @@ import { Component, Input, type OnInit, type OnChanges, type SimpleChanges } fro
   selector: 'app-on-changes',
   standalone: true,
   templateUrl: './on-changes.component.html',
-  styleUrls: ['./on-changes.component.css']
+  styleUrl: './on-changes.component.css'
 })
 export class OnChangesComponent implements OnInit, OnChanges {
   @Input({ required: true })

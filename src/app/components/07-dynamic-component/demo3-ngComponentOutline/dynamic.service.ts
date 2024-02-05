@@ -7,8 +7,6 @@ import { Subject } from "rxjs";
 export class DynamicService {
   private output = new Subject<string>();
 
-  constructor() { }
-
   getObservable() {
     return this.output.asObservable();
   }

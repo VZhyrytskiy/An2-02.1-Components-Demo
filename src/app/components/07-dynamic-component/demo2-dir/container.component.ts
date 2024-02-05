@@ -4,13 +4,11 @@ import { Component1Component } from './components/component-1/component-1.compon
 import { Component2Component } from './components/component-2/component-2.component';
 import { DynamicComponent } from './interfaces/dynamic-component.interface';
 
-
-
 @Component({
   selector: 'app-dynamic-component-loading',
   standalone: true,
   templateUrl: './container.component.html',
-  imports: [TargetDirective]
+  imports: [TargetDirective],
 })
 export class ContainerComponent implements OnInit {
   // Получить экземпляр директивы
@@ -32,7 +30,9 @@ export class ContainerComponent implements OnInit {
     this.loadComponent(this.currentComponent);
   }
 
-  private loadComponent(component: Type<Component1Component | Component2Component>) {
+  private loadComponent(
+    component: Type<Component1Component | Component2Component>
+  ) {
     // Получить место, куда необходимо добавлять компонент и очистить его
     // Используем для этого директиву target
     // Директива инжектит через свой конструктор viewContainerRef как публичное свойство,

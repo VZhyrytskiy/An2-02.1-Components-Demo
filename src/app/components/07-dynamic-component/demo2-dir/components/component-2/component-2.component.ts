@@ -5,7 +5,7 @@ import type { DynamicComponent } from './../../interfaces/dynamic-component.inte
   selector: 'app-component-2',
   standalone: true,
   templateUrl: './component-2.component.html',
-  styleUrls: ['./component-2.component.css']
+  styleUrl: './component-2.component.css'
 })
 export class Component2Component implements DynamicComponent, OnDestroy {
   @Input({ required: true }) data!: string;

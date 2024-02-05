@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 
-import { Person } from './../../models/person.model';
-import { OnPushComponent } from '../on-push/on-push.component';
 import { DefaultComponent } from '../default/default.component';
+import { OnPushComponent } from '../on-push/on-push.component';
+import { Person } from './../../models/person.model';
 
 @Component({
   selector: 'app-change-detection-container',
   standalone: true,
   templateUrl: './change-detection-container.component.html',
-  styleUrls: ['./change-detection-container.component.css'],
+  styleUrl: './change-detection-container.component.css',
   imports: [OnPushComponent, DefaultComponent]
 })
 export class ChangeDetectionContainerComponent {

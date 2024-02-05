@@ -11,7 +11,7 @@ import { ChildViewComponent } from './child-view/child-view.component';
   selector: 'app-after-view',
   standalone: true,
   templateUrl: './after-view.component.html',
-  styleUrls: ['./after-view.component.css'],
+  styleUrl: './after-view.component.css',
   imports: [ChildViewComponent]
 })
 export class AfterViewComponent implements AfterViewChecked, AfterViewInit {

@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-child-view',
   standalone: true,
   templateUrl: './child-view.component.html',
-  styleUrls: ['./child-view.component.css'],
+  styleUrl: './child-view.component.css',
   imports: [FormsModule]
 })
 export class ChildViewComponent {

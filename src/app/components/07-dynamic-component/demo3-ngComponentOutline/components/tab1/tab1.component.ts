@@ -1,4 +1,4 @@
-import { Component, Injector, OnInit } from '@angular/core';
+import { Component, Injector, OnInit, inject } from '@angular/core';
 import { DynamicService } from '../../dynamic.service';
 import { token } from './../../tab-container/tab-container.component';
 
@@ -6,24 +6,22 @@ import { token } from './../../tab-container/tab-container.component';
   selector: 'app-tab1',
   standalone: true,
   templateUrl: './tab1.component.html',
-  styleUrls: ['./tab1.component.css']
+  styleUrl: './tab1.component.css'
 })
 export class Tab1Component implements OnInit {
-  dataIn!: string;
+  private injector =  inject(Injector);
+  private dynamicService = inject( DynamicService);
 
-  constructor(
-    private inject: Injector,
-    private serv: DynamicService
-  ) { }
+  dataIn!: string;
 
   ngOnInit(): void {
     // get data from parent component (TabContainer)
-    this.dataIn = this.inject.get(token);
+    this.dataIn = this.injector.get(token);
   }
 
   sendData() {
     // send data to parent component (TabContainer)
-    this.serv.outputFromDynamicComponent('Sent data from Tab1');
+    this.dynamicService.outputFromDynamicComponent('Sent data from Tab1');
   }
 
 }

@@ -2,8 +2,9 @@ import { CUSTOM_ELEMENTS_SCHEMA, Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  styleUrl: './app.component.css',
  //  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppComponent {
@@ -13,4 +14,8 @@ export class AppComponent {
     '/assets/images/3.jpg',
     '/assets/images/4.jpg',
   ];
+
+
 }
+
+

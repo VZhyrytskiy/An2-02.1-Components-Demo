@@ -12,8 +12,10 @@ import {
   template: `<div>
     <div>Number of ticks 1 (w/o ChangeDetectorRef): {{ numberOfTicks1 }}</div>
     <div>Number of ticks 2 (w/ markForCheck): {{ numberOfTicks2 }}</div>
-    <div>Number of ticks 3 (w/ detach + detectChanges): {{ numberOfTicks3 }}</div>
-    <button (click)="onClick()">Click me!</button>
+    <div>
+      Number of ticks 3 (w/ detach + detectChanges): {{ numberOfTicks3 }}
+    </div>
+    <button class="btn btn-primary" (click)="onClick()">Click me!</button>
   </div> `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

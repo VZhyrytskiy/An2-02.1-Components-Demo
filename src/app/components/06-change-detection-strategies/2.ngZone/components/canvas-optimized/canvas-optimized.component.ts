@@ -7,7 +7,7 @@ import { Color } from '../../interfaces/color.interface';
   selector: 'app-canvas-optimized',
   standalone: true,
   templateUrl: './canvas-optimized.component.html',
-  styleUrls: ['./canvas-optimized.component.css']
+  styleUrl: './canvas-optimized.component.css'
 })
 export class CanvasOptimizedComponent implements AfterViewInit {
 

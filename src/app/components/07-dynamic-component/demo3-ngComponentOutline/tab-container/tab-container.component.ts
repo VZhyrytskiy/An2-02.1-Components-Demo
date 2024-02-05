@@ -1,4 +1,4 @@
-import { Component, InjectionToken, Injector, type OnInit } from '@angular/core';
+import { Component, InjectionToken, Injector, inject, type OnInit } from '@angular/core';
 import { Tab1Component } from '../components/tab1/tab1.component';
 import { Tab2Component } from '../components/tab2/tab2.component';
 import { DynamicService } from '../dynamic.service';
@@ -10,41 +10,41 @@ export const token = new InjectionToken<string>('');
   selector: 'app-tab-container',
   standalone: true,
   templateUrl: './tab-container.component.html',
-  styleUrls: ['./tab-container.component.css'],
-  imports: [NgClass, NgForOf, NgComponentOutlet]
+  styleUrl: './tab-container.component.css',
+  imports: [NgClass, NgComponentOutlet],
 })
 export class TabContainerComponent implements OnInit {
+  private injector = inject(Injector);
+  private dynamicService = inject(DynamicService);
+
   // tabs info
-  tabs = [{
-    label: 'Tab1',
-    component: Tab1Component,
-    data: 'This is the first Tab',
-    isActive: true
-  },
-  {
-    label: 'Tab2',
-    component: Tab2Component,
-    data: 'This is the second tab',
-    isActive: false
-  }];
+  tabs = [
+    {
+      label: 'Tab1',
+      component: Tab1Component,
+      data: 'This is the first Tab',
+      isActive: true,
+    },
+    {
+      label: 'Tab2',
+      component: Tab2Component,
+      data: 'This is the second tab',
+      isActive: false,
+    },
+  ];
 
   activeComponent: any;
   activeComponentData: string = '';
   receivedData!: string;
   myInjector!: Injector;
 
-  constructor(
-    private service: DynamicService,
-    private injector: Injector
-  ) { }
-
   ngOnInit(): void {
     // get data from children components (Tabs)
-    this.service.getObservable().subscribe((data) => {
+    this.dynamicService.getObservable().subscribe((data) => {
       this.receivedData = data;
     });
 
-    const defaultTabIndex = this.tabs.findIndex(t => t.isActive === true);
+    const defaultTabIndex = this.tabs.findIndex((t) => t.isActive === true);
     const defaultTab = this.tabs[defaultTabIndex];
     this.onTabClick(defaultTab.component, defaultTab.data, defaultTabIndex);
   }

@@ -5,7 +5,7 @@ import type { DynamicComponent } from './../../interfaces/dynamic-component.inte
   selector: 'app-component-1',
   standalone: true,
   templateUrl: './component-1.component.html',
-  styleUrls: ['./component-1.component.css']
+  styleUrl: './component-1.component.css'
 })
 export class Component1Component implements DynamicComponent, OnChanges, OnDestroy {
   private _data!: string;
